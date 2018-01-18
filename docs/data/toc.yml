@@ -3,98 +3,14 @@
 - name: Data Architecture Guide
   href: index.md
   items:
-  - name: Common data architectures
-    href: common-architectures/index.md
+  - name: Traditional RDBMS
     items:
-    - name: Relational data
-      href: common-architectures/relational-data.md 
-    - name: Non-relational data and NoSQL
-      href: common-architectures/non-relational-data.md 
-    - name: Big data
-      href: common-architectures/big-data.md 
-    - name: Data pipeline
-      href: common-architectures/data-pipeline.md 
-    - name: Advanced analytics
-      href: common-architectures/advanced-analytics.md 
-    - name: Interactive data exploration
-      href: common-architectures/interactive-data-exploration.md 
-  - name: Pipeline patterns
+    - name: Concepts
+    - name: Solutions
+    - name: Technology choices
+  - name: Big Data
     items:
-    - name: Working with transactional data
-      items:
-      - name: Online transaction processing (OLTP)
-        href: pipeline-patterns/online-transaction-processing.md 
-      - name: Online analytical processing (OLAP)
-        href: pipeline-patterns/online-analytical-processing.md 
-      - name: Data warehousing and data marts
-        href: pipeline-patterns/data-warehousing.md 
-    - name: Handling unstructured data
-      items:
-      - name: Processing CSV and JSON files
-        href: pipeline-patterns/processing-csv-and-json-files.md 
-      - name: Processing free-form text
-        href: pipeline-patterns/processing-free-form-text.md 
-    - name: Time series solutions
-      href: pipeline-patterns/time-series.md 
-    - name: Hybrid on-premises and cloud solutions
-      href: pipeline-patterns/hybrid-on-premises-and-cloud.md 
-    - name: Secure solutions
-      href: pipeline-patterns/secure-solutions.md 
-    - name: Machine learning at scale
-      href: pipeline-patterns/machine-learning-at-scale.md 
-    - name: Monitoring data solutions
-      href: pipeline-patterns/monitoring-data-solutions.md 
-  - name: Technology choices
-    items:
-    - name: Transactional data stores
-      items:
-      - name: Online transaction processing (OLTP) data stores
-        href: technology-choices/oltp-data-stores.md 
-      - name: Online analytical processing (OLAP) data stores
-        href: technology-choices/olap-data-stores.md 
-      - name: Data warehouses
-        href: technology-choices/data-warehouses.md 
-    - name: Pipeline orchestration, control flow, and data movement
-      href: technology-choices/pipeline-orchestration-data-movement.md 
-    - name: Data transfer
-      href: technology-choices/data-transfer.md 
-    - name: Data ion
-      href: technology-choices/data-ingest.md 
-    - name: Batch processing
-      href: technology-choices/batch-processing.md 
-    - name: Real-time processing
-      href: technology-choices/real-time-processing.md 
-    - name: Data serving storage
-      href: technology-choices/data-serving-storage.md 
-    - name: Options for processing CSV and JSON files
-      href: technology-choices/csv-json-options.md 
-    - name: Applied artificial intelligence and cognitive services
-      items:
-      - name: Data science and machine learning
-        href: technology-choices/data-science-and-machine-learning.md 
-      - name: Cognitive services
-        href: technology-choices/cognitive-services.md 
-      - name: Search data stores
-        href: technology-choices/search-options.md 
-      - name: Natural language processing
-        href: technology-choices/natural-language-processing.md 
-    - name: Analysis, visualizations, and reporting
-      href: technology-choices/analysis-visualizations-reporting.md 
-  - name: Implementation examples
-    items:
-    - name: On-demand big data analytics
-      href: implementation-examples/on-demand-big-data-analytics.md
-    - name: Advanced analytics and deep learning
-      href: implementation-examples/advanced-analytics-deep-learning.md
-    - name: Hybrid data architecture
-      href: implementation-examples/hybrid-data-architecture.md
-    - name: Clickstream analysis
-      href: implementation-examples/clickstream-analysis.md
-    - name: Business intelligence
-      href: implementation-examples/business-intelligence.md
-    - name: Intelligent applications
-      href: implementation-examples/intelligent-applications.md
-    - name: Data warehousing
-      href: implementation-examples/data-warehousing.md
-    - name: Extract, transform, load (ETL)
-      href: implementation-examples/etl.md
+    - name: Concepts
+    - name: Solutions
+    - name: Technology choices
+
