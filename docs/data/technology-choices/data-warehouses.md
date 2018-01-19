@@ -24,7 +24,7 @@ MPP (big data):
 
 The list above is broken into two categories: [SMP](https://en.wikipedia.org/wiki/Symmetric_multiprocessing) (symmetric multiprocessing) and [MPP](https://en.wikipedia.org/wiki/Massively_parallel) (massively parallel). As a general rule, SMP-based warehouses are best suited for small to medium data sets (up to 4-100 TB), while MPP is oftentimes used for big data. The delineation between small/medium and big data has, in part, to do with your organization's definition and supporting infrastructure, as well as the [limitation of the data sizes imposed by the technology choices within](oltp-data-stores.md#scalability-capabilities) your infrastructure. Beyond data sizes, the type of workload pattern you plan to support are likely a greater determining factor. For instance, complex queries may be too slow for an SMP solution, and require an MPP solution instead. MPP-based systems are likely to impose a performance penalty with small data sizes, due to how jobs are distributed and consolidated across nodes. All things considered, the general guidance is if your data sizes are already exceeding 1 TB and are expected to continually grow, you may want to consider selecting an MPP solution. However, if your data sizes are less than this, but your workloads are exceeding the available resources of your SMP solution, then MPP may be your best option as well.
 
-As mentioned in the [data warehousing pipeline pattern](../pipeline-patterns/data-warehousing.md#data-warehousing-in-azure) article, the data accessed or stored by your data warehouse could come from a number of data sources, including a data lake, such as [Azure Data Lake Store](/azure/data-lake-store/). For a video session that compares the different strengths of MPP services that can use Azure Data Lake, see [Azure Data Lake and Azure Data Warehouse: Applying Modern Practices to Your App](https://azure.microsoft.com/resources/videos/build-2016-azure-data-lake-and-azure-data-warehouse-applying-modern-practices-to-your-app/).
+As mentioned in the [data warehousing pipeline pattern](../solutions/data-warehousing.md#data-warehousing-in-azure) article, the data accessed or stored by your data warehouse could come from a number of data sources, including a data lake, such as [Azure Data Lake Store](/azure/data-lake-store/). For a video session that compares the different strengths of MPP services that can use Azure Data Lake, see [Azure Data Lake and Azure Data Warehouse: Applying Modern Practices to Your App](https://azure.microsoft.com/resources/videos/build-2016-azure-data-lake-and-azure-data-warehouse-applying-modern-practices-to-your-app/).
 
 SMP systems are characterized by a single instance of a relational database management system (DBMS) sharing all resources (CPU/Memory/Disk&mdash;that is, shared everything). MPP solutions, on the other hand, require a different skillset, due to variances in querying, modeling, partitioning of data, and other factors unique to parallel processing. One quick way to remember the difference is that you can scale-up an SMP system by adding processors with more CPU cores or faster CPU cores, add more memory, and use a faster I/O subsystem. For an MPP system you can scale-out by adding more compute nodes (which have their own CPU, memory and I/O subsystems). There are physical limitations to scaling up a server, at which point scaling out is more desirable depending on the workload.
 
@@ -122,15 +122,15 @@ Read more about securing your data warehouse:
 
 ## Where to go from here
 Read next:
-[Online Transaction Processing (OLTP) pipeline pattern](../pipeline-patterns/online-transaction-processing.md)
+[Online Transaction Processing (OLTP) pipeline pattern](../solutions/online-transaction-processing.md)
 
 See also:
 
 Related pipeline patterns
 - Working with transactional data
-    - [Online Transaction Processing (OLTP)](../pipeline-patterns/online-transaction-processing.md)
-    - [Online Analytical Processing (OLAP)](../pipeline-patterns/online-analytical-processing.md)
-    - [Data Warehousing](../pipeline-patterns/data-warehousing.md)
+    - [Online Transaction Processing (OLTP)](../solutions/online-transaction-processing.md)
+    - [Online Analytical Processing (OLAP)](../solutions/online-analytical-processing.md)
+    - [Data Warehousing](../solutions/data-warehousing.md)
 
 Related technology choices
 - Transactional data stores

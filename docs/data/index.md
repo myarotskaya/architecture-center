@@ -23,11 +23,11 @@ This guide covers the big picture concepts in [common data architectures](./comm
 
 Here are the common architectures covered in this guide:
 
-- [Relational data](./common-architectures/relational-data.md)
-- [Non-relational data](./common-architectures/non-relational-data.md)
-- [Big data](./common-architectures/big-data.md)
-- [Data pipeline](./common-architectures/data-pipeline.md)
-- [Advanced analytics](./common-architectures/advanced-analytics.md)
+- [Relational data](./concepts/relational-data.md)
+- [Non-relational data](./concepts/non-relational-data.md)
+- [Big data](./concepts/big-data.md)
+- [Data pipeline](./solutions/data-pipeline.md)
+- [Advanced analytics](./concepts/advanced-analytics.md)
 - [Interactive data exploration](./common-architectures/interactive-data-exploration.md)
 
 

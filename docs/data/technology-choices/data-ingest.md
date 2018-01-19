@@ -200,15 +200,15 @@ Based on your responses to the questions above, the following tables will help y
 | Route messages to multiple endpoints | Up to 10 custom endpoints are supported. Rules determine how messages are routed to custom endpoints. For more information, see [Send and receive messages with IoT Hub](/azure/iot-hub/iot-hub-devguide-messaging). | Requires additional code to be written and hosted for message dispatching | Kafka partitions streams across the nodes in the HDInsight cluster. Consumer processes can be associated with individual partitions to provide load balancing when consuming records. |
 
 ## Where to go from here
-Read next: [Data Pipeline Common Architecture](../common-architectures/data-pipeline.md)
+Read next: [Data Pipeline Common Architecture](../solutions/data-pipeline.md)
 
 See also:
 
 Related pipeline patterns
 - Working with transactional data
-    - [Online Transaction Processing (OLTP)](../pipeline-patterns/online-transaction-processing.md)
-    - [Online Analytical Processing (OLAP)](../pipeline-patterns/online-analytical-processing.md)
-    - [Data Warehousing](../pipeline-patterns/data-warehousing.md)
+    - [Online Transaction Processing (OLTP)](../solutions/online-transaction-processing.md)
+    - [Online Analytical Processing (OLAP)](../solutions/online-analytical-processing.md)
+    - [Data Warehousing](../solutions/data-warehousing.md)
 - Handling text data
     - [Processing CSV and JSON files](../pipeline-patterns/processing-csv-and-json-files.md)
     - [Processing free form text](../pipeline-patterns/processing-free-form-text.md)

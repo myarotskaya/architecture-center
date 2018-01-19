@@ -97,15 +97,15 @@ The following tables summarize the key differences in capabilities between each.
 \++ Python packages can be installed using either pip or conda. R packages can be installed from CRAN or GitHub. Packages in F# can be installed via nuget.org using the [Paket dependency manager](https://fsprojects.github.io/Paket/).
 
 ## Where to go from here
-Read Next: [Big Data Common Architecture](../common-architectures/big-data.md)
+Read Next: [Big Data Common Architecture](../concepts/big-data.md)
 
 See also:
 
 Related pipeline patterns
 - Working with transactional data
-    - [Online Transaction Processing (OLTP)](../pipeline-patterns/online-transaction-processing.md)
-    - [Online Analytical Processing (OLAP)](../pipeline-patterns/online-analytical-processing.md)
-    - [Data Warehousing](../pipeline-patterns/data-warehousing.md)
+    - [Online Transaction Processing (OLTP)](../solutions/online-transaction-processing.md)
+    - [Online Analytical Processing (OLAP)](../solutions/online-analytical-processing.md)
+    - [Data Warehousing](../solutions/data-warehousing.md)
 - Handling text data
     - [Processing CSV and JSON files](../pipeline-patterns/processing-csv-and-json-files.md)
     - [Processing free form text](../pipeline-patterns/processing-free-form-text.md)

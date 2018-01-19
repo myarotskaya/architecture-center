@@ -34,9 +34,9 @@ Relevant Azure service:
 
 ## Related pipeline patterns
 
-- [Online Analytical Processing](../pipeline-patterns/online-analytical-processing.md)
-- [Online Transaction Processing](../pipeline-patterns/online-transaction-processing.md)
-- [Data Warehousing](../pipeline-patterns/data-warehousing.md)
+- [Online Analytical Processing](../solutions/online-analytical-processing.md)
+- [Online Transaction Processing](../solutions/online-transaction-processing.md)
+- [Data Warehousing](../solutions/data-warehousing.md)
 
 ## Technology choices
 

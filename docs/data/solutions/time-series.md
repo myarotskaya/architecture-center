@@ -24,7 +24,7 @@ In each of these cases, you can see how time is most meaningful as an axis. Disp
 
 Data collected by IoT devices is a natural fit for time series storage and analysis. The incoming data is inserted and rarely, if ever, updated. The data is time stamped and inserted in the order it was received, and this data is typically displayed in chronological order, enabling users to discover trends, spot anomalies, and use the information for predictive analysis.
 
-[Read more about Internet of Things](../common-architectures/big-data.md#internet-of-things-iot) in the big data common architecture article.
+[Read more about Internet of Things](../concepts/big-data.md#internet-of-things-iot) in the big data common architecture article.
 
 ### Real-time analytics
 

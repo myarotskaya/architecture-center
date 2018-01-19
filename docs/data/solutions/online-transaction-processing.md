@@ -7,7 +7,7 @@ ms:date: 01/17/2018
 
 # Online transaction processing (OLTP)
 
-The management of [transactional data](../common-architectures/transactional-data.md) using computer systems is referred to as Online Transaction Processing or OLTP. OLTP systems record the business interactions as they occur in the day-to-day operation of the organization, and support querying of this data to make inferences related to these business transactions.
+The management of [transactional data](../concepts/transactional-data.md) using computer systems is referred to as Online Transaction Processing or OLTP. OLTP systems record the business interactions as they occur in the day-to-day operation of the organization, and support querying of this data to make inferences related to these business transactions.
 
 ## When to use this solution
 
@@ -28,7 +28,7 @@ Implementing and using an OLTP system can create a few challenges:
 ## OLTP in Azure
 Applications such as websites hosted in Azure Web Apps, REST APIs running within API Apps, or mobile or desktop applications communicate with the OLTP system (typically via a REST API intermediary).
 
-In practice, most workloads are not purely OLTP - there tends to be an [analytical component](../pipeline-patterns/online-analytical-processing.md) to it as well. In addition, there is an increasing demand for real-time reporting, such as running reports against the operational system. This is also referred to as HTAP (Hybrid Transactional and Analytical Processing). For more information, see [Online Analytical Processing (OLAP) data stores](../technology-choices/olap-data-stores.md).
+In practice, most workloads are not purely OLTP - there tends to be an [analytical component](../solutions/online-analytical-processing.md) to it as well. In addition, there is an increasing demand for real-time reporting, such as running reports against the operational system. This is also referred to as HTAP (Hybrid Transactional and Analytical Processing). For more information, see [Online Analytical Processing (OLAP) data stores](../technology-choices/olap-data-stores.md).
 
 ![OLTP in Azure](./images/oltp-data-pipeline.png)
 

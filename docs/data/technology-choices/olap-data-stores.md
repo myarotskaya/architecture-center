@@ -64,15 +64,15 @@ The following tables summarize the key differences in capabilities between each.
 
 ## Where to go from here
 Read next:
-[Data Warehousing pipeline pattern](../pipeline-patterns/data-warehousing.md)
+[Data Warehousing pipeline pattern](../solutions/data-warehousing.md)
 
 See also:
 
 Related pipeline patterns
 - Working with transactional data
-    - [Online Transaction Processing (OLTP)](../pipeline-patterns/online-transaction-processing.md)
-    - [Online Analytical Processing (OLAP)](../pipeline-patterns/online-analytical-processing.md)
-    - [Data Warehousing](../pipeline-patterns/data-warehousing.md)
+    - [Online Transaction Processing (OLTP)](../solutions/online-transaction-processing.md)
+    - [Online Analytical Processing (OLAP)](../solutions/online-analytical-processing.md)
+    - [Data Warehousing](../solutions/data-warehousing.md)
 
 Related technology choices
 - Transactional data stores

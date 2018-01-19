@@ -64,7 +64,7 @@ The following table summarize the key differences in capabilities between each. 
 See also: <!--No suggested "Read next" for this one?-->
 
 Related pipeline patterns
-- [Handling Time Series Data](../pipeline-patterns/time-series.md)
+- [Handling Time Series Data](../solutions/time-series.md)
 
 Related technology choices
 - [Data ingestion](./data-ingest.md)

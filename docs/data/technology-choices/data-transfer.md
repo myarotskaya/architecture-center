@@ -218,15 +218,15 @@ Based on your responses to the questions above, the following tables will help y
 \* Azure portal in this case means using the web-based exploration tools for Blob storage and Data Lake Store. This excludes using the portal for other services, such as Azure Data Factory.
 
 ## Where to go from here
-Read next: [Data Pipeline Common Architecture](../common-architectures/data-pipeline.md)
+Read next: [Data Pipeline Common Architecture](../solutions/data-pipeline.md)
 
 See also:
 
 Related pipeline patterns
 - Working with transactional data
-    - [Online Transaction Processing (OLTP)](../pipeline-patterns/online-transaction-processing.md)
-    - [Online Analytical Processing (OLAP)](../pipeline-patterns/online-analytical-processing.md)
-    - [Data Warehousing](../pipeline-patterns/data-warehousing.md)
+    - [Online Transaction Processing (OLTP)](../solutions/online-transaction-processing.md)
+    - [Online Analytical Processing (OLAP)](../solutions/online-analytical-processing.md)
+    - [Data Warehousing](../solutions/data-warehousing.md)
 - Handling text data
     - [Processing CSV and JSON files](../pipeline-patterns/processing-csv-and-json-files.md)
     - [Processing free form text](../pipeline-patterns/processing-free-form-text.md)
