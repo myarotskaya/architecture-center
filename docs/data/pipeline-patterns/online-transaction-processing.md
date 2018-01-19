@@ -7,7 +7,7 @@ ms:date: 01/17/2018
 
 # Online Transaction Processing (OLTP)
 
-The management of [transactional data](../common-architectures/relational-data.md#transactional-data) using computer systems is referred to as Online Transaction Processing or OLTP. OLTP systems record the business interactions as they occur in the day-to-day operation of the organization, and support querying of this data to make inferences related to these business transactions.
+The management of [transactional data](../common-architectures/transactional-data.md) using computer systems is referred to as Online Transaction Processing or OLTP. OLTP systems record the business interactions as they occur in the day-to-day operation of the organization, and support querying of this data to make inferences related to these business transactions.
 
 ## When to use this solution
 

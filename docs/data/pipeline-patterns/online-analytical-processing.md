@@ -21,7 +21,7 @@ OLAP systems are optimized for read heavy scenarios, such as analytics and busin
 
 OLAP allows business users to slice and dice <!--I've flagged this elsewhere as slang. It should be replaced with something that will work for ESL readers. Note it is not commonly used on MSDN.--> data as needed, regardless of whether the source data is partitioned across several data sources. This helps users to find trends, spot patterns, drill down, and "wander" <!--This also feels like slang, or at least may not be as clear to an ESL reader.--> around the data without having to know the detailed ins and outs of traditional data analysis.
 
-[Semantic models](../common-architectures/relational-data.md#semantic-modeling) can help business users abstract relationship complexities and make it easier to analyze the data much faster than they'd be able to otherwise, if at all.
+[Semantic models](../common-architectures/semantic-modeling.md) can help business users abstract relationship complexities and make it easier to analyze the data much faster than they'd be able to otherwise, if at all.
 
 ## Challenges
 
