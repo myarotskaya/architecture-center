@@ -5,7 +5,7 @@ author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Online analytical processing (OLAP) data stores in Azure
+# Technology choices: Online analytical processing (OLAP)
 
 ## What are your options when choosing an OLAP data store?
 In Azure, all of the following data stores will meet the core requirements for OLAP:

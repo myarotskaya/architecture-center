@@ -5,7 +5,7 @@ author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Data pipeline orchestration, control flow, and data movement in Azure
+# Technology choices: Data pipeline orchestration, control flow, and data movement
 
 ## What are your options for pipeline orchestration, control flow, and data movement?
 In Azure, the following services and tools will meet the core requirements for pipeline orchestration, control flow, and data movement:

@@ -5,7 +5,7 @@ author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Options for data serving storage in Azure
+# Technology choices: Data serving storage
 
 In the [big data](../common-architectures/big-data.md) common architecture, we reviewed the overall layout and uses of both the lambda and kappa architectures. Both of these pipelines require an analytical data store that serves processed data in a structured format that can be queried using analytical tools. The analytical data stores that support querying of both hot path data and cold path data by client applications and BI tools are collectively referred to as the serving layer, or data serving storage.
 

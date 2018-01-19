@@ -5,7 +5,7 @@ author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Options for data ingestion in Azure
+# Technology choices: Data ingestion
 
 ## What are your options when choosing a data ingest method?
 There are several options for ingesting data into Azure, depending on your needs:

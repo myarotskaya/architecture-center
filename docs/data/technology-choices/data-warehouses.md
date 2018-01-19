@@ -5,7 +5,7 @@ author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Data warehouses in Azure
+# Technology choices: Data warehouses
 
 ## What are your options when choosing a data warehouse?
 There are several options for implementing a data warehouse in Azure, depending on your needs:<!--I would probably have the text below these options first. In fact, I originally had a comment about whether we needed to spell out SMP and MPP for the audience. If the reader isn't familiar with these concepts would they really benefit from going off and reading the material at the links without the context provided by the info below?-->
