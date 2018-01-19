@@ -10,7 +10,9 @@
       - name: Relational data
         href: common-architectures/relational-data.md 
       - name: Transactional data
+        href: common-architectures/transactional-data.md 
       - name: Semantic modeling
+        href: common-architectures/semantic-modeling.md 
     - name: Solutions
       items:
       - name: ETL / ELT
