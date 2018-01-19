@@ -5,7 +5,7 @@ author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Online Transaction Processing (OLTP) data stores in Azure
+# Online transaction processing (OLTP) data stores in Azure
 
 
 ## What are your options when choosing an OLTP data store?

@@ -30,16 +30,5 @@ Here are the common architectures covered in this guide:
 - [Advanced analytics](./common-architectures/advanced-analytics.md)
 - [Interactive data exploration](./common-architectures/interactive-data-exploration.md)
 
-## Implementation examples
 
-The following examples are technology implementations we have seen directly in our customer engagements. The examples can help lead you into the content to make the right technology choices for your business. 
-
-- [On-demand big data analytics](./implementation-examples/on-demand-big-data-analytics.md)
-- [Advanced analytics and deep learning](./implementation-examples/advanced-analytics-deep-learning.md)
-- [Hybrid data architecture](./implementation-examples/hybrid-data-architecture.md)
-- [Clickstream analysis](./implementation-examples/clickstream-analysis.md)
-- [Business intelligence](./implementation-examples/business-intelligence.md)
-- [Intelligent applications](./implementation-examples/intelligent-applications.md)
-- [Data warehousing](./implementation-examples/data-warehousing.md)
-- [Extract, transform, load (ETL)](./implementation-examples/etl.md)
 
