@@ -22,7 +22,7 @@ Another use for free-form text processing is summarization of text content by id
 - **Sentence boundary detection**: detecting complete sentences within paragraphs of text.
 
 
-## When to use this architecture
+## When to use this solution
 Use free-form text processing when your text data arrives in an unstructured format and you want to enable full-text search or perform some additional natural language processing against it. Generally this means it arrives in a document format, where applying a schema to the data would be difficult or impossible.
 
 ## Benefits

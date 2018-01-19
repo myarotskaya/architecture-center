@@ -17,7 +17,7 @@ This last bit about storage for cold data can mean a couple of things. First, ba
 
 The most common use of CSV and JSON files is for exchanging or ingesting data into your environment. CSVs are more commonly used for exporting and importing data that can be used to store the data in a variety of databases, or processing it for analytics and machine learning. JSON-formatted files have the same benefits, but are more prevalent in hot data exchange solutions, where JSON documents are sent across the wire by web and mobile devices performing online transactions, by IoT (internet of things) devices for one-way or bidirectional communication, communicating with SaaS and PaaS services or serverless architectures, as well as between nodes within a microservices architecture. <!--This is last sentence is pretty long. I thought about breaking it up, but wasn't sure the best way to do that.-->
 
-## When to use this architecture
+## When to use this solution
 Use CSV and JSON file processing when your data arrives in a semi-structured format. Typically, this means that you need to store the data in another form that complies with your environment's data storage needs, such as within a database, when you need to apply a schema on the semi-structured data to make it easier to query and analyze.
 
 ## Benefits

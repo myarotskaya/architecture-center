@@ -9,7 +9,8 @@ ms:date: 01/17/2018
 
 The management of [transactional data](../common-architectures/relational-data.md#transactional-data) using computer systems is referred to as Online Transaction Processing or OLTP. OLTP systems record the business interactions as they occur in the day-to-day operation of the organization, and support querying of this data to make inferences related to these business transactions.
 
-## When to use this architecture
+## When to use this solution
+
 Choose OLTP when you have a data pipeline from source to data storage that needs to efficiently process and store business interactions and immediately make them available to client applications in a consistent way. Use this architecture when any tangible delay in processing would have a negative impact on the day-to-day operations of the business.
 
 ## Benefits

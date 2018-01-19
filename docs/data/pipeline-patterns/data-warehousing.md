@@ -16,7 +16,7 @@ To move data into a data warehouse, it is extracted on a periodic basis from var
 ### Data marts and operational data stores
 Owing to the complexities of managing data at scale it is becoming less common to have a single data warehouse that tries to represent the entire data estate of the enterprise across all scenarios. Instead, smaller more focused data warehouses referred to as data marts are created that expose the desired data for analytics purposes. These data marts are populated using an orchestration process from data maintained in an operational data store, which acts as intermediary between the source transactional system and the data mart. The data managed by the operational data store is a cleaned version of the data present in the source transactional system, and typically a subset of the historical data that is maintained by the data warehouse or data mart. 
 
-## When to use this architecture
+## When to use this solution
 
 Choose a data warehouse when you need to turn massive amounts of data from operational systems into a format that is easy to understand, current, and accurate so decisions can be made on the data. Data warehouses do not need to follow the same terse data structure you may be using in your operational/OLTP databases. You can use column names that make sense to business users and analysts, restructure the schema to simplify data relationships, and consolidate many tables, such as customers, into one. These steps help guide users who need to create ad hoc reports, or create reports and analyze the data in BI systems, without the help of a database administrator (DBA) or data developer.
 

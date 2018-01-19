@@ -11,7 +11,7 @@ The databases that a business uses to store all its transactions and records are
 
 ![OLAP in Azure](./images/olap-data-pipeline.png) <!--Virtual machines should be spelled out.-->
 
-## When to use this architecture
+## When to use this solution
 
 Choose OLAP when you need to rapidly execute complex analytical and ad hoc queries without negatively impacting your OLTP systems trying to conduct other transactions. Also consider using this architecture when you want to provide business users with a simple way to generate reports off your data&mdash;without them needing to know how to work with the underlying data relationships or figure out naming conventions&mdash;and when you want to provide a number of aggregations that will allow them to have fast, consistent results. <!--This sentence was a little dense, and I got lost in commas on first read, does this work?-->OLAP really shines when you want to apply aggregate calculations over large amounts of data.
 
