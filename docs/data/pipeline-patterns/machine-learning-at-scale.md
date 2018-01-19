@@ -51,7 +51,3 @@ Once you have decided that a custom model is warranted, then you can begin to de
 
 ![Model options in Azure](./images/machine-learning-model-training-and-deployment.png)<!--VM should be spelled out as virtual machine.-->
 
-## Technology choices
-
-- [Data science and machine learning](../technology-choices/data-science-and-machine-learning.md)
-

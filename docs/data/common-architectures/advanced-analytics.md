@@ -84,13 +84,3 @@ Relevant Azure services:
 - [Machine Learning Server (R Server) on HDInsight](/azure/hdinsight/r-server/r-server-overview)
 
 
-## Related pipeline patterns
-
-- [Machine Learning](../pipeline-patterns/machine-learning-at-scale.md)
-- [Processing CSV and JSON files](../pipeline-patterns/processing-csv-and-json-files.md)
-
-## Technology choices
-
-- [Data science and machine learning](../technology-choices/data-science-and-machine-learning.md)
-- [Cognitive services](../technology-choices/cognitive-services.md)
-

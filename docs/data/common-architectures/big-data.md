@@ -124,15 +124,3 @@ Relevant Azure service:
 Learn more about IoT on Azure by reading the [Azure IoT reference architecture](https://azure.microsoft.com/updates/microsoft-azure-iot-reference-architecture-available/).
 
 
-## Related pipeline patterns
-
-- [Processing CSV and JSON Files pipeline pattern](../pipeline-patterns/processing-csv-and-json-files.md)
-- [Processing free-form text files](../pipeline-patterns/processing-free-form-text.md)
-- [Time-series solutions](../pipeline-patterns/time-series.md)
-
-## Technology choices
-
-- [Data serving storage](../technology-choices/data-serving-storage.md)
-- [Options for processing CSV and JSON files](../technology-choices/csv-json-options.md)
-- [Search data stores](../technology-choices/search-options.md)
-- [Natural language processing](../technology-choices/natural-language-processing.md)

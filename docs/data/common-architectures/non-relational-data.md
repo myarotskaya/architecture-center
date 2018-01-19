@@ -138,16 +138,7 @@ The following compares the requirements for each of the non-relational data stor
 | Wide (lots of columns/attributes) | Yes | Yes | No | No | No | Yes | Yes |  
 | Query interface | API or SQL | API or SQL | API | API | API | API | API | 
 | Query flexibility (variety of access patterns supported) | Flexible | Flexible | Inflexible | Inflexible | Inflexible | Flexible |
-| Datum size | Small (KBs) to medium (low MBs) | Medium (MBs) to Large (low GBs) | Small (KBs) | Small (KBs) | Small (KBs) | Large (GBs) to Very Large (TBs) | Small (KBs) |<!--I know it looks wrong, but it isn't. These aren't possessive or contractions.-->
+| Datum size | Small (KBs) to medium (low MBs) | Medium (MBs) to Large (low GBs) | Small (KBs) | Small (KBs) | Small (KBs) | Large (GBs) to Very Large (TBs) | Small (KBs) |
 | Overall Maximum Scale | Very Large (PBs) | Very Large (PBs) | Very Large (PBs) | Large (TBs) | Large (low TBs)  | Very Large (PBs) | Large (low TBs) | 
 
 
-## Related pipeline patterns 
-
-- [Processing CSV and JSON files](../pipeline-patterns/processing-csv-and-json-files.md)
-- [Processing Free-form Text](../pipeline-patterns/processing-free-form-text.md)
-- [Handling Time Series Data](../pipeline-patterns/time-series.md)
-
-## Technology choices
-
-- [Options for processing CSV and JSON files](../technology-choices/csv-json-options.md) 

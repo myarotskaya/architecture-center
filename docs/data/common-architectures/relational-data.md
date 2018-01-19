@@ -28,17 +28,3 @@ Relational databases support varying forms of constraints, including:
 Additionally, relational databases allow for the storage of executable code routines in the form of stored procedures and functions, which enable a mixture of declarative and procedural approaches.
 
 If data is non-relational or has requirements that are not suited to a relational database, consider [Non-relational and No-SQL common architectures](./non-relational-data.md).
-
-
-
-## Related pipeline patterns 
-
-- [Data Warehousing](../pipeline-patterns/data-warehousing.md)
-- [Online Analytical Processing (OLAP)](../pipeline-patterns/online-analytical-processing.md)
-- [Online Transaction Processing (OLTP)](../pipeline-patterns/online-transaction-processing.md)
-
-## Technology choices
-
-- [Data warehouses](../technology-choices/data-warehouses.md)
-- [Online Analytical Processing (OLAP) data stores](../technology-choices/olap-data-stores.md)
-- [Online Transaction Processing (OLTP) data stores](../technology-choices/oltp-data-stores.md)

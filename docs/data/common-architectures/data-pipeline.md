@@ -5,13 +5,13 @@ author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Data Pipeline
+# Extract, transform, and load (ETL)
 
 Gathering data from multiple sources, in multiple formats, and moving it to one or more data stores is a common problem organizations face on a daily basis. The destination may not be the same type of data store as the source, and often the format is different, or the data needs to be shaped or cleaned in some fashion prior to loading it into its final destination.
 
 Various tools, services, and processes have been developed over the years to help address these challenges. No matter the process used, there is a common need to coordinate the work and apply some level of data transformation within the data pipeline. The following sections highlight the common methods used to perform these tasks.
 
-## Extract, transform, and load
+## Extract, transform, and load (ETL)
 
 Extract, transform, and load (ETL) is a data pipeline used to collect data from various sources (that's the extract step), transform the data according to business rules, and load it into a destination data store. The transformation work in ETL takes place in a specialized engine, and often involves using staging tables to temporarily hold data as it is being transformed and ultimately loaded to its destination.
 
@@ -27,7 +27,7 @@ Relevant Azure service:
 Other tools:
 - [SQL Server Integration Services (SSIS)](/sql/integration-services/sql-server-integration-services)
 
-## Extract, load, and transform
+## Extract, load, and transform (ELT)
 
 Extract, load, and transform (ELT) pipeline differs from ETL solely in where the transformation takes place. In the ELT pipeline, the transformation occurs in the target data store. The processing capabilities of the target data store are used to implement the transformation (typically authored in SQL), as opposed to the extra set of technologies the transformation engine may introduce. This simplifies the data pipeline somewhat, by removing the transformation engine from the pipeline, but only works well when the target system is powerful enough to efficiently transform the data. The side benefit to this approach is that scaling the target data store also scales the ELT pipeline performance.
 
@@ -48,7 +48,7 @@ Relevant Azure service:
 Other tools:
 - [SQL Server Integration Services (SSIS)](/sql/integration-services/sql-server-integration-services)
 
-## Data flow & control flow
+## Data flow and control flow
 
 In the context of data pipelines, the control flow ensures orderly processing of a set of tasks. To enforce the correct processing order of these tasks, precedence constraints are used. You can think of these constraints as connectors in a workflow diagram, as shown in the image below. Each task has an outcome, such as success, failure, or completion. Thanks in part to the precedence constraints, any subsequent task does not initiate processing until its predecessor has completed with one of these outcomes.
 
@@ -63,12 +63,6 @@ Relevant Azure service:
 
 Other tools:
 - [SQL Server Integration Services (SSIS)](/sql/integration-services/sql-server-integration-services)
-
-## Related pipeline patterns
-
-- [Online Transaction Processing (OLTP)](../pipeline-patterns/online-transaction-processing.md)
-- [Online Analytical Processing (OLAP)](../pipeline-patterns/online-analytical-processing.md)
-- [Data Warehousing](../pipeline-patterns/data-warehousing.md)
 
 ## Technology choices
 
