@@ -86,9 +86,3 @@
       href: pipeline-patterns/monitoring-data-solutions.md 
     - name: Secure data solutions
       href: pipeline-patterns/secure-solutions.md 
-
-
-      - name: Processing CSV and JSON files
-        href: pipeline-patterns/processing-csv-and-json-files.md 
-      - name: Processing free-form text
-        href: pipeline-patterns/processing-free-form-text.md 
