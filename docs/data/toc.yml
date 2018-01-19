@@ -15,20 +15,20 @@
       items:
       - name: ETL / ELT
         href: common-architectures/data-pipeline.md 
-      - name: Online transaction processing (OLTP)
-        href: pipeline-patterns/online-transaction-processing.md 
-      - name: Online analytical processing (OLAP)
-        href: pipeline-patterns/online-analytical-processing.md 
       - name: Data warehousing and data marts
         href: pipeline-patterns/data-warehousing.md 
+      - name: Online analytical processing (OLAP)
+        href: pipeline-patterns/online-analytical-processing.md 
+      - name: Online transaction processing (OLTP)
+        href: pipeline-patterns/online-transaction-processing.md 
     - name: Technology choices
       items:
-      - name: Online transaction processing (OLTP) data stores
-        href: technology-choices/oltp-data-stores.md 
-      - name: Online analytical processing (OLAP) data stores
-        href: technology-choices/olap-data-stores.md 
       - name: Data warehouses
         href: technology-choices/data-warehouses.md 
+      - name: Online analytical processing (OLAP) data stores
+        href: technology-choices/olap-data-stores.md 
+      - name: Online transaction processing (OLTP) data stores
+        href: technology-choices/oltp-data-stores.md 
       - name: Pipeline orchestration, control flow, and data movement
         href: technology-choices/pipeline-orchestration-data-movement.md 
   - name: Big Data
@@ -53,35 +53,35 @@
         href: pipeline-patterns/time-series.md 
     - name: Technology choices
       items:
-      - name: Data ingestion
-        href: technology-choices/data-ingest.md 
       - name: Batch processing
         href: technology-choices/batch-processing.md 
-      - name: Real-time processing
-        href: technology-choices/real-time-processing.md 
-      - name: Data serving storage
-        href: technology-choices/data-serving-storage.md 
-      - name: Options for processing CSV and JSON files
-        href: technology-choices/csv-json-options.md
-      - name: Data science and machine learning
-        href: technology-choices/data-science-and-machine-learning.md 
       - name: Cognitive services
         href: technology-choices/cognitive-services.md 
-      - name: Search data stores
-        href: technology-choices/search-options.md 
+      - name: CSV and JSON file processing
+        href: technology-choices/csv-json-options.md
+      - name: Data ingestion
+        href: technology-choices/data-ingest.md 
+      - name: Data science and machine learning
+        href: technology-choices/data-science-and-machine-learning.md 
+      - name: Data serving storage
+        href: technology-choices/data-serving-storage.md 
       - name: Natural language processing
         href: technology-choices/natural-language-processing.md 
+      - name: Real-time processing
+        href: technology-choices/real-time-processing.md 
+      - name: Search data stores
+        href: technology-choices/search-options.md 
   - name: Cross-cutting concerns
     items:
-    - name: Hybrid on-premises and cloud solutions
-      href: pipeline-patterns/hybrid-on-premises-and-cloud.md 
-    - name: Secure data solutions
-      href: pipeline-patterns/secure-solutions.md 
-    - name: Monitoring data solutions
-      href: pipeline-patterns/monitoring-data-solutions.md 
-    - name: Data transfer
-      href: technology-choices/data-transfer.md 
     - name: Analysis, visualizations, and reporting
       href: technology-choices/analysis-visualizations-reporting.md 
+    - name: Data transfer
+      href: technology-choices/data-transfer.md 
+    - name: Hybrid on-premises and cloud solutions
+      href: pipeline-patterns/hybrid-on-premises-and-cloud.md 
+    - name: Monitoring data solutions
+      href: pipeline-patterns/monitoring-data-solutions.md 
+    - name: Secure data solutions
+      href: pipeline-patterns/secure-solutions.md 
 
 
