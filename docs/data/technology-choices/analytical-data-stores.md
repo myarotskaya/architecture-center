@@ -93,5 +93,5 @@ Related pipeline patterns
 - [Handling Time Series Data](../solutions/time-series.md)
 
 Related technology choices
-- [Data ingestion](./data-ingest.md)
-- [Real-time processing](./real-time-processing.md)
+- [Data Storage](./data-storage.md)
+- [Stream processing](./stream-processing.md)

@@ -114,4 +114,4 @@ Related technology choices
 - [Online Transaction Processing (OLTP) data stores](../technology-choices/oltp-data-stores.md)
 - [Online Analytical Processing (OLAP) data stores](../technology-choices/olap-data-stores.md)
 - [Data warehouses](../technology-choices/data-warehouses.md)
-- [Data serving storage](../technology-choices/data-serving-storage.md)
+- [Analytical Data Stores](../technology-choices/analytical-data-stores.md)

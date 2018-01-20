@@ -67,7 +67,7 @@ Related pipeline patterns
 - [Handling Time Series Data](../solutions/time-series.md)
 
 Related technology choices
-- [Data ingestion](./data-ingest.md)
+- [Data Storage](./data-storage.md)
 
 
 

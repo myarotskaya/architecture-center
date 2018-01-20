@@ -53,7 +53,7 @@
       - name: Natural language processing
         href: solutions/natural-language-processing.md
       - name: Real time processing
-        href: solutions/real-time-processing.md
+        href: solutions/stream-processing.md
       - name: Search
         href: solutions/search.md
       - name: Time series solutions
@@ -61,7 +61,7 @@
     - name: Technology choices
       items:
       - name: Analytical data stores
-        href: technology-choices/data-serving-storage.md 
+        href: technology-choices/analytical-data-stores.md 
       - name: Analytics and reporting
         href: technology-choices/analysis-visualizations-reporting.md 
       - name: Batch processing
@@ -69,16 +69,17 @@
       - name: Cognitive services
         href: technology-choices/cognitive-services.md 
       - name: Data storage
+        href: data-storage.md
       - name: Machine learning
         href: technology-choices/data-science-and-machine-learning.md 
       - name: Real-time message ingestion
-        href: technology-choices/data-ingest.md
+        href: technology-choices/real-time-ingestion.md
       - name: Natural language processing
         href: technology-choices/natural-language-processing.md 
       - name: Search data stores
         href: technology-choices/search-options.md
       - name: Stream processing
-        href: technology-choices/real-time-processing.md 
+        href: technology-choices/stream-processing.md
   - name: Cross-cutting concerns
     items:
     - name: Data transfer

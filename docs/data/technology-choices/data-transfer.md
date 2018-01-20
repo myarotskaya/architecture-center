@@ -149,7 +149,7 @@ If your data store is behind a firewall and you are using v1 of Data Factory, us
 
 ### Data ingest
 
-Your data sources may need to be ingested into Azure, rather than simply copied from a data storage location. An example of this is ingesting telemetry data from internet of things (IoT) devices. Other examples include clickstream data from web applications, or distributed software. Read the [data ingest](../technology-choices/data-ingest.md) technology choices article for more information.
+Your data sources may need to be ingested into Azure, rather than simply copied from a data storage location. An example of this is ingesting telemetry data from internet of things (IoT) devices. Other examples include clickstream data from web applications, or distributed software. Read the [data ingest](../technology-choices/data-storage.md) technology choices article for more information.
 
 ## How do you choose?
 Each data transfer solution brings with it a unique set of capabilities, giving you the option to select the one that most closely meets your requirements.
@@ -233,5 +233,5 @@ Related pipeline patterns
 
 
 Related technology choices
-- [Data ingestion](../technology-choices/data-ingest.md)
+- [Data Storage](../technology-choices/data-storage.md)
 - [Pipeline orchestration, control flow, and data movement](../technology-choices/pipeline-orchestration-data-movement.md)
