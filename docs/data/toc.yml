@@ -69,16 +69,17 @@
       - name: Cognitive services
         href: technology-choices/cognitive-services.md 
       - name: Data storage
+      - name: Machine learning
+        href: technology-choices/data-science-and-machine-learning.md 
       - name: Real-time message ingestion
         href: technology-choices/data-ingest.md 
-      - name: Data science and machine learning
-        href: technology-choices/data-science-and-machine-learning.md 
       - name: Natural language processing
         href: technology-choices/natural-language-processing.md 
       - name: Real-time processing
         href: technology-choices/real-time-processing.md 
       - name: Search data stores
         href: technology-choices/search-options.md 
+      - name: Stream Processing
   - name: Cross-cutting concerns
     items:
     - name: Data transfer
