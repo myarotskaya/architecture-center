@@ -48,10 +48,14 @@
     - name: Solutions
       items:
       - name: Batch processing
+        href: solutions/batch-processing.md
       - name: Internet of Things (IoT)
       - name: Natural language processing
+        href: solutions/natural-language-processing.md
       - name: Real time processing
+        href: solutions/real-time-processing.md
       - name: Search
+        href: solutions/search.md
       - name: Time series solutions
         href: solutions/time-series.md
     - name: Technology choices

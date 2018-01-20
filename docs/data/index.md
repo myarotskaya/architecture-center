@@ -17,7 +17,7 @@ TODO: This image needs an update with the lighter blue and the gray arrows.
 
 ## How this guide is structured
 
-This guide covers the big picture concepts in [common data architectures](./common-architectures/index.md) and leads you to the pipeline patterns used by each architecture. The pipeline patterns are used to describe how the various processing and storage components fit together when handling the data. Finally, the technology choices will help you narrow the list of candidate Azure services--that are appropriate to your pipeline pattern--down to those services that are most appropriate to your specific requirements.
+This guide covers the big picture concepts in common data architectures and leads you to the pipeline patterns used by each architecture. The pipeline patterns are used to describe how the various processing and storage components fit together when handling the data. Finally, the technology choices will help you narrow the list of candidate Azure services--that are appropriate to your pipeline pattern--down to those services that are most appropriate to your specific requirements.
 
 ![Overview of the structure of the guide](./images/overview-flowchart.png)
 
