@@ -8,6 +8,22 @@ Real-time processing is defined as the processing of a typically infinite stream
 
 Processed data is often written to an analytical data store, which is optimized for analytics and visualization. The processed data can also be ingested directly into the analytics and reporting layer for analysis, business intelligence, and real-time dashboard visualization.
 
+## Challenges
+
+One of the big challenges of real-time processing solutions is to ingest, process, and store messages in real time, especially at high volumes. Processing must be done in such a way that it does not block the ingestion pipeline. The data store must support high-volume writes. Another challenge is being able to act on the data quickly, such as generating alerts in real time or presenting the data in a real-time (or near-real-time) dashboard.
+
+## Architecture
+
+A real-time processing architecture corresponds to the hot path of a [lambda architecture](../concepts/big-data.md#lambda-architecture), and has the following logical components.
+
+- **Real-time message ingestion.** The architecture must include a way to capture and store realtime messages to be consumed by a stream processing consumer. In simple cases, this service could be implemented as a simple data store in which new messages are deposited in a folder. But often the solution requires a message broker such as Azure Event Hubs, that acts as a buffer for the messages and supports scale-out processing, reliable delivery, and other message queuing semantics.
+
+- **Stream processing.** After capturing realtime messages, the solution must process them by filtering, aggregating, and otherwise preparing the data for analysis.
+
+- **Analytical data store.** Many big data solutions are designed to prepare data for analysis and then serve the processed data in a structured format that can be queried using analytical tools. 
+
+- **Analysis and reporting.** The goal of most big data solutions is to provide insights into the data through analysis and reporting. 
+
 ## Technology choices
 
 Typical technologies used in a real-time processing solution include:
