@@ -60,18 +60,19 @@
         href: solutions/time-series.md
     - name: Technology choices
       items:
+      - name: Analytical data stores
+        href: technology-choices/data-serving-storage.md 
+      - name: Analytics and reporting
+        href: technology-choices/analysis-visualizations-reporting.md 
       - name: Batch processing
         href: technology-choices/batch-processing.md 
       - name: Cognitive services
         href: technology-choices/cognitive-services.md 
-      - name: CSV and JSON file processing
-        href: technology-choices/csv-json-options.md
-      - name: Data ingestion
+      - name: Data storage
+      - name: Real-time message ingestion
         href: technology-choices/data-ingest.md 
       - name: Data science and machine learning
         href: technology-choices/data-science-and-machine-learning.md 
-      - name: Data serving storage
-        href: technology-choices/data-serving-storage.md 
       - name: Natural language processing
         href: technology-choices/natural-language-processing.md 
       - name: Real-time processing
@@ -80,8 +81,6 @@
         href: technology-choices/search-options.md 
   - name: Cross-cutting concerns
     items:
-    - name: Analysis, visualizations, and reporting
-      href: technology-choices/analysis-visualizations-reporting.md 
     - name: Data transfer
       href: technology-choices/data-transfer.md 
     - name: Hybrid on-premises and cloud solutions
