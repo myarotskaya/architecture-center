@@ -4,7 +4,7 @@ Realtime processing deals with unbounded streams of data that are captured in re
 
 ![](./images/real-time-pipeline.png)
 
-Real-time processing is defined as the processing of a typically infinite stream of input data, whose time until results are ready is short &mdash; measured in milliseconds or seconds in the longest of cases. This incoming data typically arrives in an unstructured or semi-structured format, such as JSON, and has the same processing requirements as [batch processing](./batch-processing), but with shorter turnaround times to support real-time consumption.
+Real-time processing is defined as the processing of a typically infinite stream of input data, whose time until results are ready is short &mdash; measured in milliseconds or seconds in the longest of cases. This incoming data typically arrives in an unstructured or semi-structured format, such as JSON, and has the same processing requirements as [batch processing](./batch-processing.md), but with shorter turnaround times to support real-time consumption.
 
 Processed data is often written to an analytical data store, which is optimized for analytics and visualization. The processed data can also be ingested directly into the analytics and reporting layer for analysis, business intelligence, and real-time dashboard visualization.
 

@@ -69,7 +69,7 @@
       - name: Cognitive services
         href: technology-choices/cognitive-services.md 
       - name: Data storage
-        href: data-storage.md
+        href: technology-choices/data-storage.md
       - name: Machine learning
         href: technology-choices/data-science-and-machine-learning.md 
       - name: Real-time message ingestion
