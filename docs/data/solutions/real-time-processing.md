@@ -18,12 +18,13 @@ Typical technologies used in a real-time processing solution include:
 - Azure IoT Hubs. Azure IoT Hubs provide bi-directional communication between Internet-connected devices and a scalable message queue that can handle millions of simultaneously connected devices, with the ability to control device state and settings centrally.
 - Apache Kafka. Kafka is an open source message queuing and stream processing application that can scale to handle millions of messages per second from multiple message producers, and route them to multiple consumers. Kafka is available in Azure as an HDInsight cluster type.
 
-. [!NOTE]
-> For a comparison of Azure Event Hubs and Azure IoT Hubs, see [Comparison of Azure IoT Hub and Azure Event Hubs](/azure/iot-hub/iot-hub-compare-event-hubs). 
+For more information, see [Real-time message ingestion](../technology-choices/real-time-ingestion.md).
 
 ### Data storage
 
 - Azure Storage Blob Containers or Azure Data Lake Store. Incoming real-time data is usually captured in a message broker (see above), but in some scenarios, it can make sense to monitor a folder for new files and process them as they are created or updated. Additionally, many real-time processing solutions combine streaming data with static reference data, which can be stored in a file store. Finally, file storage may be used as an output destination for captured real-time data for archiving, or for further batch processing in a lambda architecture.
+
+For more information, see [Data storage](../technology-choices/data-storage.md).
 
 ### Stream processing
 
@@ -31,15 +32,19 @@ Typical technologies used in a real-time processing solution include:
 - Storm. Apache Storm is an open source framework for stream processing that uses a topology of spouts and bolts to consume, process, and output the results from real-time streaming data sources. You can provision Storm in an Azure HDInsight cluster, and implement a topology in Java or C#.
 - Spark Streaming. Apache Spark is an open source distributed platform for general data processing. Spark provides the Spark Streaming API, in which you can write code in any supported Spark language (including Java, Scala, and Python) to consume a discretized stream (DStream) of resilient distributed datasets (RDDs). From Spark 2.0, you can take advantage of the Spark Structured Streaming API, in which the streaming data is presented using the dataframe API – providing a simpler and more consistent programming model. Spark 2.0 is available in an Azure HDInsight cluster.
 
+For more information, see [Stream processing](../technology-choices/stream-processing.md).
+
 ### Analytical data store
 
 - SQL Data Warehouse, HBase, Spark, or Hive. Processed real-time data can be stored in a relational database such Azure SQL Data Warehouse, a NoSQL store such as HBase, or as files in distributed storage over which Spark, or Hive tables can be defined and queried.
 
-### Analytics and reporting:
+For more information, see [Analytical data stores](../technology-choices/analytical-data-stores.md).
+
+### Analytics and reporting
 
 - Azure Analysis Services, Power BI, and Microsoft Excel. Processed real-time data that is stored in an analytical data store can be used for historical reporting and analysis in the same way as batch processed data. Additionally, Power BI can be used to publish real-time (or near-real-time) reports and visualizations from analytical data sources where latency is sufficiently low, or in some cases directly from the stream processing output.
 
+For more information, see [Analytics and reporting](../technology-choices/analysis-visualizations-reporting.md).
+
 In a purely real-time solution, most of the processing orchestration is managed by the message ingestion and stream processing components. However, in a lambda architecture that combines batch processing and real-time processing, you may need to use an orchestration framework such as Azure Data Factory or Apache Oozie and Sqoop to manage batch workflows for captured real-time data.
-
-
 

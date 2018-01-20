@@ -21,12 +21,16 @@ Typical technologies used in a big data batch processing solution include:
 - Azure Storage Blob Containers. Many existing Azure business processes already make use of Azure blob storage, making this a good choice for a big data store.
 - Azure Data Lake Store. Azure Data Lake Store offers virtually unlimited storage for any size of file, and extensive security options; making it a great choice for extremely large scale big data solution that require a centralized store for data in all kind of format.
 
+For more information, see [Data storage](../technology-choices/data-storage.md).
+
 ### Batch processing
 
 - U-SQL. U-SQL is the query processing language used by Azure Data Lake Analytics. The language blend the declarative nature of SQL with the procedural extensibility of C#, and takes advantage of parallelism to enable efficient processing of data at massive scale.
 - Hive. Hive is a commonly used SQL-like language that is supported in most Hadoop distributions, including HDInsight. It can be used to process data from any HDFS-compatible store, including Azure blob storage and Azure Data Lake Store.
 - Pig. Pig is a declarative big data processing language used in many Hadoop distributions, including HDInsight. It is particularly useful for processing data that is unstructured or semi-structured.
 - Spark. The Spark engine supports batch processing programs written in a range of languages, including Java, Scala, and Python. Spark uses a distributed architecture to process data in parallel across multiple worker nodes.
+
+For more information, see [Batch processing](../technology-choices/batch-processing.md).
 
 ### Analytical data store
 
@@ -35,13 +39,17 @@ Typical technologies used in a big data batch processing solution include:
 - HBase. HBase is a low-latency NoSQL store that offers a high-performance, flexible option for querying structured and semi-structured data.
 - Hive. In addition to being useful for batch processing, Hive offers a database architecture that is conceptually similar to that of a typical relational database management system. Improvements in Hive query performance through innovations like the Tez engine and Stinger initiative mean that Hive tables can be used effectively as sources for analytical queries in some scenarios.
 
-## Analytics and reporting
+For more information, see [Analytical data stores](../technology-choices/analytical-data-stores.md).
+
+### Analytics and reporting
 
 - Azure Analysis Services. Many big data solutions emulate traditional enterprise business intelligence architectures by including a centralized online analytical processing (OLAP) data model (often referred to as a cube) on which reports, dashboards, and interactive “slice and dice” analysis can be based. Azure Analysis Services supports the creation of multidimensional and tabular models to meet this need.
 - Power BI. Power BI enables data analysis to create interactive data visualizations based on data models in an OLAP model or directly from an analytical data store.
 - Microsoft Excel. Microsoft Excel is one of the most widely used software applications in the world, and offers a wealth of data analysis and visualization capabilities. Data analysis can use Excel to build document data models from analytical data stores, or to retrieve data from OLAP data models into interactive PivotTables and charts.
 
-## Orchestration
+For more information, see [Analytics and reporting](../technology-choices/analysis-visualizations-reporting.md).
+
+### Orchestration
 
 - Azure Data Factory. Azure Data Factory pipelines can be used to define a sequence of activities, scheduled for recurring temporal windows. These activities can initiate data copy operations as well as Hive, Pig, MapReduce, or Spark jobs in on-demand HDInsight clusters; U-SQL jobs in Azure Date Lake Analytics; and stored procedures in Azure SQL Data Warehouse or Azure SQL Database.
 - Oozie and Sqoop. Oozie is a job automation engine for the Apache Hadoop ecosystem and can be used to initiate data copy operations as well as Hive, Pig, and MapReduce jobs to process data and Sqoop jobs to copy data between HDFS and SQL databases.
