@@ -13,10 +13,7 @@ The management of [transactional data](../concepts/transactional-data.md) using 
 
 Choose OLTP when you have a data pipeline from source to data storage that needs to efficiently process and store business interactions and immediately make them available to client applications in a consistent way. Use this architecture when any tangible delay in processing would have a negative impact on the day-to-day operations of the business.
 
-## Benefits
-OLTP systems are designed to efficiently process and store transactions, as well as query transactional data.
-
-The goal of efficiently processing and storing individual transactions by an OLTP system is in part accomplished by data normalization&mdash;that is, breaking the data up into smaller chunks that are less redundant. This supports efficiency because it enables the OLTP system to process large numbers of transactions independently, and avoids extra processing needed to maintain data integrity in the presence of redundant data.
+OLTP systems are designed to efficiently process and store transactions, as well as query transactional data. The goal of efficiently processing and storing individual transactions by an OLTP system is in part accomplished by data normalization&mdash;that is, breaking the data up into smaller chunks that are less redundant. This supports efficiency because it enables the OLTP system to process large numbers of transactions independently, and avoids extra processing needed to maintain data integrity in the presence of redundant data.
 
 ## Challenges
 Implementing and using an OLTP system can create a few challenges:

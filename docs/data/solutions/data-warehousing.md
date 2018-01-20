@@ -40,7 +40,7 @@ Properly configuring a data warehouse to fit the needs of your business can brin
 * Planning and setting up your data orchestration. Deciding how and how often to copy data from the source transactional system over to your data warehouse. Deciding on when, or if, to move historical data out of your operational data stores and into the warehouse.
 * Coming up with a strategy to maintain and improve your data quality by cleaning your data as it is imported into your warehouse.
 
-## Data warehousing in Azure 
+## Architecture
 
 In Azure, you may have one or more sources of data, whether from customer transactions, or from various business applications used by various departments. This data is traditionally stored in one or more [OLTP](online-transaction-processing.md) databases. The data could be persisted in other storage mediums such as network shares, Azure Storage Blobs, or a data lake. The data could also be stored by the data warehouse itself, such as in Azure SQL Data Warehouse or by a relational database like Azure SQL Database. The purpose of the analytical data store layer is to satisfy queries issued by analytics and reporting tools against the data warehouse or data mart. In Azure this analytical store capability can be met with Azure SQL Data Warehouse, with Azure HDInsight using Hive or Interactive Query. Because there is a requirement to move and transform data on a regular basis, you will need some level of orchestration to periodically move or copy data from your data storage to the data warehouse, which can be accomplished with Azure Data Factory or Oozie on Azure HDInsight.  
 
