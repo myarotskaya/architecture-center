@@ -58,16 +58,3 @@ The following table summarize the key differences in capabilities between each. 
 | Input data formats | Avro, JSON or CSV, UTF-8 encoded | Any format using custom code | Any format using custom code | Any format using custom code | Any format using custom code |
 | Scalability | Up to 1 GB/second | Bounded by cluster size | Bounded by cluster size | Up to 200 function app instances processing in parallel | Bounded by app service plan capacity | 
 | Late arrival and out of order event handling support | Yes | Yes | Yes | No | No |
-
-
-## Where to go from here
-See also: <!--No suggested "Read next" for this one?-->
-
-Related pipeline patterns
-- [Handling Time Series Data](../solutions/time-series.md)
-
-Related technology choices
-- [Data Storage](./data-storage.md)
-
-
-

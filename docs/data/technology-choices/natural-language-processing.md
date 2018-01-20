@@ -68,13 +68,3 @@ Based on your responses to the questions above, the following tables will help y
 | Sentiment analysis | Yes&mdash;using Spark NLP | Yes&mdash;using the Text Analytics API |
 | Language detection | No | Yes&mdash;using the Text Analytics API |
 | Supports multiple languages besides English | No | Yes&mdash;language support varies by API |
-
-## Where to go from here
-
-See also:
-
-Related pipeline patterns
-- Working with text data
-    - [Processing CSV and JSON files](../pipeline-patterns/processing-csv-and-json-files.md)
-    - [Processing free-form text data](../pipeline-patterns/processing-free-form-text.md)
-- [Machine learning at scale](../concepts/machine-learning-at-scale.md)

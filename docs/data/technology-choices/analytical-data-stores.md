@@ -84,14 +84,3 @@ The following tables summarize the key differences in capabilities between each.
 \** Requires using transparent data encryption (TDE) to encrypt and decrypt your data at rest.
 
 \*** Supported when [used within an Azure Virtual Network](/azure/hdinsight/hdinsight-extend-hadoop-virtual-network).
-
-
-## Where to go from here
-See also:
-
-Related pipeline patterns
-- [Handling Time Series Data](../solutions/time-series.md)
-
-Related technology choices
-- [Data Storage](./data-storage.md)
-- [Stream processing](./stream-processing.md)

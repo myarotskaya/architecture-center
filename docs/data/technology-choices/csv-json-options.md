@@ -120,18 +120,3 @@ When it comes to orchestration, Azure Data Factory and SQL Server Integration Se
 | Pig and Hive | Yes | No |
 | Execute SSIS Package | Yes | Yes |
 
-## Where to go from here
-Read next:
-[Data Warehousing](../solutions/data-warehousing.md)
-
-See also:
-
-Related pipeline patterns
-- Working with transactional data
-    - [Online Transaction Processing (OLTP)](../solutions/online-transaction-processing.md)
-    - [Online Analytical Processing (OLAP)](../solutions/online-analytical-processing.md)
-
-Related technology choices
-- Transactional data stores
-    - [Online Analytical Processing (OLAP) data stores](../technology-choices/olap-data-stores.md)
-    - [Data Warehouses](../technology-choices/data-warehouses.md)

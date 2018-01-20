@@ -7,7 +7,6 @@ ms:date: 01/17/2018
 
 # Technology choices: Online transaction processing (OLTP)
 
-
 ## What are your options when choosing an OLTP data store?
 In Azure, all of the following data stores will meet the core requirements for OLTP and for the management of transaction data:
 - [Azure SQL Database](/azure/sql-database/)
@@ -88,20 +87,3 @@ The following table summarize the key differences in capabilities between each o
 | [Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-database-engine) | Yes | Yes | Yes | No | No |
 | Private IP | No | Yes | Yes | No | No |
 
-## Where to go from here
-Read next:
- [Data Warehousing Pipeline Pattern](../solutions/data-warehousing.md)
-
-See also:
-
-Related pipeline patterns
-- Working with transactional data
-    - [Online Transaction Processing (OLTP)](../solutions/online-transaction-processing.md)
-    - [Online Analytical Processing (OLAP)](../solutions/online-analytical-processing.md)
-    - [Data Warehousing](../solutions/data-warehousing.md)
-
-Related technology choices
-- Transactional data stores
-    - [Online Analytical Processing (OLAP) data stores](../technology-choices/olap-data-stores.md)
-    - [Data warehouses](../technology-choices/data-warehouses.md)
-    - [Analytical Data Stores](../technology-choices/analytical-data-stores.md)

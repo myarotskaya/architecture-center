@@ -65,19 +65,3 @@ Answer the following questions to help you narrow down your choices, then use th
 | Scale out | Yes | No | Yes (by adding worker nodes to cluster) |
 | Optimized for big data | Yes | No | Yes |
 
-## Where to go from here
-Read next:
-[Data Warehouse Pipeline Pattern](../solutions/data-warehousing.md)
-
-See also:
-
-Related pipeline patterns
-- Working with transactional data
-    - [Online Transaction Processing (OLTP)](../solutions/online-transaction-processing.md)
-    - [Online Analytical Processing (OLAP)](../solutions/online-analytical-processing.md)
-    - [Data Warehousing](../solutions/data-warehousing.md)
-
-Related technology choices
-- Transactional data stores
-    - [Online Analytical Processing (OLAP) data stores](../technology-choices/olap-data-stores.md)
-    - [Data warehouses](../technology-choices/data-warehouses.md)

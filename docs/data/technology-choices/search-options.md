@@ -67,13 +67,3 @@ The following table summarize the key differences in capabilities between each. 
 | Restrict access to allow virtual network access only | No | Yes | Yes | Yes |  
 | Active Directory authentication (integrated authentication) | No | No | No | Yes | 
 
-## Where to go from here
-Read next: [Natural language processing](../technology-choices/natural-language-processing.md)
-
-See also:
-
-Related pipeline patterns
-- Working with text data
-    - [Processing CSV and JSON files](../pipeline-patterns/processing-csv-and-json-files.md)
-    - [Processing free-form text data](../pipeline-patterns/processing-free-form-text.md)
-

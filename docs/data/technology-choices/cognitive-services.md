@@ -85,13 +85,3 @@ The following tables summarize the key differences in capabilities between each 
 | Custom Decision Service | Web content (for example, RSS feed) | Use machine learning to automatically select the appropriate content for your home page |
 | Bing Custom Search API | Text (web search query) | An easy to use, ad free, commercial-grade search tool that lets you deliver the results you want |
 
-
-## Where to go from here
-Read next: [Data science and machine learning](../technology-choices/data-science-and-machine-learning.md)
-
-See also:
-
-Related pipeline patterns
-- [Machine learning at scale](../concepts/machine-learning-at-scale.md)
-- [Processing CSV and JSON files](../pipeline-patterns/processing-csv-and-json-files.md)
-- [Processing free-form text data](../pipeline-patterns/processing-free-form-text.md)

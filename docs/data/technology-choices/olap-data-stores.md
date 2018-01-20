@@ -62,21 +62,3 @@ The following tables summarize the key differences in capabilities between each.
 | Supports query scale out  | Yes | No | Yes | No |
 | Dynamic scalability (scale up)  | Yes | No | Yes | No |
 
-## Where to go from here
-Read next:
-[Data Warehousing pipeline pattern](../solutions/data-warehousing.md)
-
-See also:
-
-Related pipeline patterns
-- Working with transactional data
-    - [Online Transaction Processing (OLTP)](../solutions/online-transaction-processing.md)
-    - [Online Analytical Processing (OLAP)](../solutions/online-analytical-processing.md)
-    - [Data Warehousing](../solutions/data-warehousing.md)
-
-Related technology choices
-- Transactional data stores
-    - [Online Transaction Processing (OLTP) data stores](../technology-choices/oltp-data-stores.md)
-    - [Data warehouses](../technology-choices/data-warehouses.md)
-    - [Analytical Data Stores](../technology-choices/analytical-data-stores.md)
-    - [Pipeline orchestration, control flow, and data movement](../technology-choices/pipeline-orchestration-data-movement.md)

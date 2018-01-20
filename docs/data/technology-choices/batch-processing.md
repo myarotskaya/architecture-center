@@ -82,14 +82,3 @@ Based on your responses to the questions above, the following tables will help y
 \** Requires using Transparent Data Encryption (TDE) to encrypt and decrypt your data at rest.
 
 \*** Supported when [used within an Azure Virtual Network](/azure/hdinsight/hdinsight-extend-hadoop-virtual-network).
-
-## Where to go from here
-See also: 
-
-Related pipeline patterns
-- [Processing CSV and JSON files](../pipeline-patterns/processing-csv-and-json-files.md)
-- [Processing free-form text](../pipeline-patterns/processing-free-form-text.md)
-
-Related technology choices
-- [Data Storage](./data-storage.md)
-- [Stream processing](./stream-processing.md)

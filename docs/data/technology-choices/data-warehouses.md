@@ -120,19 +120,3 @@ Read more about securing your data warehouse:
 * [Extend Azure HDInsight using an Azure Virtual Network](/azure/hdinsight/hdinsight-extend-hadoop-virtual-network)
 * [Enterprise-level Hadoop security with domain-joined HDInsight clusters](/azure/hdinsight/domain-joined/apache-domain-joined-introduction)
 
-## Where to go from here
-Read next:
-[Online Transaction Processing (OLTP) pipeline pattern](../solutions/online-transaction-processing.md)
-
-See also:
-
-Related pipeline patterns
-- Working with transactional data
-    - [Online Transaction Processing (OLTP)](../solutions/online-transaction-processing.md)
-    - [Online Analytical Processing (OLAP)](../solutions/online-analytical-processing.md)
-    - [Data Warehousing](../solutions/data-warehousing.md)
-
-Related technology choices
-- Transactional data stores
-    - [Online Transaction Processing (OLTP) data stores](../technology-choices/oltp-data-stores.md)
-    - [Online Analytical Processing (OLAP) data stores](../technology-choices/olap-data-stores.md)
