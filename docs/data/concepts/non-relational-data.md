@@ -78,8 +78,7 @@ Relevant Azure service:
 - [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)  
 
 ## Time series data stores
-Time series <<!--Not sure why column-family is typically hyphenated when it's a compound modifier and time series is not, but a quick search shows this is the case so I'm leaving it as is.--> data is a set of values organized by time, and a time series data store is optimized for this type of data. Time series data stores must support a very high number of writes, as they typically collect large amounts of data in real time from a large number of sources. Time series data stores are optimized for storing telemetry data. Scenarios include IoT sensors or application/system counters.   
-
+Time series data is a set of values organized by time, and a time series data store is optimized for this type of data. Time series data stores must support a very high number of writes, as they typically collect large amounts of data in real time from a large number of sources. Time series data stores are optimized for storing telemetry data. Scenarios include IoT sensors or application/system counters.   
 ![Example of time series data](./images/time-series.png)
 
 Updates are rare, and deletes are often done as bulk operations. Although the records written to a time series database are generally small, there are often a large number of records, and total data size can grow rapidly. Time series data stores also handle out of order and late-arriving data, automatic indexing of data points, and optimized querying for queries described in terms of windows of time. This last feature enables queries to run across millions of data points and multiple data streams quickly in order to support drill across and drill down behavior in time series visualizations, which is one common way time series data is consumed. 

@@ -13,13 +13,9 @@ The databases that a business uses to store all its transactions and records are
 
 ## When to use this solution
 
-Choose OLAP when you need to rapidly execute complex analytical and ad hoc queries without negatively impacting your OLTP systems trying to conduct other transactions. Also consider using this architecture when you want to provide business users with a simple way to generate reports off your data&mdash;without them needing to know how to work with the underlying data relationships or figure out naming conventions&mdash;and when you want to provide a number of aggregations that will allow them to have fast, consistent results. <!--This sentence was a little dense, and I got lost in commas on first read, does this work?-->OLAP really shines when you want to apply aggregate calculations over large amounts of data.
+Choose OLAP when you need to rapidly execute complex analytical and ad hoc queries without negatively impacting your OLTP systems trying to conduct other transactions. Also consider using this architecture when you want to provide business users with a simple way to generate reports off your data&mdash;without them needing to know how to work with the underlying data relationships or figure out naming conventions&mdash;and when you want to provide a number of aggregations that will allow them to have fast, consistent results. OLAP is especially useful for applying aggregate calculations over large amounts of data.
 
-## Benefits
-
-OLAP systems are optimized for read heavy scenarios, such as analytics and business intelligence.
-
-OLAP allows business users to slice and dice <!--I've flagged this elsewhere as slang. It should be replaced with something that will work for ESL readers. Note it is not commonly used on MSDN.--> data as needed, regardless of whether the source data is partitioned across several data sources. This helps users to find trends, spot patterns, drill down, and "wander" <!--This also feels like slang, or at least may not be as clear to an ESL reader.--> around the data without having to know the detailed ins and outs of traditional data analysis.
+OLAP systems are optimized for read heavy scenarios, such as analytics and business intelligence. OLAP allows users to segment multi-dimensional data into slices that can be viewed in two dimensions (such as a pivot table) or filter the data by specific values. This process is sometimes called "slicing and dicing" the data, and can be done regardless of whether the data is partitioned across several data sources. This helps users to find trends, spot patterns, drill down, and explore the data without having to know the detailed ins and outs of traditional data analysis.
 
 [Semantic models](../concepts/semantic-modeling.md) can help business users abstract relationship complexities and make it easier to analyze the data much faster than they'd be able to otherwise, if at all.
 

@@ -6,11 +6,25 @@ For example, the logs from a web server might be dumped to a folder, and then pr
 
 ![](./images/batch-pipeline.png)
 
+## When to use this solution
+
 Batch processing is used in a variety of scenarios, from simple data transformations to a more complete ETL (extract-transform-load) pipeline, to preparing data for ultimate consumption over very large data sets or where the computation takes significant time. Batch processing typically either leads to further interactive exploration (downstream analytics), provides the modeling-ready data for machine learning, or writes the data to a data store optimized for analytics and visualization.
 
 One example of batch processing is transforming a large set of flat, semi-structured CSV or JSON files into a schematized (and structured) format that is ready for further querying. Along with this, typically the format is converted from the raw formats used for ingest (such as CSV) to binary formats that are more performant for querying because they store data in a columnar format, and often provide indexes and inline statistics about the data contained.
 
-With batch processing, typically some orchestration is required to migrate or copy the data into your data storage, batch processing, analytical data store, and reporting layers.
+## Architecture
+
+A batch processing architecture corresponds to the cold path of a [lambda architecture](../concepts/big-data.md#lambda-architecture), and has the following logical components.
+
+- **Data storage.** Typically a distributed file store that can serve as a repository for high volumes of large files in various formats. Generically, this kind of store is often referred to as a data lake. 
+
+- **Batch processing.** The high-volume nature of big data often means that solutions must process data files using long-running batch jobs to filter, aggregate, and otherwise prepare the data for analysis. Usually these jobs involve reading source files, processing them, and writing the output to new files. 
+
+- **Analytical data store.** Many big data solutions are designed to prepare data for analysis and then serve the processed data in a structured format that can be queried using analytical tools. 
+
+- **Analysis and reporting.** The goal of most big data solutions is to provide insights into the data through analysis and reporting. 
+
+- **Orchestration.** With batch processing, typically some orchestration is required to migrate or copy the data into your data storage, batch processing, analytical data store, and reporting layers.
 
 ## Technology choices
 

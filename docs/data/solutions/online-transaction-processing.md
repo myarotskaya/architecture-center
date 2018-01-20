@@ -25,14 +25,15 @@ Implementing and using an OLTP system can create a few challenges:
 - When conducting analytics and reporting on data stored in an OLTP system that is highly normalized, the queries used tend to be more complex, as most queries need to be constructed to de-normalize the data by using joins before it can be useful to the business. Additionally, naming conventions for database objects in OLTP systems tend to be terse and succinct. The increased normalization coupled with terse naming conventions makes OLTP systems difficult for business users attempting to query them for analytics purposes without the help of a DBA or data developer.
 - Storing the history of transactions in perpetuity and storing too much data in any one table could lead to query performance issues, depending on the number of transactions stored. The common solution is to maintain a relevant window of time (such as the current fiscal year) in the OLTP system and offload historical data to other systems, such as a datamart or [data warehouse](../technology-choices/data-warehouses.md).
 
-## OLTP in Azure
+## Architecture
+
 Applications such as websites hosted in Azure Web Apps, REST APIs running within API Apps, or mobile or desktop applications communicate with the OLTP system (typically via a REST API intermediary).
 
-In practice, most workloads are not purely OLTP - there tends to be an [analytical component](../solutions/online-analytical-processing.md) to it as well. In addition, there is an increasing demand for real-time reporting, such as running reports against the operational system. This is also referred to as HTAP (Hybrid Transactional and Analytical Processing). For more information, see [Online Analytical Processing (OLAP) data stores](../technology-choices/olap-data-stores.md).
+In practice, most workloads are not purely OLTP. There tends to be an [analytical component](../solutions/online-analytical-processing.md) as well. In addition, there is an increasing demand for real-time reporting, such as running reports against the operational system. This is also referred to as HTAP (Hybrid Transactional and Analytical Processing). For more information, see [Online Analytical Processing (OLAP) data stores](../technology-choices/olap-data-stores.md).
 
 ![OLTP in Azure](./images/oltp-data-pipeline.png)
 
-Related services:
+## Technology choices
 
 - Data storage
     - [Azure SQL Database](/azure/sql-database/)
@@ -42,7 +43,5 @@ Related services:
 - Data sources
     - [Web/API Apps](/azure/app-service/)
     - [Mobile Apps](/azure/app-service-mobile/)
-
-## Technology choices
 
 - [Online Transaction Processing (OLTP) data stores](../technology-choices/oltp-data-stores.md)

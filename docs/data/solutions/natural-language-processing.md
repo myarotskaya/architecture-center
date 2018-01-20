@@ -4,12 +4,9 @@ Natural language processing (NLP) is used for tasks such as sentiment analysis, 
 
 ![](./images/nlp-pipeline.png)
 
+## When to use this solution
 
-Free-form text processing is performed against documents containing paragraphs of text to perform other 
-
-Free-form text processing can used for classifying documents, such as labeling documents as sensitive or spam to support subsequent processing or search. 
-
-Another use for free-form text processing is summarization of text content by identifying the entities present in the document. On their own, the important entities in the document can be used to tag the documents with keywords enabling search and retrieval. The entities might themselves be combined into topics, and the summarization instead describes the important topics present in each document. The detected topics may be used to categorize the documents for navigation, or to enumerate related documents given a selected topic. Alternately, the text may be scored for sentiment to assess the positive or negative tone of the document. These approaches use many techniques from natural language processing, such as: 
+NLP can be use to classify documents, such as labeling documents as sensitive or spam to support subsequent processing or search. Another use for NLP is summarization of text content by identifying the entities present in the document. On their own, the important entities in the document can be used to tag the documents with keywords enabling search and retrieval. The entities might themselves be combined into topics, and the summarization instead describes the important topics present in each document. The detected topics may be used to categorize the documents for navigation, or to enumerate related documents given a selected topic. Alternately, the text may be scored for sentiment to assess the positive or negative tone of the document. These approaches use many techniques from natural language processing, such as: 
 
 - **Tokenizer**: Splitting the text into words or phrases.
 - **Stemming and lemmatization**: normalizing words so that that different forms map to the canonical word with the same meaning. For example, "running" and "ran" map to "run." 
@@ -19,7 +16,11 @@ Another use for free-form text processing is summarization of text content by id
 
 When using NLP to extract information and insight from free-form text, the starting point is typically the raw documents stored within object storage such as Azure Storage or Azure Data Lake Store. 
 
-The actual processing that applies NLP techniques varies based on the desired outcome, but in terms of the pipeline may be applied in a batch or real-time fashion. For example, sentiment analysis can be used against blocks of the text to produce a sentiment score, and can typically done either in batch against data in storage or in real time against smaller data flowing thru messaging services. 
+## Architecture
+
+In an NLP solution, free-form text processing is performed against documents containing paragraphs of text. The overall architecture can be a [batch processing](./batch-processing.md) or [real-time stream processing](./real-time-processing.md) architecture. 
+
+The actual processing that applies NLP techniques varies based on the desired outcome, but in terms of the pipeline may be applied in a batch or real-time fashion. For example, sentiment analysis can be used against blocks of the text to produce a sentiment score, and can typically done either in batch against data in storage or in real time against smaller data flowing through messaging services. 
 
 ## Challenges
 

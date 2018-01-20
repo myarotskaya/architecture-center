@@ -22,8 +22,6 @@ Choose a data warehouse when you need to turn massive amounts of data from opera
 
 Consider using a data warehouse when you need to keep historical data separate from the source transaction systems for performance reasons. Data warehouses make it easy to access historical data from multiple locations, by providing a centralized location using common formats, common keys, common data models, and common access methods.
 
-## Benefits
-
 Data warehouses are optimized for read access, resulting in faster report generation compared to running reports against the source transaction system. In addition, data warehouses provide the following benefits:
 
 * All historical data from multiple sources can be stored and accessed from a data warehouse as the single source of truth.
