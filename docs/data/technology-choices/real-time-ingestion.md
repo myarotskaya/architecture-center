@@ -1,4 +1,4 @@
-# Real-time message ingestion
+# Technology choices: Real-time message ingestion
 
 ## What are your options for real-time message ingestion?
 
