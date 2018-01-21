@@ -1,23 +1,15 @@
 ---
-title: 
+title: Time series data
 description: 
 author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Time Series
+# Time series data
 
+Time series data is a set of values organized by time. Examples of time series data include sensor data, stock prices, click stream data, and application telemetry. Time series data can be analyzed for historical trends, real-time alerts, or predictive modeling.
 
 ![](./images/time-series-pipeline.png)
-
-
-
-## When to use this solution
-
-Choose a time series solution when you need to ingest data whose strategic value is centered around changes over a period of time, and you are primarily inserting new data and rarely updating, if at all. You can use this information to detect anomalies, visualize trends, compare current data to historical data, among other things. This type of architecture is also best suited for predictive modeling and forecasting results, because you have historical record of changes over time that can then be applied to any number of forecasting models. Forecasting means understanding how a metric moves through time and being able to project/predict the future.
-
-
-## Working with time series data
 
 Time series data represents how an asset or process changes over time. It’s unique in that it has a timestamp and time is most meaningful as an axis. Time series data typically arrives in order of time and is usually treated as an insert rather than an update to your database. Because of this, change is measured over time, enabling you to look backward and to predict future change. As such, time series data is best visualized with scatter or line charts.
 
@@ -32,20 +24,9 @@ Some examples of time series data are:
 
 In each of these cases, you can see how time is most meaningful as an axis. Displaying the events in the order in which they arrived is a key characteristic of time series data, as there is a natural temporal ordering. This differs from data captured for standard OLTP data pipelines where data can be entered in any order, and updated at any time.
 
-### Internet of Things (IoT)
+## When to use this solution
 
-Data collected by IoT devices is a natural fit for time series storage and analysis. The incoming data is inserted and rarely, if ever, updated. The data is time stamped and inserted in the order it was received, and this data is typically displayed in chronological order, enabling users to discover trends, spot anomalies, and use the information for predictive analysis.
-
-[Read more about Internet of Things](../concepts/big-data.md#internet-of-things-iot) in the big data common architecture article.
-
-### Real-time analytics
-
-Often, data is most valuable at its time of arrival. Whether your data is streaming into your real-time pipeline from connected IoT devices, or from telemetry originating from security monitoring software, there is a growing need for deriving insights from the millions of events being generated in real time. Any delay in insights can cause significant downtime and business impact. Additionally, the need to correlate data from a variety of different sources, such as sensors, is paramount to debug and optimize business processes and workflows. Reducing the time and expertise required for this is essential for businesses to gain a competitive edge and optimize their operations.
-
-Ideally, you would have a stream processing layer that can handle the influx of data and process all of it with high precision and high granularity. This isn't always possible, depending on your streaming architecture and the components of your stream buffering and stream processing layers. You may need to sacrifice some precision of the time series data by reducing it. This is done by processing sliding windows of several seconds apiece, allowing the processing layer to perform calculations in a timely manner. If you are capable of capturing full fidelity of your streaming data, you need the compute power and ability to down sample (through aggregates) your data when displaying longer periods of time, such as zooming out your graph to display data captured over several months, for example.
-
-
-## Benefits
+Choose a time series solution when you need to ingest data whose strategic value is centered around changes over a period of time, and you are primarily inserting new data and rarely updating, if at all. You can use this information to detect anomalies, visualize trends, compare current data to historical data, among other things. This type of architecture is also best suited for predictive modeling and forecasting results, because you have historical record of changes over time that can then be applied to any number of forecasting models. Forecasting means understanding how a metric moves through time and being able to project/predict the future.
 
 Using time series offers the following benefits:
 
@@ -53,24 +34,38 @@ Using time series offers the following benefits:
 * Helps you quickly detect changes to a number of related sources, making anomalies and emerging trends clearly stand out.
 * Best suited for predictive modeling and forecasting.
 
+### Internet of Things (IoT)
+
+Data collected by IoT devices is a natural fit for time series storage and analysis. The incoming data is inserted and rarely, if ever, updated. The data is time stamped and inserted in the order it was received, and this data is typically displayed in chronological order, enabling users to discover trends, spot anomalies, and use the information for predictive analysis.
+
+For more information, see [Internet of Things](../concepts/big-data.md#internet-of-things-iot).
+
+### Real-time analytics
+
+Often, data is most valuable at its time of arrival. Whether your data is streaming into your real-time pipeline from connected IoT devices, or from telemetry originating from security monitoring software, there is a growing need for deriving insights from the millions of events being generated in real time. Any delay in insights can cause significant downtime and business impact. Additionally, the need to correlate data from a variety of different sources, such as sensors, is paramount to debug and optimize business processes and workflows. Reducing the time and expertise required for this is essential for businesses to gain a competitive edge and optimize their operations.
+
+Ideally, you would have a stream processing layer that can handle the influx of data and process all of it with high precision and high granularity. This isn't always possible, depending on your streaming architecture and the components of your stream buffering and stream processing layers. You may need to sacrifice some precision of the time series data by reducing it. This is done by processing sliding windows of several seconds apiece, allowing the processing layer to perform calculations in a timely manner. If you are capable of capturing full fidelity of your streaming data, you need the compute power and ability to down sample (through aggregates) your data when displaying longer periods of time, such as zooming out your graph to display data captured over several months, for example.
+
 ## Challenges
 
 Establishing a time series architecture can have some of the following challenges:
 
-* In large volumes, storing, indexing, querying, analyzing, and visualizing time series data can be challenging. <!--Since this is the challenges section, saying it can be challening seems like a given. Can you elaborate on what at all?-->
+* Time series data is often very high volume, especially in IoT scenarios. Storing, indexing, querying, analyzing, and visualizing time series data can be challenging. 
 * Finding the right combination of high-speed storage and powerful compute operations for handling real-time/near real-time analytics, while minimizing time to market and overall cost investment.
 
 ## Architecture
 
-In Azure, data from one or more data sources is ingested into the stream buffering layer by a [IoT Hub](/azure/iot-hub/), [Event Hubs](/azure/event-hubs/), or [Kafka on HDInsight](/azure/hdinsight/kafka/apache-kafka-introduction). Next, the data is processed in the stream processing layer that can optionally hand off the processed data to a machine learning service for predictive analytics. The processed data is stored in an analytical data store, such as [HBase](/azure/hdinsight/hbase/apache-hbase-overview), [Azure Cosmos DB](/azure/cosmos-db/), Azure Data Lake, or Blob Storage. An analytics and reporting application or service, like Power BI or OpenTSDB (if stored in HBase) can be used to display the time series data for analysis.
+In many scenarios that involve time series data, such as IoT, the data is captured in real time. As such, as [real-time processing](./real-time-processing.md) architecture is appropriate. 
 
-![Time Series in Azure](./images/time-series.png) <!--Should be Azure Cosmos DB.Should also have a comma after analytics in the last box.-->
+Data from one or more data sources is ingested into the stream buffering layer by a [IoT Hub](/azure/iot-hub/), [Event Hubs](/azure/event-hubs/), or [Kafka on HDInsight](/azure/hdinsight/kafka/apache-kafka-introduction). Next, the data is processed in the stream processing layer that can optionally hand off the processed data to a machine learning service for predictive analytics. The processed data is stored in an analytical data store, such as [HBase](/azure/hdinsight/hbase/apache-hbase-overview), [Azure Cosmos DB](/azure/cosmos-db/), Azure Data Lake, or Blob Storage. An analytics and reporting application or service, like Power BI or OpenTSDB (if stored in HBase) can be used to display the time series data for analysis.
 
-A fully managed service for time series that you can optionally use is [Azure Time Series Insights](/azure/time-series-insights/). This service accepts streaming data flowing in from either IoT Hub or Event Hubs, then it takes care of storing, processing, analyzing, and displaying the data in near real time (1 minute intervals). All of the work is done behind the scenes with no need for you to write a single line of code. It does not pre-aggregate the data, but stores the raw events, and delivers the power of doing all aggregations instantly, at scale.
+[Azure Time Series Insights](/azure/time-series-insights/) is a fully managed service for time series data. In this architecture, Time Series Insights performs the roles of stream processing, data store, and analytics and reporting.
 
-This service is schema adaptive, which means that you do not have to do any data preparation to start deriving insights. This enables you to explore, compare, and correlate a variety of sensors seamlessly. It provides a very intuitive user experience that enables you to view, explore, and drill down into various granularities of data, down to specific events. It also provides SQL-like filters and aggregates, ability to construct, visualize, compare, and overlay various time series patterns, heat maps, and the ability to save and share queries. This is what enables you to get started, and glean insights from your data using Azure Time Series Insights in minutes. You can also unleash the power <!--This seems very marketingese that I haven't seen in these docs before. Just something to think about.--> of Time Series Insights using the REST query APIs to create custom solutions.
+It accepts streaming data from either IoT Hub or Event Hubs and stores, processes, analyzes, and displays the data in near real time (1 minute intervals). It does not pre-aggregate the data, but stores the raw events.
 
-![Time Series Insights](./images/time-series-insights.png) <!--Should have a comma after analytics in the last box.-->
+![Time Series Insights](./images/time-series-insights.png) 
+
+Time Series Insights is schema adaptive, which means that you do not have to do any data preparation to start deriving insights. This enables you to explore, compare, and correlate a variety of sensors seamlessly. It also provides SQL-like filters and aggregates, ability to construct, visualize, compare, and overlay various time series patterns, heat maps, and the ability to save and share queries. 
 
 
 ## Technology choices
