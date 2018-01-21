@@ -1,3 +1,10 @@
+---
+title: Transactional data
+description: 
+author: zoinerTejada
+ms:date: 01/17/2018
+---
+
 # Transactional data
 
 Transactional data is information an organization collects that tracks the interactions related to what the organization does. These interactions are typically business transactions such as payments received from customers or payments made to suppliers, products moving through inventory, orders taken or services delivered. Transactional events, which represent the transactions themselves, not reference tables, typically contain a time dimension, some numerical values, and references to other data.

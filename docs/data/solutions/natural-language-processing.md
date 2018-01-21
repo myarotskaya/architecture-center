@@ -1,3 +1,10 @@
+---
+title: Natural language processing
+description: 
+author: zoinerTejada
+ms:date: 01/17/2018
+---
+
 # Natural language processing
 
 Natural language processing (NLP) is used for tasks such as sentiment analysis, topic detection, language detection, key phrase extraction, and document categorization.

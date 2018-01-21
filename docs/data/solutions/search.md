@@ -1,3 +1,10 @@
+---
+title: Processing free-form text for search
+description: 
+author: zoinerTejada
+ms:date: 01/17/2018
+---
+
 # Processing free-form text for search
 
 To support search, free-form text processing can be performed against documents containing paragraphs of text.

@@ -1,6 +1,13 @@
+---
+title: Real time processing
+description: 
+author: zoinerTejada
+ms:date: 01/17/2018
+---
+
 # Real time processing
 
-Realtime processing deals with unbounded streams of data that are captured in real-time and processed with minimal latency to generate real-time (or near-real-time) reports or automated responses. For example, a real-time traffic monitoring solution might use sensor data to detect high traffic volumes, and which could be used to dynamically update a map to indicate congestion or to automatically initiate high-occupancy lanes or other traffic management systems.
+Real time processing deals with unbounded streams of data that are captured in real-time and processed with minimal latency to generate real-time (or near-real-time) reports or automated responses. For example, a real-time traffic monitoring solution might use sensor data to detect high traffic volumes, and which could be used to dynamically update a map to indicate congestion or to automatically initiate high-occupancy lanes or other traffic management systems.
 
 ![](./images/real-time-pipeline.png)
 

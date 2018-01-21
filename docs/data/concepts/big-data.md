@@ -1,11 +1,11 @@
 ---
-title: 
+title: Big Data architectures
 description: 
 author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Big Data
+# Big Data architectures
 
 A big data architecture is designed to handle the ingestion, processing, and analysis of data that is too large or complex for traditional database systems. The threshold at which organizations enter into the big data realm differs, depending on the capabilities of the users and their tools. For some, it can mean hundreds of gigabytes of data, while for others it means hundreds of terabytes. As tools to help you work with big data sets advance, so does the meaning of big data. More and more, this term relates to the value you can extract from your data sets through advanced analytics, like predictive or user behavior analytics, than strictly the size of your data set, though in these cases they tend to be quite large.
 
@@ -24,7 +24,7 @@ Consider big data architectures when you need to:
 * Transform unstructured data for analysis and reporting.
 * Capture, process, and analyze unbounded streams of data in real time, or with low latency.
 
-![Overall data pipeline diagram](../images/overall-data-pipeline.png) <!--Technically there should be a comma after Analytics in the right column, but it's not vital.-->
+![Overall data pipeline diagram](../images/overall-data-pipeline.png) 
 
 Most big data architectures include some or all of the following components:
 

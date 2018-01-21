@@ -1,11 +1,11 @@
 ---
-title: 
+title: Non-relational data and NoSQL
 description: 
 author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Non-relational data and NoSQL 
+# Non-relational data and NoSQL
 
 Non-relational data is not represented in the tabular schema of rows and columns used by many traditional databases, but is instead represented in a storage model that better suits the specific requirements of the application in which the data is used. For example, the data may stored as simple key/value pairs, as JSON documents, or as a graph consisting of edges and vertices. These data stores break from the tradition of representing the data in a relational model and tend to more specific in the type of data they support, and in the ways in which the data can be queried. For example, time series data stores are optimized for supporting queries over time based sequences of data, and graph data stores are optimized for exploring weighted relationships between entities. Neither format would generalize well to the task of managing transactional data. 
 

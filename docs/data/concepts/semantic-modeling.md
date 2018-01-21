@@ -1,3 +1,10 @@
+---
+title: Semantic modeling
+description: 
+author: zoinerTejada
+ms:date: 01/17/2018
+---
+
 # Semantic modeling
 
 A semantic data model is a conceptual model that describes the meaning of the data elements it contains. To put it another way, organizations have their own terms they use for things, sometimes with synonyms, or even different meanings for two different terms. An example of this is where an inventory database tracks a piece of equipment with an asset Id and a serial number, but a sales database might refer to the serial number as the asset Id. There would be no simple way to relate these values without some model that can describe the relationship. This is where semantic modeling can help. It makes it easier for end users to query data by providing a level of abstraction, making it so they do not need to know the underlying data structure and how aggregates and joins are formed. Also, usually columns are renamed to more business user-friendly names, helping users better understand the context and meaning of the data.
