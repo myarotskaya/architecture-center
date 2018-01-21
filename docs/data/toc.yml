@@ -31,8 +31,6 @@
         href: technology-choices/olap-data-stores.md 
       - name: Online transaction processing (OLTP)
         href: technology-choices/oltp-data-stores.md 
-      - name: Pipeline orchestration
-        href: technology-choices/pipeline-orchestration-data-movement.md 
   - name: Big Data
     items:
     - name: Concepts
@@ -45,6 +43,8 @@
         href: concepts/advanced-analytics.md 
       - name: Machine learning at scale
         href: concepts/machine-learning-at-scale.md
+      - name: Processing CSV and JSON files
+        href: concepts/processing-csv-and-json-files.md
     - name: Solutions
       items:
       - name: Batch processing

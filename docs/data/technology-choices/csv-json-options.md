@@ -101,22 +101,4 @@ Azure Functions and SQL Data Warehouse are both useful for streaming/real-time p
 | Serverless | Yes | Yes | No | No |
 | Stream (Real-time processing) | No | Yes | No | Yes |
 
-### Orchestration
-
-When it comes to orchestration, Azure Data Factory and SQL Server Integration Services both offer a number of data sources and destinations you can use to move and transform your CSV and JSON file data. When your data destination is an Azure service, such as Azure Storage or HDInsight, Azure Data Factory <!--no acronyms using Azure, except in very rare cases. -->is the natural choice.
-
-| | Azure Data Factory | SQL Server Integration Services (SSIS) |
-| --- | --- | --- |
-| Managed | Yes | No |
-| Cloud-based | Yes | No (local) |
-| Prerequisite | Azure Subscription | SQL Server  |
-| Management Tools | Azure Portal, PowerShell, CLI, .NET SDK | SSMS, PowerShell |
-| Pricing | Pay per usage | Licensing/Pay for features |
-| Copy Data | Yes | Yes |
-| Custom Transformations (C#) | Yes | Yes |
-| Azure Machine Learning scoring | Yes | Yes (with scripting) |
-| HDInsight on-demand | Yes | No |
-| Azure Batch | Yes | No |
-| Pig and Hive | Yes | No |
-| Execute SSIS Package | Yes | Yes |
 
