@@ -31,7 +31,7 @@
         href: technology-choices/olap-data-stores.md 
       - name: Online transaction processing (OLTP)
         href: technology-choices/oltp-data-stores.md 
-      - name: Pipeline orchestration, control flow, and data movement
+      - name: Pipeline orchestration
         href: technology-choices/pipeline-orchestration-data-movement.md 
   - name: Big Data
     items:
@@ -72,6 +72,8 @@
         href: technology-choices/data-storage.md
       - name: Machine learning
         href: technology-choices/data-science-and-machine-learning.md 
+      - name: Pipeline orchestration
+        href: technology-choices/pipeline-orchestration-data-movement.md 
       - name: Real-time message ingestion
         href: technology-choices/real-time-ingestion.md
       - name: Natural language processing
