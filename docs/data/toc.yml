@@ -31,11 +31,11 @@
         href: technology-choices/olap-data-stores.md 
       - name: Online transaction processing (OLTP)
         href: technology-choices/oltp-data-stores.md 
-  - name: Big Data
+  - name: Big Data and NoSQL
     items:
     - name: Concepts
       items:
-      - name: Non-relational data and NoSQL
+      - name: Non-relational data
         href: concepts/non-relational-data.md
       - name: Big data architectures
         href: concepts/big-data.md
