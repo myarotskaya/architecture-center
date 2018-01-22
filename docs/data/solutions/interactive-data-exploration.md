@@ -12,6 +12,7 @@ In many corporate business intelligence (BI) solutions, reports and semantic mod
 ![](./images/data-exploration.png)
 
 ## Self-service BI
+
 Self-service BI is a name given to a modern approach to business decision making in which users are empowered to find, explore, and share insights from data across the enterprise. To accomplish this, the data ecosystem must support:
 * Discovery of business data sources through a data catalog.
 * Master data management to ensure consistency of data entity defintions and values.
@@ -33,6 +34,10 @@ Relevant Azure service:
 - [Azure Machine Learning Experimentation Services](/azure/machine-learning/preview/experimentation-service-configuration)
 - [The Data Science Virtual Machine](/azure/machine-learning/data-science-virtual-machine/overview)
 
+## Architecture
+
+Although the goal of this scenario is to support interactive data analysis, the data cleansing, sampling, and structuring tasks involved in data science often include long-running processes. That makes a [batch processing](./batch-processing.md) architecture appropriate.
+
 ## Technology choices
 
 Typical technologies used for interactive data exploration include:
@@ -45,7 +50,7 @@ For more information, see [Data storage](../technology-choices/data-storage.md).
 
 ### Batch processing
 
-- R Server and/or Spark. Although the goal of this scenario is to support interactive data analysis, the data cleansing, sampling, and structuring tasks involved in data science often include long-running processes. Most data scientists use programming languages with strong support for mathematical and statistical packages, such as R or Python to work with data. When working with large volumes of data, using platforms that enable these languages to use distributed processing techniques reduces latency. R Server can be used on its own or in conjunction with Spark to scale out R processing functions, and Spark natively supports Python for similar scale-out capabilities in that language.
+- R Server and/or Spark. Most data scientists use programming languages with strong support for mathematical and statistical packages, such as R or Python to work with data. When working with large volumes of data, using platforms that enable these languages to use distributed processing techniques reduces latency. R Server can be used on its own or in conjunction with Spark to scale out R processing functions, and Spark natively supports Python for similar scale-out capabilities in that language.
 - Hive. Hive is a good choice for transforming data using SQL-like semantics. Users can create and load tables using HiveQL statements, which are semantically similar to SQL. Azure 
 Analytical Data Store
 - Spark SQL. Spark SQL is an API built on Spark that supports the creation of dataframes and tables that can be queried using SQL syntax. Regardless of whether the data files to be analyzed are raw source files or new files that have been cleaned and prepared by a batch process, users can define Spark SQL tables on them for further querying an analysis. 
@@ -56,7 +61,6 @@ For more information, see [Batch processing](../technology-choices/batch-process
 ### Analytics and reporting
 
 - Jupyter. Jupyter Notebooks provides a browser-based interface for running code in languages such as R, Python, or Scala. When using R Server or Spark to batch process data, or when using Spark SQL to define a schema of tables for querying, Jupyter can be a good choice for querying the data. When using Spark, you can use the standard Spark dataframe API or the Spark SQL API as well as embedded SQL statements to query the data and produce visualizations.
-- Interactive Hive Clients. If you choose to use an Interactive Hive cluster to query the data, you can use the Hive view in the Ambari cluster dashboard, the Beeline command line tool, or any ODBC-based tool (using the Hive ODBC driver), such as Microsoft Excel or Power BI.
+- Interactive Hive Clients. If use an Interactive Hive cluster to query the data, you can use the Hive view in the Ambari cluster dashboard, the Beeline command line tool, or any ODBC-based tool (using the Hive ODBC driver), such as Microsoft Excel or Power BI.
 
 For more information, see [Data analytics and reporting technology](../technology-choices/analysis-visualizations-reporting.md).
-
