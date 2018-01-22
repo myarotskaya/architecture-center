@@ -1,13 +1,13 @@
 ---
-title: Choosing a data storage technology for batch processing
+title: Choosing a data storage technology
 description: 
 author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Choosing a data storage technology for batch processing
+# Choosing a data storage technology 
 
-## What are your options when choosing a data store for batch processing?
+## What are your options when choosing data storage in Azure?
 
 There are several options for ingesting data into Azure, depending on your needs:
 

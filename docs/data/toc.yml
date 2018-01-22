@@ -49,6 +49,8 @@
       items:
       - name: Batch processing
         href: solutions/batch-processing.md
+      - name: Interactive data exploration
+        href: solutions/interactive-data-exploration.md
       - name: Natural language processing
         href: solutions/natural-language-processing.md
       - name: Real time processing
