@@ -49,7 +49,6 @@
       items:
       - name: Batch processing
         href: solutions/batch-processing.md
-      - name: Internet of Things (IoT)
       - name: Natural language processing
         href: solutions/natural-language-processing.md
       - name: Real time processing
@@ -87,8 +86,8 @@
     - name: Data transfer
       href: technology-choices/data-transfer.md 
     - name: Hybrid on-premises and cloud solutions
-      href: pipeline-patterns/hybrid-on-premises-and-cloud.md 
+      href: cross-cutting/hybrid-on-premises-and-cloud.md 
     - name: Monitoring data solutions
-      href: pipeline-patterns/monitoring-data-solutions.md 
+      href: cross-cutting/monitoring-data-solutions.md 
     - name: Secure data solutions
-      href: pipeline-patterns/secure-solutions.md 
+      href: cross-cutting/secure-solutions.md 
