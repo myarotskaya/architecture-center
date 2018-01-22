@@ -18,17 +18,17 @@ The cloud is changing the way applications are designed, including how data is p
 
 ## How this guide is structured
 
-This guide is structure around a basic pivot: The distinction between *relational* or *structured* data and *non-relational* or *unstructured* (or semi-structured) data. 
+This guide is structure around a basic pivot: The distinction between *relational* or *structured* data and *non-relational* or *unstructured* data. 
 
 Relational data is generally stored in a traditional RDBMS or a data warehouse. It has a pre-defined schema ("schema on write") with a set of constraints to maintain referential integrity. Most relational databases use Structured Query Language (SQL) for querying. Solutions that use relational databases include online transaction processing (OLTP) and online analytical processing (OLAP).
 
-Non-relational data is any data that does not use the [relational model](https://en.wikipedia.org/wiki/Relational_model) used in traditional RDBMS systems. It can include key-value data, JSON data, graph data, time series data, and others. The term NoSQL refers collectively to databases that are designed to hold various types of non-relational data. (The term is not entirely accurate, because many non-relational data stores support SQL compatible queries.) Non-relational or NoSQL databases often come up in the contect of *big data* solutions. A big data architecture is designed to handle the ingestion, processing, and analysis of data that is too large or complex for traditional database systems. 
+Non-relational data is any data that does not use the [relational model](https://en.wikipedia.org/wiki/Relational_model) found in traditional RDBMS systems. It may include key-value data, JSON data, graph data, time series data, and other data types. The term NoSQL refers collectively to databases that are designed to hold various types of non-relational data. (The term is not entirely accurate, because many non-relational data stores support SQL compatible queries.) Non-relational or NoSQL databases often come up in discussions of *Big Data* solutions. A big data architecture is designed to handle the ingestion, processing, and analysis of data that is too large or complex for traditional database systems. 
 
 Within each of these two main pivots, the Data Architecture Guide contains the following sections:
 
-- **Concepts.** Overview articles that introduce the main concepts you need to understand. 
+- **Concepts.** Overviews that introduce the main concepts you need to understand. 
 - **Solutions.** A representative set of data solutions, including a discussion of the relevant Azure services and the appropriate architecture for the solution.
-- **Technology choices.** Detailed comparions of various data technologies available on Azure, including open source options. Within each category, we describe the key selection criteria and a capability matrix, to help you choose the right technology option.
+- **Technology choices.** Detailed comparions of various data technologies available on Azure, including open source options. Within each category, we describe the key selection criteria and a capability matrix, to help you choose the right technology for your scenario.
 
 ## Traditional RDBMS
 
