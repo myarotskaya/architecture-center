@@ -1,11 +1,11 @@
 ---
-title: 
+title: Choosing a machine learning technology
 description: 
 author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Technology choices: Data science and machine learning
+# Choosing a machine learning technology
 
 Data science and machine learning is a workload that is usually undertaken by data scientists. It requires specialist tools, many of which are designed specifically for the type of interactive data exploration and modeling tasks that a data scientist must perform.
 

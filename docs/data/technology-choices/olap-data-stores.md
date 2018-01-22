@@ -1,13 +1,13 @@
 ---
-title: 
+title: Choosing an OLAP data store
 description: 
 author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Technology choices: Online analytical processing (OLAP)
+# Choosing an OLAP data store
 
-## What are your options when choosing an OLAP data store?
+## What are your options when choosing an online analytical processing (OLAP) data store?
 In Azure, all of the following data stores will meet the core requirements for OLAP:
 
 - [SQL Server with Columnstore indexes](/sql/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics)

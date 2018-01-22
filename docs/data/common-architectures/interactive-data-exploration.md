@@ -1,11 +1,11 @@
 ---
-title: 
+title: Interactive data exploration
 description: 
 author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Interactive Data Exploration
+# Interactive data exploration
 
 In many corporate business intelligence (BI) solutions, reports and semantic models for analysis are created by BI specialists and managed centrally. However, increasingly organizations are seeking to empower users to make data-driven decisions by providing access to it<!--not completely sure what it refers to here? The data? maybe say, "that data" normally I don't like to be repetitive, but I think it would help here.--> for self-service analytics. Additionally, a growing number of organizations are hiring *data scientists* to build advanced analytical models, and empowering these users to explore data interactively using specialist tools for staistical modeling and analysis.
 

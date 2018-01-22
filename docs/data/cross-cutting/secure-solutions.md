@@ -1,11 +1,11 @@
 ---
-title: 
+title: Securing data solutions
 description: 
 author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Secure solutions
+# Securing data solutions
 
 For many, making data accessible in the cloud, particularly when transitioning from working exclusively in on-premises data stores, can cause some concern around increased accessibility to that data and new ways in which to secure it.
 
@@ -56,19 +56,6 @@ Get to know the various types of logs provided by your cloud platform, as well a
 
 Learn more about [logging and auditing in Azure](/azure/security/azure-log-audit).
 
-## When to use this architecture
-
-Security should be part of your plan from the beginning of your project lifecycle. For many, the security capabilities a cloud provider offers is the first indicator of its viability for their solution.
-
-## Benefits
-
-Using a secure solution offers the following benefits:
-
-* Protect your data from both external and internal threats.
-* Gain insight on how your data is being accessed and used.
-* Adhere to security and auditing regulations to maintain compliancy within your industry.
-* Protect your users' important information; gain and maintain their trust.
-* Proper security monitoring and auditing goes beyond simply keeping your data safe - those practices also help ensure the health and stability of your applications in the cloud.
 
 ## Challenges
 
@@ -86,9 +73,9 @@ If you are using Azure SQL Database or Azure SQL Data Warehouse, use the [Transp
 
 You can protect other types of files that you use with [Azure Rights Management](/information-protection/understand-explore/what-is-azure-rms) (Azure RMS), the protection technology used by [Azure Information Protection](/information-protection/understand-explore/what-is-information-protection). This cloud-based service uses encryption, identity, and authorization policies to help secure your files and email, and it works across multiple devices—phones, tablets, and PCs. Information can be protected both within your organization and outside your organization because that protection remains with the data, even when it leaves your organization's boundaries.
 
-To protect your data in transit, start out by always using SSL/TLS protocols when exchanging data across different locations. Sometimes you need to isolate your entire communication channel between your on-premises and cloud infrastructure by using either a virtual private network (VPN) or [ExpressRoute](/azure/expressroute/). More information on using VPNs and ExpressRoute can be found in the [Hybrid On-Premises and Cloud Solutions](../cross-cutting/hybrid-on-premises-and-cloud.md) article.
+To protect your data in transit, start out by always using SSL/TLS protocols when exchanging data across different locations. Sometimes you need to isolate your entire communication channel between your on-premises and cloud infrastructure by using either a virtual private network (VPN) or [ExpressRoute](/azure/expressroute/). For more information, see [Extending on-premises data solutions to the cloud](../cross-cutting/hybrid-on-premises-and-cloud.md).
 
-If you are interacting with Azure Storage through the Azure Portal, all transactions occur via TLS. [Storage REST API](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference) over TLS can also be used to interact with Azure Storage and Azure SQL Database. Organizations that fail to protect data in transit are more susceptible for man-in-the-middle attacks, eavesdropping and session hijacking. These attacks can be the first step in gaining access to confidential data.
+If you are interacting with Azure Storage through the Azure Portal, all transactions occur via TLS. You can also use the [Storage REST API](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference) over TLS to interact with Azure Storage and Azure SQL Database. Organizations that fail to protect data in transit are more susceptible for man-in-the-middle attacks, eavesdropping and session hijacking. These attacks can be the first step in gaining access to confidential data.
 
 When it comes to identity and access control, Microsoft offers comprehensive solutions you can use across Azure and other services such as Office 365, to help simplify the management of multiple environments and control user access across applications. For instance, [Azure Active Directory](/azure/active-directory/) (Azure AD) can help you manage access to numerous Azure services as well as your custom-built applications, while providing active monitoring for suspicious activities. Azure AD can also help you implement [Role-Based Access Control](/azure/active-directory/role-based-access-control-what-is) (RBAC) to restrict your users to the exact permissions they need. If you are using Active Directory on-premises, it is possible to [synchronize with Azure Active Directory](/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements) to provide your users with a cloud identity based on their on-premises identity. Use [Multi-Factor Authentication](/azure/multi-factor-authentication/), a two-step verification solution that delivers strong authentication via a range of verification methods, including phone call, text message, or mobile app verification. You may also opt to integrate a number of third-party SaaS applications, such as Salesforce, with Azure AD for single sign-on, making it easier for your users to gain access to your products and services. These features help ensure the _right people_ can access your applications. When you want to have more control over how the right people are accessing your resources under certain conditions, or perhaps even block them from accessing certain apps under other conditions, use Azure Active Directory [conditional access](/azure/active-directory/active-directory-conditional-access-azure-portal). This capability is configured by setting conditional access policies through a number of condition statements and controls. For example, your policy statement could take the form of: _When contractors are trying to access our cloud apps from networks that are not trusted, then block access_. Finally, [Azure AD Privileged Identity Management](/azure/active-directory/active-directory-privileged-identity-management-configure) can help you manage, control, and monitor your users and what sorts of tasks they are performing with their admin privileges. This is an important step to limiting who in your organization can carry out privileged operations in Azure AD, Azure, Office 365, or SaaS apps, as well as monitor their activities.
 

@@ -1,11 +1,11 @@
 ---
-title: 
+title: Choosing a data pipeline orchestration technology
 description: 
 author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Technology choices: Data pipeline orchestration
+# Choosing a data pipeline orchestration technology
 
 ## What are your options for data pipeline orchestration, control flow, and data movement?
 

@@ -1,11 +1,11 @@
 ---
-title: 
+title: Choosing a data transfer technology
 description: 
 author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Technology choices: Data transfer
+# Choosing a data transfer technology
 
 ## What are your options when choosing a data transfer method?
 There are several options for transferring data to and from Azure, depending on your needs:

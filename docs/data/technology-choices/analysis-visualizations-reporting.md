@@ -1,11 +1,11 @@
 ---
-title: 
+title: Choosing a data analytics and reporting technology
 description: 
 author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Technology choices: Data analytics and reporting
+# Choosing a data analytics and reporting technology
 
 ## What are your options when choosing analysis, visualization, and reporting methods?
 There are several options for analysis, visualizations, and reporting in Azure, depending on your needs:

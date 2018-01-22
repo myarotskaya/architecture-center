@@ -1,13 +1,13 @@
 ---
-title: 
+title: Choosing an analytical data store
 description: 
 author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Technology choices: Analytical data stores
+# Choosing an analytical data store
 
-In the [big data](../concepts/big-data.md) common architecture, we reviewed the overall layout and uses of both the lambda and kappa architectures. Both of these pipelines require an analytical data store that serves processed data in a structured format that can be queried using analytical tools. The analytical data stores that support querying of both hot path data and cold path data by client applications and BI tools are collectively referred to as the serving layer, or data serving storage.
+In the [big data](../concepts/big-data.md) architecture, we reviewed the overall layout and uses of both the lambda and kappa architectures. Both of these pipelines require an analytical data store that serves processed data in a structured format that can be queried using analytical tools. The analytical data stores that support querying of both hot path data and cold path data by client applications and BI tools are collectively referred to as the serving layer, or data serving storage.
 
 The serving layer deals with processed data from both the hot path and cold path. This can be further subdivided into a speed serving layer that stores a subset of incrementally processed hot path data not yet processed by the batch techniques of the cold path, and a batch serving layer that contains the batch-processed output of the cold path. Because of this, the serving layer requires strong support for random reads with low latency. In addition, data serving storage for the speed layer should also support random writes, since any preparation work needed to create a batch, and batch load data into this store would typically introduce undesired delays. On the other hand, data serving storage for the batch layer does not need to support random writes, but batch writes instead.
 

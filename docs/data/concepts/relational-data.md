@@ -27,4 +27,4 @@ Relational databases support varying forms of constraints, including:
 
 Additionally, relational databases allow for the storage of executable code routines in the form of stored procedures and functions, which enable a mixture of declarative and procedural approaches.
 
-If data is non-relational or has requirements that are not suited to a relational database, consider [Non-relational and No-SQL common architectures](./non-relational-data.md).
+If data is non-relational or has requirements that are not suited to a relational database, consider a [Non-relational or NoSQL](./non-relational-data.md)data store.

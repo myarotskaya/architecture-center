@@ -1,11 +1,11 @@
 ---
-title: 
+title: Choosing a search data store
 description: 
 author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Technology choices: Search data stores
+# Choosing a search data store
 
 ## What are your options when choosing a search data store?
 In Azure, all of the following data stores will meet the core requirements for search against free-form text data by providing a search index:

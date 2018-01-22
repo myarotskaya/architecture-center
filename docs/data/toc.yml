@@ -85,9 +85,9 @@
     items:
     - name: Data transfer
       href: technology-choices/data-transfer.md 
-    - name: Hybrid on-premises and cloud solutions
+    - name: Extending on-premises data solutions to the cloud
       href: cross-cutting/hybrid-on-premises-and-cloud.md 
     - name: Monitoring data solutions
       href: cross-cutting/monitoring-data-solutions.md 
-    - name: Secure data solutions
+    - name: Securing data solutions
       href: cross-cutting/secure-solutions.md 

@@ -1,4 +1,11 @@
-# Technology choices: Real-time message ingestion
+---
+title: Choosing a real-time message ingestion technology
+description: 
+author: zoinerTejada
+ms:date: 01/17/2018
+---
+
+# Choosing a real-time message ingestion technology
 
 ## What are your options for real-time message ingestion?
 

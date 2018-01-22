@@ -1,13 +1,13 @@
 ---
-title: 
+title: Choosing an OLTP data store
 description: 
 author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Technology choices: Online transaction processing (OLTP)
+# Choosing an OLTP data store
 
-## What are your options when choosing an OLTP data store?
+## What are your options when choosing an online transaction processing (OLTP) data store?
 In Azure, all of the following data stores will meet the core requirements for OLTP and for the management of transaction data:
 - [Azure SQL Database](/azure/sql-database/)
 - Azure SQL Database Managed Instance

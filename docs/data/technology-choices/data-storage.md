@@ -1,11 +1,11 @@
 ---
-title: 
+title: Choosing a data storage technology for batch processing
 description: 
 author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Technology choices: Data storage for batch processing
+# Choosing a data storage technology for batch processing
 
 ## What are your options when choosing a data store for batch processing?
 
