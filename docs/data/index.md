@@ -14,6 +14,8 @@ This guide presents a structured approach for designing data-centric solutions o
 
 The cloud is changing the way applications are designed, including how data is processed and stored. Instead of a single general-purpose database that handles all of a solution's data, the _polyglot persistence_ approach is to use multiple, specialized databases and datastores &mdash; each optimized to provide specific capabilities needed by the solution. The perspective on data in the solution changes as a result. There are no longer multiple layers of business logic that read and write to a single data layer. Instead modern, polyglot persistence solutions are designed around a *data pipeline* that describes how data flows through a solution, where it is processed, where it is stored, and how it is consumed by the next component in the pipeline. 
 
+![](./images/guide-steps.svg)
+
 ## How this guide is structured
 
 This guide is structure around a basic pivot: The distinction between *relational* or *structured* data and *non-relational* or *unstructured* (or semi-structured) data. 
@@ -30,7 +32,7 @@ Within each of these two main pivots, the Data Architecture Guide contains the f
 
 ## Traditional RDBMS
 
-### Conccepts
+### Concepts
 
 - [Relational data](./concepts/relational-data.md) 
 - [Transactional data](./concepts/transactional-data.md) 
