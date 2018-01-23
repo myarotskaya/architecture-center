@@ -19,7 +19,7 @@ The responsibilities and controls for the security of applications and networks 
 
 Learn more about these topics in [Security in a Cloud-Enabled World](https://mva.microsoft.com/training-courses/security-in-a-cloudenabled-world-12725?l=CfLHobAcB_3904300474), provided by Microsoft Virtual Academy.
 
-### Data Protection
+## Data Protection
 
 The first step to protecting information is identifying what to protect. Develop clear, simple, and well-communicated guidelines to identify, protect, and monitor the most important data assets anywhere they reside. This is commonly referred to as Information Security and Data Classification policies. Once identified, establish the strongest protection for assets that have a disproportionate impact on the organization's mission or profitability. These are known as high value assets, or HVAs. Perform stringent analysis of HVA lifecycle and security dependencies, and establish appropriate security controls and conditions. Similarly, identify and classify sensitive assets, and define the technologies and processes to automatically apply security controls.
 
@@ -30,7 +30,7 @@ Once the data you need to protect has been identified, you need to account for t
 
 Learn more about how to protect your data at-rest or in-transit by reading [Azure Data Security and Encryption Best Practices](/azure/security/azure-security-data-encryption-best-practices).
 
-### Access Control
+## Access Control
 
 Central to protecting your data in the cloud is a combination of identity management and access control. Given the variety and type of cloud services (SaaS, PaaS, and IaaS), as well as the rising popularity of [hybrid cloud](../cross-cutting/hybrid-on-premises-and-cloud.md), there are several key practices you should follow when it comes to identity and access control:
 
@@ -46,7 +46,7 @@ Central to protecting your data in the cloud is a combination of identity manage
 
 Learn more about [Azure Identity Management and access control security best practices](/azure/security/azure-security-identity-management-best-practices).
 
-### Auditing
+## Auditing
 
 Beyond the identity and access monitoring previously mentioned, the services and applications that you use in the cloud should be generating security-related events that you can monitor. A combination of [monitoring these events and creating alerts](../cross-cutting/monitoring-data-solutions.md) for them are important components in an effective data protection strategy.
 
@@ -65,7 +65,7 @@ Establishing a secure solution can cause you to face some of the following chall
 * Implementing encryption and authorization management across your applications and services.
 * Ensuring that centralized identity management works across all of your solution components, whether on-premises or in the cloud.
 
-## Secure solutions in Azure
+## Secure data solutions in Azure
 
 Starting with data protection, how you secure your data at rest in Azure depends on where you are keeping it. When using Azure to host your virtual machines, you can leverage [Azure Disk Encryption](/azure/security/azure-security-disk-encryption) on your Linux or Windows VMs to help protect and safeguard your data stored by encrypting the attached disks. This solution integrates with [Azure Key Vault](/azure/key-vault/) to help you safely control and manage the disk-encryption keys and secrets in your key vault subscription. [Azure Storage Service Encryption](/azure/storage/common/storage-service-encryption) for data at rest enables Azure Storage to automatically encrypt your data prior to persisting to storage, and decrypts prior to retrieval. The encryption, decryption, and key management are totally transparent to users. You can use a combination of [Client-Side Encryption and Azure Key Vault](/azure/storage/common/storage-client-side-encryption) to easily encrypt at the client before sending your data to Azure Storage.
 
