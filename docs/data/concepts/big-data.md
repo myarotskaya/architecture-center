@@ -90,7 +90,7 @@ From a practical viewpoint, Internet of Things (IoT) represents any device that 
 
 Event-driven architectures are central to IoT solutions. The following diagram shows a possible logical architecture for IoT. The diagram emphasizes the event-streaming components of the architecture.
 
-![IoT architecture](./images/iot.png) <!--You might consider spelling out machine learning.-->
+![IoT architecture](../../guide/architecture-styles/images/iot.png)
 
 The **cloud gateway** ingests device events at the cloud boundary, using a reliable, low latency messaging system.
 
