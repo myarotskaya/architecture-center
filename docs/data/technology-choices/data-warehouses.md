@@ -8,21 +8,21 @@ ms:date: 01/17/2018
 # Choosing a data warehouse
 
 ## What are your options when choosing a data warehouse?
-There are several options for implementing a data warehouse in Azure, depending on your needs:<!--I would probably have the text below these options first. In fact, I originally had a comment about whether we needed to spell out SMP and MPP for the audience. If the reader isn't familiar with these concepts would they really benefit from going off and reading the material at the links without the context provided by the info below?-->
 
-SMP (small/medium data):
+There are several options for implementing a data warehouse in Azure, depending on your needs. The following lists are broken into two categories, [symmetric multiprocessing](https://en.wikipedia.org/wiki/Symmetric_multiprocessing) (SMP) and [massively parallel processing](https://en.wikipedia.org/wiki/Massively_parallel) (MPP). 
+
+SMP:
 
 - [Azure SQL Database](/azure/sql-database/)
 - [SQL Server in a virtual machine](/sql/sql-server/sql-server-technical-documentation)
-- Azure SQL Database managed instance
 
-MPP (big data):
+MPP:
 
 - [Azure Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is)
 - [Apache Hive on HDInsight](/azure/hdinsight/hadoop/hdinsight-use-hive)
 - [Interactive Query (Hive LLAP) on HDInsight](/azure/hdinsight/interactive-query/apache-interactive-query-get-started)
 
-The list above is broken into two categories: [SMP](https://en.wikipedia.org/wiki/Symmetric_multiprocessing) (symmetric multiprocessing) and [MPP](https://en.wikipedia.org/wiki/Massively_parallel) (massively parallel). As a general rule, SMP-based warehouses are best suited for small to medium data sets (up to 4-100 TB), while MPP is oftentimes used for big data. The delineation between small/medium and big data has, in part, to do with your organization's definition and supporting infrastructure, as well as the [limitation of the data sizes imposed by the technology choices within](oltp-data-stores.md#scalability-capabilities) your infrastructure. Beyond data sizes, the type of workload pattern you plan to support are likely a greater determining factor. For instance, complex queries may be too slow for an SMP solution, and require an MPP solution instead. MPP-based systems are likely to impose a performance penalty with small data sizes, due to how jobs are distributed and consolidated across nodes. All things considered, the general guidance is if your data sizes are already exceeding 1 TB and are expected to continually grow, you may want to consider selecting an MPP solution. However, if your data sizes are less than this, but your workloads are exceeding the available resources of your SMP solution, then MPP may be your best option as well.
+As a general rule, SMP-based warehouses are best suited for small to medium data sets (up to 4-100 TB), while MPP is often used for big data. The delineation between small/medium and big data has, in part, to do with your organization's definition and supporting infrastructure, as well as the [limitation of the data sizes imposed by the technology choices within](oltp-data-stores.md#scalability-capabilities) your infrastructure. Beyond data sizes, the type of workload pattern you plan to support are likely a greater determining factor. For instance, complex queries may be too slow for an SMP solution, and require an MPP solution instead. MPP-based systems are likely to impose a performance penalty with small data sizes, due to how jobs are distributed and consolidated across nodes. All things considered, the general guidance is if your data sizes are already exceeding 1 TB and are expected to continually grow, you may want to consider selecting an MPP solution. However, if your data sizes are less than this, but your workloads are exceeding the available resources of your SMP solution, then MPP may be your best option as well.
 
 The data accessed or stored by your data warehouse could come from a number of data sources, including a data lake, such as [Azure Data Lake Store](/azure/data-lake-store/). For a video session that compares the different strengths of MPP services that can use Azure Data Lake, see [Azure Data Lake and Azure Data Warehouse: Applying Modern Practices to Your App](https://azure.microsoft.com/resources/videos/build-2016-azure-data-lake-and-azure-data-warehouse-applying-modern-practices-to-your-app/).
 

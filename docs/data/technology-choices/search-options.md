@@ -19,7 +19,7 @@ Each data store brings with it a unique set of capabilities, giving you the opti
 
 ## Key selection criteria
 
-The following table summarize the key differences in capabilities between each. <!--You might want to move this after the list. It may make more sense to introduce the questions, and then introduce the table with something like: "Based on your responses to the questions, the following table will help you select the choice that's right for you." or something along those lines. Also, BTW, this is one of the best decision making processes I've seen. Normally you get a table that tries to answer all the questions, but doesn't. Breaking it out this way is much easier to follow. -->For search scenarios, begin choosing the appropriate search data store for your needs by answering these questions:
+For search scenarios, begin choosing the appropriate search data store for your needs by answering these questions:
 - Do you want a managed service or do you prefer to setup and manage the cluster of virtual machines running the search data store?
     - If yes, then narrow your options to those that are managed services.
 - Can you specify your index schema upfront?
@@ -36,6 +36,8 @@ The following table summarize the key differences in capabilities between each. 
     - If yes, examine the options that provide capabilities like transparent data encryption, authentication with Azure Active Directory and IP-based or virtual network&ndash;based access controls.
 
 ## Capability matrix
+
+The following tables summarize the key differences in capabilities between each.
 
 ### General capabilities
 | | Azure Search | ElasticSearch | HDInsight with Solr | SQL Server or SQL DB with full text search | 
@@ -55,7 +57,7 @@ The following table summarize the key differences in capabilities between each. 
 | | Azure Search | ElasticSearch | HDInsight with Solr | SQL Server or SQL DB with full text search | 
 | --- | --- | --- | --- | --- | 
 | Supports analytics beyond full text search | No | Yes | Yes | Yes |
-| Part of a log analytics stack | No | Yes (ELK) <!--Term familiar to the audience-->|  No | No |
+| Part of a log analytics stack | No | Yes (ELK) |  No | No |
 | Supports semantic search | Yes (find similar documents only) | Yes | Yes | Yes | 
 
 ### Security capabilities

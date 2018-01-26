@@ -128,7 +128,7 @@ Based on your responses to the questions above, the following tables will help y
 | Data types | Yes (JSON data types) | No |
 | Secondary indexes | Yes | No |
 | SQL language support | Yes | Yes (using the [Phoenix](http://phoenix.apache.org/) JDBC driver) |
-| Available APIs |<!--DocumentDB is a deprecated name--> [Azure Cosmos DB](/azure/cosmos-db/documentdb-introduction), [MongoDB](/azure/cosmos-db/mongodb-introduction), [Graph](/azure/cosmos-db/graph-introduction) (Gremlin), RESTful HTTP, [Table](/azure/cosmos-db/table-introduction), [Cassandra](/azure/cosmos-db/cassandra-introduction) | Java, RESTful HTTP, Thrift |
+| Available APIs |[DocumentDB](/azure/cosmos-db/documentdb-introduction), [MongoDB](/azure/cosmos-db/mongodb-introduction), [Graph](/azure/cosmos-db/graph-introduction) (Gremlin), RESTful HTTP, [Table](/azure/cosmos-db/table-introduction), [Cassandra](/azure/cosmos-db/cassandra-introduction) (preview) | Java, RESTful HTTP, Thrift |
 | Consistency | Strong, bounded-staleness, session, consistent prefix, eventual | Strong |
 | Native Azure Functions integration | [Yes](/azure/cosmos-db/serverless-computing-database) | No |
 | Regional availability | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) |

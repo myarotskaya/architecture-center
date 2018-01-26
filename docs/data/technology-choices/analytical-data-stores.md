@@ -26,7 +26,7 @@ There are several options for data serving storage in Azure, depending on your n
 
 These options provide various database models that are optimized for different types of tasks:
 
-- [Key/value](https://msdn.microsoft.com/library/dn313285.aspx#sec7) databases store <!--Originally I added an "s" to "stores" but after reading the next sections it's clear that the word database is needed for readability. Yes, it repeats the intro slightly, but wihout it I had questions.--> a single serialized object for each key value. They're good for storing large volumes of data where you want to get one item for a given key value and you don't have to query based on other properties of the item.
+- [Key/value](https://msdn.microsoft.com/library/dn313285.aspx#sec7) databases hold a single serialized object for each key value. They're good for storing large volumes of data where you want to get one item for a given key value and you don't have to query based on other properties of the item.
 - [Document](https://msdn.microsoft.com/library/dn313285.aspx#sec8) databases are key/value databases in which the values are *documents*. Document here isn't used in the sense of a Word or Excel document, but means a collection of named fields and values, any of which could be a child document. For example, in an order history table an order document might have order number, order date, and customer fields, and the customer field might have name and address fields. The database encodes field data in a format such as XML, YAML, JSON, or BSON, or it can use plain text. One feature that sets document databases apart from key/value databases is the ability to query on non-key fields and define secondary indexes to make querying more efficient. This ability makes a document database more suitable for applications that need to retrieve data based on criteria more complex than the value of the document key. For example, in a sales order history document database you could query on various fields such as product ID, customer ID, customer name, and so forth.
 - [Column-family](https://msdn.microsoft.com/library/dn313285.aspx#sec9) databases are key/value data stores that enable you to structure data storage into collections of related columns called column families. For example, a census database might have one group of columns for a person's name (first, middle, last), one group for the person's address, and one group for the person's profile information (DOB, gender, and so on). The database can then store each column family in a separate partition while keeping all of the data for one person related to the same key. You can then read all profile information without having to read through all of the name and address information as well.
 - [Graph](https://msdn.microsoft.com/library/dn313285.aspx#sec10) databases store information as a collection of objects and relationships. The purpose of a graph database is to enable an application to efficiently perform queries that traverse the network of objects and the relationships between them. For example, the objects might be employees in a human resources database, and you might want to facilitate queries such as "find all employees who directly or indirectly work for Scott."
@@ -37,7 +37,7 @@ Each data serving solution brings with it a unique set of capabilities, giving y
 
 ## Key selection criteria
 
-The following tables summarize the key differences in capabilities between each. <!--See note from analysis-visualizations-reporting.md-->For data serving storage scenarios, choose the appropriate system for your needs by answering these questions:
+For data serving storage scenarios, choose the appropriate system for your needs by answering these questions:
 
 - Do you need serving storage that can serve as a hot path for your data?
     - If yes, narrow your options to those that are optimized for speed serving layer.
@@ -47,6 +47,8 @@ The following tables summarize the key differences in capabilities between each.
     - If so, narrow your options to those with a relational database model, but also note that it is possible to use a tool like PolyBase to query non-relational data stores if needed.
 
 ## Capability matrix
+
+The following tables summarize the key differences in capabilities.
 
 ### General capabilities
 

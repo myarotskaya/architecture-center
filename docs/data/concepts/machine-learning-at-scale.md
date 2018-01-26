@@ -45,9 +45,9 @@ The machine learning at scale approach produces a few challenges:
 ## Machine learning at scale in Azure
 Before deciding on which Machine earning services to utilize in training and operationalization, you should consider if you need to train a model at all or if your requirements are satisfied by using a prebuilt model. In many cases, the use of a prebuilt model is the same as integrating a call to a web service, or using a simple machine learning library to load a saved model and using it as input to the library provided prediction function. As the following diagram illustrates, you can integrate the web services provide by Microsoft Cognitive Services into your application, use the pretrained neural network models provided by Cognitive Toolkit in your application, or embed the serialized models provided by Core ML for your use within your iOS apps. If a prebuilt model does not fit your data or your scenario, then you have multiple options in Azure, including Azure Machine Learning, HDInsight with Spark MLlib and MMLSpark, Cognitive Toolkit, and SQL Machine Learning Services.  
 
-![Model options in Azure](./images/machine-learning-model-options.png) <!--This image has a lot of unnecessary caps. Really only the first word of any lable should be capped until it's a proper name, like Azure Machine Learning.-->
+![Model options in Azure](./images/machine-learning-model-options.png) 
 
 Once you have decided that a custom model is warranted, then you can begin to design your pipeline from model training to operationalization. In Azure, the options are as follows:
 
-![Model options in Azure](./images/machine-learning-model-training-and-deployment.png)<!--VM should be spelled out as virtual machine.-->
+![Model options in Azure](./images/machine-learning-model-training-and-deployment.png)
 

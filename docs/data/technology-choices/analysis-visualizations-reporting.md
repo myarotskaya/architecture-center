@@ -19,12 +19,12 @@ There are several options for analysis, visualizations, and reporting in Azure, 
 
 [Power BI](/power-bi/) is a suite of business analytics tools that deliver insights throughout your organization. Connect to hundreds of data sources, simplify data prep, and drive ad hoc analysis. Use [Power BI Embedded](https://azure.microsoft.com/services/power-bi-embedded/) to integrate Power BI data experiences within your own applications without requiring any additional licensing.
 
-Produce reports and publish them for your organization to consume on the web and across mobile devices. Everyone can create personalized dashboards with a unique, 360-degree view of their business. And scale across the enterprise, with governance and [security built in](/power-bi/service-admin-power-bi-security). Power BI uses [Azure Active Directory](/azure/active-directory/) (Azure AD) <!--This is the approved acronym.--> to authenticate users who log in to the Power BI service, and in turn, uses the Power BI login credentials whenever a user attempts to access resources that require authentication.
+Produce reports and publish them for your organization to consume on the web and across mobile devices. Everyone can create personalized dashboards with a unique, 360-degree view of their business. And scale across the enterprise, with governance and [security built in](/power-bi/service-admin-power-bi-security). Power BI uses [Azure Active Directory](/azure/active-directory/) (Azure AD) to authenticate users who log in to the Power BI service, and in turn, uses the Power BI login credentials whenever a user attempts to access resources that require authentication.
 
 You can connect to hundreds of data sources from Power BI. See [this list](/power-bi/desktop-data-sources) of the currently available data sources.
 
 ### Jupyter Notebooks 
-<!--Looks like Notebook in this and Zeppelin are proper names so leaving capped.-->
+
 [Jupyter Notebooks](https://jupyter.readthedocs.io/en/latest/index.html) provide a browser-based shell that enables data scientists to create *notebook* files that contain Python, Scala, or R code and markdown text, making it an effective way to collaborate by sharing and documenting code and results in a single document.
 
 Most varieties of HDInsight clusters, such as Spark or Hadoop, come [preconfigured with Jupyter notebooks](/azure/hdinsight/spark/apache-spark-jupyter-notebook-kernels) for interacting with data and submitting jobs for processing. Depending on the type of HDInsight cluster you are using, one or more kernels will be provided for interpreting and running your code. For example, Spark clusters on HDInsight provide Spark-related kernels that you can select from to execute Python or Scala code using the Spark engine.
@@ -58,7 +58,7 @@ Each analysis, visualization, and reporting method brings with it a unique set o
 
 ## Key selection criteria
 
-The following tables summarize the key differences in capabilities between each. <!--You might want to move this after the list. It may make more sense to introduce the questions, and then introduce the table with something like: "Based on your responses to the questions, the following table will help you select the choice that's right for you." or something along those lines. Also, BTW, this is one of the best decision making processes I've seen. Normally you get a table that tries to answer all the questions, but doesn't. Breaking it out this way is much easier to follow. -->For analysis, visualizations, and reporting scenarios, choose the appropriate system for your needs by answering these questions:
+For analysis, visualizations, and reporting scenarios, choose the appropriate system for your needs by answering these questions:
 
 - Do you want the ability to connect to numerous data sources, providing a centralized place to create reports for data spread throughout your domain?
     - If so, look for options that allow you to connect to 100s of data sources.
@@ -70,6 +70,8 @@ The following tables summarize the key differences in capabilities between each.
     - If yes, then narrow your options to those that can tap into the power of a big data cluster, such as Spark on HDInsight.
 
 ## Capability matrix
+
+The following tables summarize the key differences in capabilities. 
 
 ### General capabilities
 

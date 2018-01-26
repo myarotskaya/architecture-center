@@ -22,7 +22,7 @@ Each service brings with it a unique set of capabilities, giving you the option 
 
 ## Key Selection Criteria
 
-The following table summarize the key differences in capabilities between each. <!--See note from analysis-visualizations-reporting.md-->For real-time processing scenarios, begin choosing the appropriate service for your needs by answering these questions:
+For real-time processing scenarios, begin choosing the appropriate service for your needs by answering these questions:
 - Do you want a managed service or do you prefer to setup and manage the cluster of virtual machines running the processing?
     - If yes, then narrow your options to those that are managed services.
 - Do you want to author stream processing logic declartively (for example, as SQL queries) or imperatively (for example, Java code)?
@@ -35,6 +35,8 @@ The following table summarize the key differences in capabilities between each. 
     - If yes, consider the options that scale with the cluster size. 
 
 ## Capability matrix
+
+The following tables summarize the key differences in capabilities. 
 
 ### General capabilities
 | | Azure Stream Analytics | HDInsight with Spark Streaming | HDInsight with Storm | Azure Functions | Azure App Service WebJobs |

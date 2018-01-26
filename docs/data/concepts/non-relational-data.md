@@ -9,7 +9,7 @@ ms:date: 01/17/2018
 
 Non-relational data is not represented in the tabular schema of rows and columns used by many traditional databases, but is instead represented in a storage model that better suits the specific requirements of the application in which the data is used. For example, the data may stored as simple key/value pairs, as JSON documents, or as a graph consisting of edges and vertices. These data stores break from the tradition of representing the data in a relational model and tend to more specific in the type of data they support, and in the ways in which the data can be queried. For example, time series data stores are optimized for supporting queries over time based sequences of data, and graph data stores are optimized for exploring weighted relationships between entities. Neither format would generalize well to the task of managing transactional data. 
 
-NoSQL refers to data stores that do not use SQL for performing their querying, and instead use other programming languages and constructs to query the data. In practice, when the term No-SQL is used, what is really meant is non-relational. This is because overtime, many non-relational data stores have added in SQL compatible query support. So while they have remained non-relational, they are no longer strictly No-SQL.  <!--The MS style to to avoide semicolons because they can make it harder for ESL readers to parse the sentence. They suggest breaking into two.-->
+NoSQL refers to data stores that do not use SQL for performing their querying, and instead use other programming languages and constructs to query the data. In practice, when the term No-SQL is used, what is really meant is non-relational. This is because overtime, many non-relational data stores have added in SQL compatible query support. So while they have remained non-relational, they are no longer strictly No-SQL.  
 
 There are various non-relational data stores that take their own unique approach to data storage, data representation, data processing, and querying&mdash;and by extension have their own data architecture. The following introduces each.
 
@@ -119,7 +119,7 @@ Relevant Azure service:
 ## Typical requirements
 Non-relational data stores often use a different storage architecture from that used by relational databases to address the requirements of the type of data they manage. Specifically, they tend towards having no fixed schema, thus enabling agility in evolving storage with the client application needs. Additionally, they tend not to support transactions (or they restrict the scope of transactions) and they generally don't include secondary indexes for scalability reasons.
 
-The following compares the requirements for each of the non-relational data stores:<!--Colons aren't required in the first column, the table structure implies the relationship.-->
+The following compares the requirements for each of the non-relational data stores:
 
 | Requirement | Document data | Column-family data | Key/value data | Graph data | Time series data | Object data | External index data |
 | --- | --- | --- | --- | --- | --- | --- | --- |

@@ -39,7 +39,8 @@ Each cognitive service is purpose built to meet a particular application require
 
 ## Key Selection Criteria
 
-The following tables summarize the key differences in capabilities between each of the cognitive services. <!--See note from analysis-visualizations-reporting.md-->A good way to begin finding the right service is by answering these questions:
+A good way to begin finding the right service is by answering these questions:
+
 - What type of data are you dealing with?
     - Narrow your options by choosing from the set of services based on the type of input data you are working with&mdash;text, images/video, or speech. For example, if your input is text, select from the services that have an input type of text. 
 - Do you have the data to train a model?
@@ -47,6 +48,8 @@ The following tables summarize the key differences in capabilities between each 
 
 
 ## Capability matrix
+
+The following tables summarize the key differences in capabilities between each of the cognitive services. 
 
 ### Uses prebuilt models
 | | Input type | Key benefit |
@@ -70,7 +73,7 @@ The following tables summarize the key differences in capabilities between each 
 | Bing Web Search API | Text (web search query) | Get enhanced search details from billions of web documents |
 | Bing Speech API | Text or Speech | Convert speech to text and back again |
 | Speaker Recognition API | Speech | Use speech to identify and authenticate individual speakers |
-| Translator Speech API | Speech | Easily <!-- Is it really easy?-->conduct real-time speech translation |
+| Translator Speech API | Speech | Perform real-time speech translation |
 | Computer Vision API | Images (or frames from video) | Distill actionable information from images, automatically create description of photos, derive tags, recognize celebrities, extract text, and create accurate thumbnails |
 | Content Moderator | Text, Images or Video | Automated image, text, and video moderation |
 | Emotion API | Images (photos with human subjects) | Identify the range emotions of human subjects |
