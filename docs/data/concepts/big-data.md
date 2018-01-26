@@ -24,6 +24,10 @@ Consider big data architectures when you need to:
 * Transform unstructured data for analysis and reporting.
 * Capture, process, and analyze unbounded streams of data in real time, or with low latency.
 
+## Components of a big data architecture
+
+The following diagram shows the logical components that fit into a big data architecture. Individual solutions may not contain every item in this diagram.
+
 ![Overall data pipeline diagram](./images/big-data-pipeline.png) 
 
 Most big data architectures include some or all of the following components:
