@@ -41,4 +41,4 @@ Transactional data tends to have the following traits:
 
 ## See Also
 
-[Online Transaction Processing](../solutions/online-transaction-processing.md)
+[Online Transaction Processing](../scenarios/online-transaction-processing.md)

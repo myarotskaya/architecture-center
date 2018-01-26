@@ -27,7 +27,7 @@ Non-relational data is any data that does not use the [relational model](https:/
 Within each of these two main pivots, the Data Architecture Guide contains the following sections:
 
 - **Concepts.** Overview articles that introduce the main concepts you need to understand when working with this type of data.
-- **Solutions.** A representative set of data solutions, including a discussion of the relevant Azure services and the appropriate architecture for the solution.
+- **Scenarios.** A representative set of data scenarios, including a discussion of the relevant Azure services and the appropriate architecture for the scenario.
 - **Technology choices.** Detailed comparions of various data technologies available on Azure, including open source options. Within each category, we describe the key selection criteria and a capability matrix, to help you choose the right technology for your scenario.
 
 ## Traditional RDBMS
@@ -38,12 +38,12 @@ Within each of these two main pivots, the Data Architecture Guide contains the f
 - [Transactional data](./concepts/transactional-data.md) 
 - [Semantic modeling](./concepts/semantic-modeling.md) 
 
-### Solutions
+### Scenarios
 
-- [ETL](./solutions/etl.md) 
-- [Data warehousing and data marts](./solutions/data-warehousing.md)
-- [Online analytical processing (OLAP)](./solutions/online-analytical-processing.md)
-- [Online transaction processing (OLTP)](./solutions/online-transaction-processing.md) 
+- [ETL](./scenarios/etl.md) 
+- [Data warehousing and data marts](./scenarios/data-warehousing.md)
+- [Online analytical processing (OLAP)](./scenarios/online-analytical-processing.md)
+- [Online transaction processing (OLTP)](./scenarios/online-transaction-processing.md) 
 
 ## Big Data and NoSQL
 
@@ -55,14 +55,14 @@ Within each of these two main pivots, the Data Architecture Guide contains the f
 - [Machine learning at scale](./concepts/machine-learning-at-scale.md)
 - [Processing CSV and JSON files](./concepts/processing-csv-and-json-files.md)
 
-### Solutions
+### Scenarios
 
-- [Batch processing](./solutions/batch-processing.md)
-- [Interactive data exploration](./solutions/interactive-data-exploration.md)
-- [Natural language processing](./solutions/natural-language-processing.md)
-- [Real time processing](./solutions/real-time-processing.md)
-- [Search](./solutions/search.md)
-- [Time series solutions](./solutions/time-series.md)
+- [Batch processing](./scenarios/batch-processing.md)
+- [Interactive data exploration](./scenarios/interactive-data-exploration.md)
+- [Natural language processing](./scenarios/natural-language-processing.md)
+- [Real time processing](./scenarios/real-time-processing.md)
+- [Search](./scenarios/search.md)
+- [Time series solutions](./scenarios/time-series.md)
 
 ## Cross-cutting concerns
 

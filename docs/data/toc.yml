@@ -16,13 +16,13 @@
     - name: Scenarios
       items:
       - name: Extract, transform, and load (ETL)
-        href: solutions/etl.md 
+        href: scenarios/etl.md 
       - name: Data warehousing
-        href: solutions/data-warehousing.md
+        href: scenarios/data-warehousing.md
       - name: Online analytical processing (OLAP)
-        href: solutions/online-analytical-processing.md
+        href: scenarios/online-analytical-processing.md
       - name: Online transaction processing (OLTP)
-        href: solutions/online-transaction-processing.md 
+        href: scenarios/online-transaction-processing.md 
     - name: Technology choices
       items:
       - name: Data warehouses
@@ -48,17 +48,17 @@
     - name: Scenarios
       items:
       - name: Batch processing
-        href: solutions/batch-processing.md
+        href: scenarios/batch-processing.md
       - name: Interactive data exploration
-        href: solutions/interactive-data-exploration.md
+        href: scenarios/interactive-data-exploration.md
       - name: Natural language processing
-        href: solutions/natural-language-processing.md
+        href: scenarios/natural-language-processing.md
       - name: Real time processing
-        href: solutions/real-time-processing.md
+        href: scenarios/real-time-processing.md
       - name: Search
-        href: solutions/search.md
+        href: scenarios/search.md
       - name: Time series solutions
-        href: solutions/time-series.md
+        href: scenarios/time-series.md
     - name: Technology choices
       items:
       - name: Analytical data stores

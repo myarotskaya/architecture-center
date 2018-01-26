@@ -49,4 +49,4 @@ Semantic modeling and analytical processing tends to have the following traits:
 
 ## See also
 
-[Online analytical processing (OLAP)](../solutions/online-analytical-processing.md)
+[Online analytical processing (OLAP)](../scenarios/online-analytical-processing.md)
