@@ -16,7 +16,7 @@
     - name: Scenarios
       items:
       - name: Extract, Transform, and Load (ETL)
-        href: solutions/data-pipeline.md 
+        href: solutions/etl.md 
       - name: Data warehousing
         href: solutions/data-warehousing.md
       - name: Online analytical processing (OLAP)

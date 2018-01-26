@@ -40,7 +40,7 @@ Within each of these two main pivots, the Data Architecture Guide contains the f
 
 ### Solutions
 
-- [ETL / ELT](./solutions/data-pipeline.md) 
+- [ETL](./solutions/etl.md) 
 - [Data warehousing and data marts](./solutions/data-warehousing.md)
 - [Online analytical processing (OLAP)](./solutions/online-analytical-processing.md)
 - [Online transaction processing (OLTP)](./solutions/online-transaction-processing.md) 
