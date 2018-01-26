@@ -7,13 +7,13 @@ ms:date: 01/17/2018
 
 # Extract, transform, and load (ETL)
 
-Gathering data from multiple sources, in multiple formats, and moving it to one or more data stores is a common problem organizations face on a daily basis. The destination may not be the same type of data store as the source, and often the format is different, or the data needs to be shaped or cleaned in some fashion prior to loading it into its final destination.
+Gathering data from multiple sources, in multiple formats, and moving it to one or more data stores is a common problem organizations face on a daily basis. The destination may not be the same type of data store as the source, and often the format is different, or the data needs to be shaped or cleaned in some fashion before to loading it into its final destination.
 
 Various tools, services, and processes have been developed over the years to help address these challenges. No matter the process used, there is a common need to coordinate the work and apply some level of data transformation within the data pipeline. The following sections highlight the common methods used to perform these tasks.
 
 ## Extract, transform, and load (ETL)
 
-Extract, transform, and load (ETL) is a data pipeline used to collect data from various sources (that's the extract step), transform the data according to business rules, and load it into a destination data store. The transformation work in ETL takes place in a specialized engine, and often involves using staging tables to temporarily hold data as it is being transformed and ultimately loaded to its destination.
+Extract, transform, and load (ETL) is a data pipeline used to collect data from various sources, transform the data according to business rules, and load it into a destination data store. The transformation work in ETL takes place in a specialized engine, and often involves using staging tables to temporarily hold data as it is being transformed and ultimately loaded to its destination.
 
 The data transformation that takes place usually involves various operations, such as filtering, sorting, aggregating, joining data, cleaning data, deduplicating, and validating data.
 
@@ -69,4 +69,4 @@ Other tools:
 - [Online Transaction Processing (OLTP) data stores](../technology-choices/oltp-data-stores.md)
 - [Online Analytical Processing (OLAP) data stores](../technology-choices/olap-data-stores.md)
 - [Data warehouses](../technology-choices/data-warehouses.md)
-- [Pipeline orchestration, control flow, and data movement](../technology-choices/pipeline-orchestration-data-movement.md)
+- [Pipeline orchestration](../technology-choices/pipeline-orchestration-data-movement.md)

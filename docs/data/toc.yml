@@ -15,7 +15,7 @@
         href: concepts/semantic-modeling.md 
     - name: Scenarios
       items:
-      - name: Extract, Transform, and Load (ETL)
+      - name: Extract, transform, and load (ETL)
         href: solutions/etl.md 
       - name: Data warehousing
         href: solutions/data-warehousing.md

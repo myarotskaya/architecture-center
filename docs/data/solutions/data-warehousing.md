@@ -16,7 +16,8 @@ To move data into a data warehouse, it is extracted on a periodic basis from var
 <!--![Data warehousing](./images/data-warehouses.png) -->
 
 ### Data marts and operational data stores
-Owing to the complexities of managing data at scale it is becoming less common to have a single data warehouse that tries to represent the entire data estate of the enterprise across all scenarios. Instead, smaller more focused data warehouses referred to as data marts are created that expose the desired data for analytics purposes. These data marts are populated using an orchestration process from data maintained in an operational data store, which acts as intermediary between the source transactional system and the data mart. The data managed by the operational data store is a cleaned version of the data present in the source transactional system, and typically a subset of the historical data that is maintained by the data warehouse or data mart. 
+
+Managing data at scale is complex, and it is becoming less common to have a single data warehouse that represents all data across the entire enterprise. Instead, organizations create smaller, more focused data warehouses, called *data marts*, that expose the desired data for analytics purposes. An orchestration process populates the data marts from data maintained in an operational data store. The operational data store acts as an intermediary between the source transactional system and the data mart. Data managed by the operational data store is a cleaned version of the data present in the source transactional system, and is typically a subset of the historical data that is maintained by the data warehouse or data mart. 
 
 ## When to use this solution
 

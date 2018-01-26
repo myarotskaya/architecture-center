@@ -10,7 +10,6 @@ ms:date: 01/17/2018
 ## What are your options when choosing an online transaction processing (OLTP) data store?
 In Azure, all of the following data stores will meet the core requirements for OLTP and for the management of transaction data:
 - [Azure SQL Database](/azure/sql-database/)
-- Azure SQL Database Managed Instance
 - [SQL Server in an Azure virtual machine](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview?toc=%2Fazure%2Fvirtual-machines%2Fwindows%2Ftoc.json)
 - [Azure Database for MySQL](/azure/mysql/)
 - [Azure Database for PostgreSQL](/azure/postgresql/)
