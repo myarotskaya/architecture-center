@@ -13,9 +13,9 @@
         href: concepts/transactional-data.md 
       - name: Semantic modeling
         href: concepts/semantic-modeling.md 
-    - name: Solutions
+    - name: Scenarios
       items:
-      - name: ETL / ELT
+      - name: ETL
         href: solutions/data-pipeline.md 
       - name: Data warehousing and data marts
         href: solutions/data-warehousing.md
@@ -45,7 +45,7 @@
         href: concepts/machine-learning-at-scale.md
       - name: Processing CSV and JSON files
         href: concepts/processing-csv-and-json-files.md
-    - name: Solutions
+    - name: Scenarios
       items:
       - name: Batch processing
         href: solutions/batch-processing.md
