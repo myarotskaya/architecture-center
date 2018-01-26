@@ -15,9 +15,9 @@
         href: concepts/semantic-modeling.md 
     - name: Scenarios
       items:
-      - name: ETL
+      - name: Extract, Transform, and Load (ETL)
         href: solutions/data-pipeline.md 
-      - name: Data warehousing and data marts
+      - name: Data warehousing
         href: solutions/data-warehousing.md
       - name: Online analytical processing (OLAP)
         href: solutions/online-analytical-processing.md

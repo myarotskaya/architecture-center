@@ -9,9 +9,11 @@ ms:date: 01/17/2018
 
 A data warehouse is a central, organizational, relational repository of integrated data from one or more disparate sources, across many or all subject areas. Data warehouses store current and historical data and are used for reporting and analysis of the data in different ways.
 
+![Data warehousing in Azure](./images/data-warehousing.png)
+
 To move data into a data warehouse, it is extracted on a periodic basis from various sources that contain important business information. As the data is moved, it can be formatted, cleaned, validated, summarized, and reorganized. Alternately, the data can be stored in the lowest level of detail, with aggregated views provided in the warehouse for reporting. In either case, the data warehouse becomes a permanent storage space for data used for reporting, analysis, and forming important business decisions using business intelligence (BI) tools.
 
-![Data warehousing](./images/data-warehouses.png)
+<!--![Data warehousing](./images/data-warehouses.png) -->
 
 ### Data marts and operational data stores
 Owing to the complexities of managing data at scale it is becoming less common to have a single data warehouse that tries to represent the entire data estate of the enterprise across all scenarios. Instead, smaller more focused data warehouses referred to as data marts are created that expose the desired data for analytics purposes. These data marts are populated using an orchestration process from data maintained in an operational data store, which acts as intermediary between the source transactional system and the data mart. The data managed by the operational data store is a cleaned version of the data present in the source transactional system, and typically a subset of the historical data that is maintained by the data warehouse or data mart. 
@@ -40,11 +42,9 @@ Properly configuring a data warehouse to fit the needs of your business can brin
 * Planning and setting up your data orchestration. Deciding how and how often to copy data from the source transactional system over to your data warehouse. Deciding on when, or if, to move historical data out of your operational data stores and into the warehouse.
 * Coming up with a strategy to maintain and improve your data quality by cleaning your data as it is imported into your warehouse.
 
-## Architecture
+## Data warehousing in Azure
 
-In Azure, you may have one or more sources of data, whether from customer transactions, or from various business applications used by various departments. This data is traditionally stored in one or more [OLTP](online-transaction-processing.md) databases. The data could be persisted in other storage mediums such as network shares, Azure Storage Blobs, or a data lake. The data could also be stored by the data warehouse itself, such as in Azure SQL Data Warehouse or by a relational database like Azure SQL Database. The purpose of the analytical data store layer is to satisfy queries issued by analytics and reporting tools against the data warehouse or data mart. In Azure this analytical store capability can be met with Azure SQL Data Warehouse, with Azure HDInsight using Hive or Interactive Query. Because there is a requirement to move and transform data on a regular basis, you will need some level of orchestration to periodically move or copy data from your data storage to the data warehouse, which can be accomplished with Azure Data Factory or Oozie on Azure HDInsight.  
-
-![Data warehousing in Azure](./images/data-warehousing.png)<!-- VM should be spelled out in the image as virtual machine.-->
+In Azure, you may have one or more sources of data, whether from customer transactions, or from various business applications used by various departments. This data is traditionally stored in one or more [OLTP](online-transaction-processing.md) databases. The data could be persisted in other storage mediums such as network shares, Azure Storage Blobs, or a data lake. The data could also be stored by the data warehouse itself, such as in Azure SQL Data Warehouse or by a relational database like Azure SQL Database. The purpose of the analytical data store layer is to satisfy queries issued by analytics and reporting tools against the data warehouse or data mart. In Azure this analytical store capability can be met with Azure SQL Data Warehouse, or with Azure HDInsight using Hive or Interactive Query. Because there is a requirement to move and transform data on a regular basis, you will need some level of orchestration to periodically move or copy data from your data storage to the data warehouse, which can be accomplished with Azure Data Factory or Oozie on Azure HDInsight.  
 
 Related services:
 

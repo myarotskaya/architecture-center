@@ -26,7 +26,7 @@ For all the benefits OLAP systems provide, they do produce a few challenges:
 - Whereas data in OLTP systems is constantly updated through transactions flowing in from various sources, OLAP data stores are typically refreshed at a much slower cadence, depending on business needs. This means OLAP systems are better suited for strategic business decisions, rather than immediate responses to changes. Additionally, some level of data cleansing and orchestration needs to be planned to keep the OLAP data stores up-to-date.
 - Unlike traditional, normalized, relational tables found in OLTP systems, OLAP data models tend to be multidimensional. This makes it difficult or impossible to directly map to entity-relationship or object-oriented models, where each attribute is mapped to one column. Instead, OLAP systems typically use a star or snowflake schema in place of traditional normalization.
 
-## Architecture
+## OLAP in Azure
 
 In Azure, data held in OLTP systems such as Azure SQL Database is copied into the OLAP system, such as [Azure Analysis Services](/azure/analysis-services/analysis-services-overview). Data exploration and visualization tools like [Power BI](https://powerbi.microsoft.com), Excel, and third-party options connect to Analysis Services servers and provide users with highly interactive and visually rich insights into the modeled data. The flow of data from OLTP data to OLAP is typically orchestrated using SQL Server Integration Services, such as can be executed using [Azure Data Factory](/azure/data-factory/concepts-integration-runtime).
 
