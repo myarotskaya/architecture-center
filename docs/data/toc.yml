@@ -37,7 +37,7 @@
       items:
       - name: Non-relational data
         href: concepts/non-relational-data.md
-      - name: Big data architectures
+      - name: Big Data architectures
         href: concepts/big-data.md
       - name: Advanced analytics
         href: concepts/advanced-analytics.md 
