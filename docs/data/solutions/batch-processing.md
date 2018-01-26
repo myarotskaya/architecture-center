@@ -19,6 +19,12 @@ Batch processing is used in a variety of scenarios, from simple data transformat
 
 One example of batch processing is transforming a large set of flat, semi-structured CSV or JSON files into a schematized (and structured) format that is ready for further querying. Along with this, typically the format is converted from the raw formats used for ingest (such as CSV) to binary formats that are more performant for querying because they store data in a columnar format, and often provide indexes and inline statistics about the data contained.
 
+## Challenges
+
+- **Data format and encoding**. Some of the most difficult issues to debug happen when files use an unexpected format or encoding. For example, source files might use a mix of UTF-16 and UTF-8 encoding, or contain unexpected delimiters (space versus tab), or include unexpected characters. Another common example is text fields that contain tabs, spaces, or commas that are interpreted as delimiters. Data loading and parsing logic must be flexible enough to detect and handle with these issues.
+
+- **Orchestrating time slices.** Often source data is placed in a folder hierarchy that reflects processing windows, organized by year, month, day, hour, and so on. In some cases, data may arrive late. For example, suppose that a web server fails, and the logs March 7th don't end up in the folder for processing until March 9th. Are they just ignored because they're too late? Can the downstream processing logic handle out-of-order records?
+
 ## Architecture
 
 A batch processing architecture corresponds to the cold path of a [lambda architecture](../concepts/big-data.md#lambda-architecture), and has the following logical components.

@@ -34,6 +34,16 @@ Relevant Azure service:
 - [Azure Machine Learning Experimentation Services](/azure/machine-learning/preview/experimentation-service-configuration)
 - [The Data Science Virtual Machine](/azure/machine-learning/data-science-virtual-machine/overview)
 
+## Challenges
+
+- **Data privacy compliance.** You need to be careful about making personal data available to users for self-service analysis and reporting. There are likely to be compliance consideration, due to organizational policies and also regulatory issues. 
+
+- **Data volume.** While it may be useful to give users access to the full data source, it can result in very long-running Excel or Power BI operations, or Spark SQL queries that use a lot of cluster resources.
+
+- **User knowledge.** Users create their own queries and aggregations in order to inform business decisions. Are you confident that users have the necessary analytical and querying skills to get accurate results?
+
+- **Sharing results.** There may be security considerations if users can create and share reports or data visualizations.
+
 ## Architecture
 
 Although the goal of this scenario is to support interactive data analysis, the data cleansing, sampling, and structuring tasks involved in data science often include long-running processes. That makes a [batch processing](./batch-processing.md) architecture appropriate.
