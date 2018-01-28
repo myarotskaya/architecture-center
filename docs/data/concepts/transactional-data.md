@@ -7,15 +7,15 @@ ms:date: 01/17/2018
 
 # Transactional data
 
-Transactional data is information an organization collects that tracks the interactions related to what the organization does. These interactions are typically business transactions such as payments received from customers or payments made to suppliers, products moving through inventory, orders taken or services delivered. Transactional events, which represent the transactions themselves, not reference tables, typically contain a time dimension, some numerical values, and references to other data. 
+Transactional data is information that an organization collects that tracks the interactions related to the organization's activities. These interactions are typically business transactions such as payments received from customers or payments made to suppliers, products moving through inventory, orders taken, or services delivered. Transactional events, which represent the transactions themselves, typically contain a time dimension, some numerical values, and references to other data. 
+
+Transactions typically need to be *atomic* and *consistent*. Atomicity means that an entire transaction always succeeds or fails as one unit of work, and is never left in a half-completed state. If a transaction cannot be completed, the database system must roll back any steps that were already done. Consistency means that transactions always leave the data in a valid state. (These are informal descriptions. There are more formal definitions of these properties, such as [ACID](https://en.wikipedia.org/wiki/ACID).)
 
 Transactional data stores that support strong consistency can leverage transactions using various locking strategies, such as pessimistic locking, to ensure all data are strongly consistent within the context of the enterprise, for all users and processes. 
 
 The most common deployment architecture that uses transactional data is the data store tier in a 3-tier architecture. A 3-tier architecture typically consists of a presentation tier, business logic tier, and data store tier. A related deployment architecture is the [N-tier](/azure/architecture/guide/architecture-styles/n-tier) architecture, which may have multiple middle-tiers handling business logic.
 
 ![Example of a 3-tier application](./images/three-tier-application.png)
-
-
 
 ## Typical traits of transactional data
 

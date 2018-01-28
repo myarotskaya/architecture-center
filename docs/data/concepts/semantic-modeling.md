@@ -7,9 +7,11 @@ ms:date: 01/17/2018
 
 # Semantic modeling
 
-A semantic data model is a conceptual model that describes the meaning of the data elements it contains. Organizations often have their own terms for things, sometimes with synonyms, or even different meanings the same term. For example, an inventory database might track a piece of equipment with an asset Id and a serial number, but a sales database might refer to the serial number as the asset Id. There is no simple way to relate these values without a model that can describes the relationship. Semantic modeling makes it easier for end users to query data by providing a level of abstraction, so that users don't need to know the underlying data structure and how aggregates and joins are formed. Also, usually columns are renamed to more business user-friendly names, so that the context and meaning of the data are more obvious.
+A semantic data model is a conceptual model that describes the meaning of the data elements it contains. Organizations often have their own terms for things, sometimes with synonyms, or even different meanings for the same term. For example, an inventory database might track a piece of equipment with an asset ID and a serial number, but a sales database might refer to the serial number as the asset ID. There is no simple way to relate these values without a model that describes the relationship. 
 
-Semantic modeling is predominately used for read-heavy scenarios, such as analytics and business intelligence (OLAP), as opposed to more write-heavy transactional data processing (OLTP). This is mostly due to the nature of a typical semantic layer, where aggregation behaviors are set so that reporting tools display them properly, business logic and calculations are defined, time-oriented calculations are included, and often data is integrated from multiple sources. Traditionally, the semantic layer is placed over top of a data warehouse for these reasons.
+Semantic modeling provides a level of abstraction over the database schema, so that users don't need to know the underlying data structures. That makes is easier for end users to query data without performing aggregates and joins over the underlying schema. Also, usually columns are renamed to more business user-friendly names, so that the context and meaning of the data are more obvious.
+
+Semantic modeling is predominately used for read-heavy scenarios, such as analytics and business intelligence (OLAP), as opposed to more write-heavy transactional data processing (OLTP). This is mostly due to the nature of a typical semantic layer, where aggregation behaviors are set so that reporting tools display them properly, business logic and calculations are defined, time-oriented calculations are included, and often data is integrated from multiple sources. Traditionally, the semantic layer is placed over a data warehouse for these reasons.
 
 ![Example diagram of a semantic layer between a data warehouse and a reporting tool](./images/semantic-modeling.png)
 
@@ -23,7 +25,7 @@ Relevant Azure service:
 
 ## Example use case
 
-An organization has data stored in a large database. It wants to make this data available to business users and customers to create their own reports and do some analysis. One option is just to give those uses direct access to the database. Of course, there are several drawbacks to doing this, including managing security and controlling access. In addition, the the design of the database, including the names of tables and columns, may be hard for a user to understand. Users would need to know which tables to query, how those tables should be joined, and other business logic that must be applied to get the correct results. They would also need to know a query language like SQL even to get started. Typically this leads to multiple users reporting the same metrics but with different results.
+An organization has data stored in a large database. It wants to make this data available to business users and customers to create their own reports and do some analysis. One option is just to give those users direct access to the database. Of course, there are several drawbacks to doing this, including managing security and controlling access. In addition, the design of the database, including the names of tables and columns, may be hard for a user to understand. Users would need to know which tables to query, how those tables should be joined, and other business logic that must be applied to get the correct results. They would also need to know a query language like SQL even to get started. Typically this leads to multiple users reporting the same metrics but with different results.
 
 Another option is to encapsulate all of the information that users need into a semantic model. The semantic model can be more easily queried by users with a reporting tool of their choice. The data provided by the semantic model is pulled from a data warehouse, ensuring that all users see a single version of the truth. The semantic model also provides friendly table and column names, relationships between tables, descriptions, calculations, and row-level security.
 
@@ -49,4 +51,5 @@ Semantic modeling and analytical processing tends to have the following traits:
 
 ## See also
 
+[Data warehousing](../scenarios/data-warehousing.md)
 [Online analytical processing (OLAP)](../scenarios/online-analytical-processing.md)
