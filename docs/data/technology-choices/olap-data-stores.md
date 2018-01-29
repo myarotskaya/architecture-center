@@ -7,8 +7,8 @@ ms:date: 01/17/2018
 
 # Choosing an OLAP data store
 
-## What are your options when choosing an online analytical processing (OLAP) data store?
-In Azure, all of the following data stores will meet the core requirements for OLAP:
+## What are your options when choosing an OLAP data store?
+In Azure, all of the following data stores will meet the core requirements for online analytical processing (OLAP):
 
 - [SQL Server with Columnstore indexes](/sql/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics)
 - [Azure Analysis Services](/azure/analysis-services/analysis-services-overview)
@@ -25,8 +25,8 @@ Each data store brings with it a unique set of capabilities, giving you the opti
 
 The following tables summarize the key differences in capabilities between each. For OLAP scenarios, choose the appropriate system for your needs by answering these questions:
 
-- Do you want a managed service or do you prefer to manage your own physical or virtual servers?
-    - If yes (you want a managed service), then narrow your options to those that are managed services, such as Azure Analysis Services and Azure SQL Database.
+- Do you want a managed service rather than managing your own servers?
+    - If yes, then narrow your options to those that are managed services, such as Azure Analysis Services and Azure SQL Database.
 - Do you require secure authentication using Azure Active Directory (Azure AD)?
     - If yes, then you will need one of the options that Azure AD integration.
 - Do you want to conduct real-time analytics?

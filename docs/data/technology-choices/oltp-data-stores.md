@@ -7,22 +7,20 @@ ms:date: 01/17/2018
 
 # Choosing an OLTP data store
 
-## What are your options when choosing an online transaction processing (OLTP) data store?
-In Azure, all of the following data stores will meet the core requirements for OLTP and for the management of transaction data:
+## What are your options when choosing an OLTP data store?
+In Azure, all of the following data stores will meet the core requirements for online transaction processing (OLTP) and for the management of transaction data:
+
 - [Azure SQL Database](/azure/sql-database/)
 - [SQL Server in an Azure virtual machine](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview?toc=%2Fazure%2Fvirtual-machines%2Fwindows%2Ftoc.json)
 - [Azure Database for MySQL](/azure/mysql/)
 - [Azure Database for PostgreSQL](/azure/postgresql/)
 
-## How do you choose?
-Each data store brings with it a unique set of capabilities, giving you the option to select the one that most closely meets your requirements. 
-
 ## Key selection criteria
 
 The following table summarize the key differences in capabilities between each option. For the OLTP scenarios, begin choosing the appropriate database for your needs by answering these questions:
 
-- Do you want a managed service, or do you prefer to manage the VMs running the database server?
-    - Managed services, typically PaaS-based, removes the operational overhead required by Infrastructure-as-a-Service (IaaS) virtual machines, such as patching, configuring high availability, and applying the security best practices associated with managing a server. However, if you do need to use an IaaS-based solution, consider using one of the database images on [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/) and use automated patching and backup on your provisioned VMs to reduce the administrative burdon. Otherwise, narrow your options to those that are managed services.
+- Do you want a managed service rather than managing your own servers?
+    - Managed services remove the operational overhead required by virtual machines, such as patching, configuring high availability, and applying the security best practices associated with managing a server. However, if you do need to use a VM-based solution, consider using one of the database images on [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/) and use automated patching and backup on your provisioned VMs to reduce the administrative burdon. Otherwise, narrow your options to those that are managed services.
 - Does your solution have specific dependencies for Microsoft SQL Server, MySQL or PostgreSQL compatibility?
     - Your application may limit the data stores you can choose based on the drivers it supports for communicating with the data store, or the assumptions it makes about which database is used.
 - Are your write throughput requirements particularly high?
@@ -83,6 +81,6 @@ The following table summarize the key differences in capabilities between each o
 | Azure Active Directory authentication | Yes | Yes | Yes | No | No |
 | Active Directory authentication | No | No | Yes | No | No |
 | Multi-factor authentication | Yes | Yes | Yes | No | No |
-| [Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-database-engine) | Yes | Yes | Yes | No | No |
+| Supports [Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-database-engine) | Yes | Yes | Yes | No | No |
 | Private IP | No | Yes | Yes | No | No |
 

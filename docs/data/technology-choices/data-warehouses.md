@@ -43,7 +43,7 @@ Azure SQL Data Warehouse can also be used for small and medium datasets, where t
 
 For data warehouse scenarios, choose the appropriate system for your needs by answering these questions:
 
-- Do you want a managed service rather than managing your own physical or virtual servers?
+- Do you want a managed service rather than managing your own servers?
     - If yes, then narrow your options to those that are managed services.
 - Are you working with extremely large data sets or highly complex, long-running queries? This is sometimes referred to as a big data workload.
     - If yes, narrow your options to those under MPP capabilities. Some things to consider when reviewing your options for this question, is whether the data source is structured or unstructured. For unstructured, it may need to be processed in a big data environment like Spark on HDInsight or Azure Databricks, Hive LLAP on HDInsight, or perhaps Azure Data Lake Analytics, all of which can serve as ELT (Extract, Load, Transform) and ETL (Extract, Transform, Load) engines. They can output the processed data into structured data, making it easier to load into SQL Data Warehouse or one of the other options. For structured data, SQL Data Warehouse now has a new performance tier called Optimized for Compute. This is provided for compute-intensive workloads requiring ultra-high performance.
