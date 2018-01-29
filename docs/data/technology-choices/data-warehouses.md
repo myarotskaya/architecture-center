@@ -7,6 +7,8 @@ ms:date: 01/17/2018
 
 # Choosing a data warehouse
 
+A data warehouse is a central, organizational, relational repository of integrated data from one or more disparate sources. (For more information, see [Data warehousing and data marts](../scenarios/data-warehouse.md).) This topic compares the main options for data warehouses in Azure.
+
 ## What are your options when choosing a data warehouse?
 
 There are several options for implementing a data warehouse in Azure, depending on your needs. The following lists are broken into two categories, [symmetric multiprocessing](https://en.wikipedia.org/wiki/Symmetric_multiprocessing) (SMP) and [massively parallel processing](https://en.wikipedia.org/wiki/Massively_parallel) (MPP). 

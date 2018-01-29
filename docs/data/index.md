@@ -22,13 +22,15 @@ This guide is structure around a basic pivot: The distinction between *relationa
 
 Relational data is generally stored in a traditional RDBMS or a data warehouse. It has a pre-defined schema ("schema on write") with a set of constraints to maintain referential integrity. Most relational databases use Structured Query Language (SQL) for querying. Solutions that use relational databases include online transaction processing (OLTP) and online analytical processing (OLAP).
 
-Non-relational data is any data that does not use the [relational model](https://en.wikipedia.org/wiki/Relational_model) found in traditional RDBMS systems. This may include key-value data, JSON data, graph data, time series data, and other data types. The term *NoSQL* refers collectively to databases that are designed to hold various types of non-relational data. (The term is not entirely accurate, because many non-relational data stores support SQL compatible queries.) Non-relational data and NoSQL databases often come up in discussions of *Big Data* solutions. A big data architecture is designed to handle the ingestion, processing, and analysis of data that is too large or complex for traditional database systems. 
+Non-relational data is any data that does not use the [relational model](https://en.wikipedia.org/wiki/Relational_model) found in traditional RDBMS systems. This may include key-value data, JSON data, graph data, time series data, and other data types. The term *NoSQL* refers collectively to databases that are designed to hold various types of non-relational data. (The term is not entirely accurate, because many non-relational data stores support SQL compatible queries.) Non-relational data and NoSQL databases often come up in discussions of *big data* solutions. A big data architecture is designed to handle the ingestion, processing, and analysis of data that is too large or complex for traditional database systems. 
 
 Within each of these two main pivots, the Data Architecture Guide contains the following sections:
 
 - **Concepts.** Overview articles that introduce the main concepts you need to understand when working with this type of data.
 - **Scenarios.** A representative set of data scenarios, including a discussion of the relevant Azure services and the appropriate architecture for the scenario.
 - **Technology choices.** Detailed comparions of various data technologies available on Azure, including open source options. Within each category, we describe the key selection criteria and a capability matrix, to help you choose the right technology for your scenario.
+
+This guide is not intended to teach you data science or database theory &mdash; entire books have been written on those subjects. Instead, the goal is to help you select the right data architecture or data pipeline for your scenario, and then select the Azure services and technologies that best fit your requirements. If you already have an architecture in mind, you can skip directly to the technology choices.
 
 ## Traditional RDBMS
 
@@ -40,12 +42,12 @@ Within each of these two main pivots, the Data Architecture Guide contains the f
 
 ### Scenarios
 
-- [ETL](./scenarios/etl.md) 
-- [Data warehousing and data marts](./scenarios/data-warehousing.md)
 - [Online analytical processing (OLAP)](./scenarios/online-analytical-processing.md)
 - [Online transaction processing (OLTP)](./scenarios/online-transaction-processing.md) 
+- [Data warehousing and data marts](./scenarios/data-warehousing.md)
+- [ETL](./scenarios/etl.md) 
 
-## Big Data and NoSQL
+## Big data and NoSQL
 
 ### Concepts
 
@@ -53,7 +55,7 @@ Within each of these two main pivots, the Data Architecture Guide contains the f
 - [Big data architectures](./concepts/big-data.md)
 - [Advanced analytics](./concepts/advanced-analytics.md) 
 - [Machine learning at scale](./concepts/machine-learning-at-scale.md)
-- [Processing CSV and JSON files](./concepts/processing-csv-and-json-files.md)
+- [Processing CSV and JSON files](./concepts/csv-and-json.md)
 
 ### Scenarios
 

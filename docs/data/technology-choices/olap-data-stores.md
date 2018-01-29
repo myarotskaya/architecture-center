@@ -5,10 +5,12 @@ author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Choosing an OLAP data store
+# Choosing an online analytical processing (OLAP) data store
+
+Online analytical processing (OLAP) is a technology that organizes large business databases and supports complex analysis. (For more information, see [Online analytical processing](../scenarios/online-analytical-processing.md).) This topic compares the main options for OLAP solutions in Azure.
 
 ## What are your options when choosing an OLAP data store?
-In Azure, all of the following data stores will meet the core requirements for online analytical processing (OLAP):
+In Azure, all of the following data stores will meet the core requirements for OLAP:
 
 - [SQL Server with Columnstore indexes](/sql/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics)
 - [Azure Analysis Services](/azure/analysis-services/analysis-services-overview)
@@ -17,9 +19,6 @@ In Azure, all of the following data stores will meet the core requirements for o
 SQL Server Analysis Services (SSAS) offers OLAP and data mining functionality for business intelligence applications. You can either install SSAS on local servers, or host within a virtual machine in Azure. Azure Analysis Services is a fully managed platform as a service (PaaS) offering that provides the same major features as SSAS, but in the cloud. Because Azure Analysis Services lives in the cloud, its servers support connecting to [various data sources](/azure/analysis-services/analysis-services-datasource) in the cloud and on-premises in your organization.
 
 Clustered Columnstore indexes are available in SQL Server 2014 and above, as well as Azure SQL Database, and are ideal for OLAP workloads. However, beginning with SQL Server 2016 (including Azure SQL Database), you can take advantage of hybrid transactional/analytics processing (HTAP) through the use of updateable nonclustered columnstore indexes. HTAP enables you to perform OLTP and OLAP processing on the same platform, which removes the need to store multiple copies of your data, and eliminates the need for distinct OLTP and OLAP systems. For more information, see [Get started with Columnstore for real-time operational analytics](/sql/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics).
-
-## How do you choose?
-Each data store brings with it a unique set of capabilities, giving you the option to select the one that most closely meets your requirements. 
 
 ## Key selection criteria
 

@@ -15,14 +15,14 @@
         href: concepts/semantic-modeling.md 
     - name: Scenarios
       items:
-      - name: Extract, transform, and load (ETL)
-        href: scenarios/etl.md 
-      - name: Data warehousing
-        href: scenarios/data-warehousing.md
-      - name: Online analytical processing (OLAP)
-        href: scenarios/online-analytical-processing.md
       - name: Online transaction processing (OLTP)
         href: scenarios/online-transaction-processing.md 
+      - name: Online analytical processing (OLAP)
+        href: scenarios/online-analytical-processing.md
+      - name: Data warehousing
+        href: scenarios/data-warehousing.md
+      - name: Extract, transform, and load (ETL)
+        href: scenarios/etl.md 
     - name: Technology choices
       items:
       - name: Data warehouses
@@ -43,8 +43,8 @@
         href: concepts/advanced-analytics.md 
       - name: Machine learning at scale
         href: concepts/machine-learning-at-scale.md
-      - name: Processing CSV and JSON files
-        href: concepts/processing-csv-and-json-files.md
+      - name: CSV and JSON files
+        href: concepts/csv-and-json.md
     - name: Scenarios
       items:
       - name: Batch processing
@@ -73,12 +73,12 @@
         href: technology-choices/data-storage.md
       - name: Machine learning
         href: technology-choices/data-science-and-machine-learning.md 
+      - name: Natural language processing
+        href: technology-choices/natural-language-processing.md 
       - name: Pipeline orchestration
         href: technology-choices/pipeline-orchestration-data-movement.md 
       - name: Real-time message ingestion
         href: technology-choices/real-time-ingestion.md
-      - name: Natural language processing
-        href: technology-choices/natural-language-processing.md 
       - name: Search data stores
         href: technology-choices/search-options.md
       - name: Stream processing

@@ -7,8 +7,11 @@ ms:date: 01/17/2018
 
 # Choosing an OLTP data store
 
+Online transaction processing (OLTP) is the management of transactional data and transaction processing. (For more information, see [Online Online transaction processing](../scenarios/online-transaction-processing.md).) This topic compares the main options for OLTP solutions in Azure.
+
 ## What are your options when choosing an OLTP data store?
-In Azure, all of the following data stores will meet the core requirements for online transaction processing (OLTP) and for the management of transaction data:
+
+In Azure, all of the following data stores will meet the core requirements for OLTP and the management of transaction data:
 
 - [Azure SQL Database](/azure/sql-database/)
 - [SQL Server in an Azure virtual machine](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview?toc=%2Fazure%2Fvirtual-machines%2Fwindows%2Ftoc.json)
@@ -17,7 +20,7 @@ In Azure, all of the following data stores will meet the core requirements for o
 
 ## Key selection criteria
 
-The following table summarize the key differences in capabilities between each option. For the OLTP scenarios, begin choosing the appropriate database for your needs by answering these questions:
+The following table summarize the key differences in capabilities between each option. For OLTP scenarios, begin choosing the appropriate database for your needs by answering these questions:
 
 - Do you want a managed service rather than managing your own servers?
     - Managed services remove the operational overhead required by virtual machines, such as patching, configuring high availability, and applying the security best practices associated with managing a server. However, if you do need to use a VM-based solution, consider using one of the database images on [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/) and use automated patching and backup on your provisioned VMs to reduce the administrative burdon. Otherwise, narrow your options to those that are managed services.

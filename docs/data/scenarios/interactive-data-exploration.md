@@ -54,7 +54,7 @@ Typical technologies used for interactive data exploration include:
 
 ### Data storage
 
-- Azure Storage Blob Containers or Azure Data Lake Store. Data scientists generally work with raw source data, to ensure they have full visibility of all possible features, outliers, and errors in the data. In a Big Data scenario, this data usually takes the form of files in a data store.
+- Azure Storage Blob Containers or Azure Data Lake Store. Data scientists generally work with raw source data, to ensure they have full visibility of all possible features, outliers, and errors in the data. In a big data scenario, this data usually takes the form of files in a data store.
 
 For more information, see [Data storage](../technology-choices/data-storage.md).
 
