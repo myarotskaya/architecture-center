@@ -7,7 +7,7 @@ ms:date: 01/17/2018
 
 # Choosing an online analytical processing (OLAP) data store
 
-Online analytical processing (OLAP) is a technology that organizes large business databases and supports complex analysis. (For more information, see [Online analytical processing](../scenarios/online-analytical-processing.md).) This topic compares the main options for OLAP solutions in Azure.
+[Online analytical processing](../scenarios/online-analytical-processing.md) (OLAP) is a technology that organizes large business databases and supports complex analysis. This topic compares the options for OLAP solutions in Azure.
 
 ## What are your options when choosing an OLAP data store?
 In Azure, all of the following data stores will meet the core requirements for OLAP:

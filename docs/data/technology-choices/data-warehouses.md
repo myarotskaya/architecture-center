@@ -7,7 +7,7 @@ ms:date: 01/17/2018
 
 # Choosing a data warehouse
 
-A data warehouse is a central, organizational, relational repository of integrated data from one or more disparate sources. (For more information, see [Data warehousing and data marts](../scenarios/data-warehouse.md).) This topic compares the main options for data warehouses in Azure.
+A [data warehouse](../scenarios/data-warehousing.md) is a central, organizational, relational repository of integrated data from one or more disparate sources. This topic compares options for data warehouses in Azure.
 
 ## What are your options when choosing a data warehouse?
 

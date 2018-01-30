@@ -7,7 +7,7 @@ ms:date: 01/17/2018
 
 # Choosing an OLTP data store
 
-Online transaction processing (OLTP) is the management of transactional data and transaction processing. (For more information, see [Online Online transaction processing](../scenarios/online-transaction-processing.md).) This topic compares the main options for OLTP solutions in Azure.
+[Online Online transaction processing](../scenarios/online-transaction-processing.md) (OLTP) is the management of transactional data and transaction processing. This topic compares options for OLTP solutions in Azure.
 
 ## What are your options when choosing an OLTP data store?
 
