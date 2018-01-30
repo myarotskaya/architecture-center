@@ -5,7 +5,7 @@ author: zoinerTejada
 ms:date: 01/17/2018
 ---
 
-# Choosing a data storage technology 
+# Choosing a big data storage technology 
 
 ## What are your options when choosing data storage in Azure?
 
