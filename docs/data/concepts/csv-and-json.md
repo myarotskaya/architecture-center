@@ -7,11 +7,11 @@ ms:date: 01/17/2018
 
 # Working with CSV and JSON files for data solutions
 
-CSV (comma-separated values) and JSON are probably the most common formats for ingesting, exchanging, and storing unstructured or semi-structured data. 
+CSV and JSON are likely the most common formats used for ingesting, exchanging, and storing unstructured or semi-structured data. 
 
 ## CSV
 
-CSV files are commonly used to exchange tabular data between systems in plain text. They typically contain a header row that provides column names for the data, but are otherwise considered semi-structured. This is due to the fact that CSVs cannot naturally represent hierarchical or relational data. Data relationships are typically handled with multiple CSV files, where foreign keys are stored in columns of one or more files, but the relationships between those files are not expressed by the format itself.  Despite their name, files in CSV format may use other delimiters such as tabs or spaces.
+CSV (comma-separated values)  files are commonly used to exchange tabular data between systems in plain text. They typically contain a header row that provides column names for the data, but are otherwise considered semi-structured. This is due to the fact that CSVs cannot naturally represent hierarchical or relational data. Data relationships are typically handled with multiple CSV files, where foreign keys are stored in columns of one or more files, but the relationships between those files are not expressed by the format itself.  Despite their name, files in CSV format may use other delimiters such as tabs or spaces.
 
 Despite their limitations, CSV files are a popular choice for data exchange, because they are supported by ranging support in business, consumer, and scientific applications. For example, database and spreadsheet programs can import and export CSV files, offering options to specify the delimiter and quotation character used within the file. Similarly, most batch and stream data processing engines, such as Spark and Hadoop, natively support serializing and deserializing CSV-formatted files and offer ways to apply a schema on read. This makes it easier to work with the data, by offering options to query against it and store the information in a more performant data format for faster processing.
 

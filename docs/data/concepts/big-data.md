@@ -67,9 +67,9 @@ Relevant Azure service:
 
 ## Lambda architecture
 
-When working with very large data sets, it can take a long time to run the sort of queries that give deep analytical insight. These queries can't be performed in real time, so they require a batch process, such as [MapReduce](https://en.wikipedia.org/wiki/MapReduce), that operates across the entire data set. The results are then stored separately from the raw data and used for querying. 
+When working with very large data sets, it can take a long time to run the sort of queries that clients need. These queries can't be performed in real time, and often require algorithms such as [MapReduce](https://en.wikipedia.org/wiki/MapReduce) that operate in parallel across the entire data set. The results are then stored separately from the raw data and used for querying.
 
-One drawback to this approach is that it introduces latency &mdash; a query may return results that are several hours old. Ideally, you would like to get some results in real time (perhaps with some loss of accuracy), and combine these results with the deeper insights that batch analytics provides.
+One drawback to this approach is that it introduces latency &mdash; if processing takes a few hours, a query may return results that are several hours old. Ideally, you would like to get some results in real time (perhaps with some loss of accuracy), and combine these results with the results from the batch analytics.
 
 The **lambda architecture**, first proposed by Nathan Marz, addresses this problem by creating two paths for data flow. All data coming into the system goes through these two paths:
 

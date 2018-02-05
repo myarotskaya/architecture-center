@@ -37,14 +37,14 @@
       items:
       - name: Non-relational data
         href: concepts/non-relational-data.md
+      - name: Working with CSV and JSON files
+        href: concepts/csv-and-json.md
       - name: Big Data architectures
         href: concepts/big-data.md
       - name: Advanced analytics
         href: concepts/advanced-analytics.md 
       - name: Machine learning at scale
         href: concepts/machine-learning-at-scale.md
-      - name: CSV and JSON files
-        href: concepts/csv-and-json.md
     - name: Scenarios
       items:
       - name: Batch processing
