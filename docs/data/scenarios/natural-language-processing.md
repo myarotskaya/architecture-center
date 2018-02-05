@@ -30,7 +30,7 @@ When using NLP to extract information and insight from free-form text, the start
 
 ## Architecture
 
-In an NLP solution, free-form text processing is performed against documents containing paragraphs of text. The overall architecture can be a [batch processing](./batch-processing.md) or [real-time stream processing](./real-time-processing.md) architecture, or both paths combined in a [lambda architecture](../concepts/big-data.md#lambda-architecture) or [kappa architecture](../concepts/big-data.md#kappa-architecture).
+In an NLP solution, free-form text processing is performed against documents containing paragraphs of text. The overall architecture can be a [batch processing](./batch-processing.md) or [real-time stream processing](./real-time-processing.md) architecture.
 
 The actual processing that applies NLP techniques varies based on the desired outcome, but in terms of the pipeline may be applied in a batch or real-time fashion. For example, sentiment analysis can be used against blocks of the text to produce a sentiment score, and can typically done either in batch against data in storage or in real time against smaller data flowing through messaging services. 
 

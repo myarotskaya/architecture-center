@@ -21,7 +21,7 @@ One of the big challenges of real-time processing solutions is to ingest, proces
 
 ## Architecture
 
-A real-time processing architecture corresponds to the hot path of a [lambda architecture](../concepts/big-data.md#lambda-architecture), and has the following logical components.
+A real-time processing architecture has the following logical components.
 
 - **Real-time message ingestion.** The architecture must include a way to capture and store realtime messages to be consumed by a stream processing consumer. In simple cases, this service could be implemented as a simple data store in which new messages are deposited in a folder. But often the solution requires a message broker such as Azure Event Hubs, that acts as a buffer for the messages and supports scale-out processing, reliable delivery, and other message queuing semantics.
 

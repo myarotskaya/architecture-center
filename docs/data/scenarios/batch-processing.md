@@ -27,7 +27,7 @@ One example of batch processing is transforming a large set of flat, semi-struct
 
 ## Architecture
 
-A batch processing architecture corresponds to the cold path of a [lambda architecture](../concepts/big-data.md#lambda-architecture), and has the following logical components.
+A batch processing architecture has the following logical components.
 
 - **Data storage.** Typically a distributed file store that can serve as a repository for high volumes of large files in various formats. Generically, this kind of store is often referred to as a data lake. 
 
