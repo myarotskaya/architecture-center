@@ -28,7 +28,7 @@ Within each of these two main pivots, the Data Architecture Guide contains the f
 
 - **Concepts.** Overview articles that introduce the main concepts you need to understand when working with this type of data.
 - **Scenarios.** A representative set of data scenarios, including a discussion of the relevant Azure services and the appropriate architecture for the scenario.
-- **Technology choices.** Detailed comparions of various data technologies available on Azure, including open source options. Within each category, we describe the key selection criteria and a capability matrix, to help you choose the right technology for your scenario.
+- **Technology choices.** Detailed comparisons of various data technologies available on Azure, including open source options. Within each category, we describe the key selection criteria and a capability matrix, to help you choose the right technology for your scenario.
 
 This guide is not intended to teach you data science or database theory &mdash; entire books have been written on those subjects. Instead, the goal is to help you select the right data architecture or data pipeline for your scenario, and then select the Azure services and technologies that best fit your requirements. If you already have an architecture in mind, you can skip directly to the technology choices.
 

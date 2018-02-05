@@ -67,27 +67,39 @@ Relevant Azure service:
 
 ## Lambda architecture
 
-The lambda architecture is a pipeline architecture originally devised with the goal to reduce complexity of a real-time analytics pipeline by constraining incremental computation activities to only a small portion of this architecture. This is accomplished by creating two paths for data flow into the pipeline:
+When working with very large data sets, it can take a long time to run the sort of queries that give deep analytical insight. These queries can't be performed in real time, so they require a batch process, such as [MapReduce](https://en.wikipedia.org/wiki/MapReduce), that operates across the entire data set. The results are then stored separately from the raw data and used for querying. 
 
-* A hot path, or speed layer, used for rapid ingestion of latency-sensitive (or real-time) data, meant for rapid consumption by analytics clients.
+One drawback to this approach is that it introduces latency &mdash; a query may return results that are several hours old. Ideally, you would like to get some results in real time (perhaps with some loss of accuracy), and combine these results with the deeper insights that batch analytics provides.
 
-* A cold path, or batch layer, that stores all of the incoming data for batch processing, where data processing can take anywhere from minutes to hours.
+The **lambda architecture**, first proposed by Nathan Marz, addresses this problem by creating two paths for data flow. All data coming into the system goes through these two paths:
+
+* A **batch layer** (cold path) that stores all of the incoming data in its raw form and performs batch processing on the data. The result of this processing is stored as a **batch view**.
+
+* A **speed layer** (hot path) that analyzes data in real time. This layer is designed for low latency, at the expense of accuracy.
+
+The batch layer feeds into a **serving layer** that indexes the batch view for efficient querying. The speed layer updates the serving layer with incremental updates based on the most recent data.
 
 ![Lambda architecture diagram](./images/lambda.png)
 
-Data that flows into the hot path is constrained by latency requirements imposed by the speed layer so that it can be processed as quickly as possible, as data in this layer is typically desired in real time. Often, this requires a tradeoff of some level of accuracy in favor of data that is ready as quickly as possible. An example of this is incoming temperatures from a large swath of IoT devices. In this scenario, the speed layer may be used to process a subset of this incoming data in order to provide a live dashboard of temperature readings for several locations. The data in this case may be reduced by processing sliding windows of several seconds apiece, allowing the processing layer to perform calculations in a timely manner.
+Data that flows into the hot path is constrained by latency requirements imposed by the speed layer, so that it can be processed as quickly as possible. Often, this requires a tradeoff of some level of accuracy in favor of data that is ready as quickly as possible. For example, consider an IoT scenario where a large number of temperature sensors are sending telemetry data. The speed layer may be used to process a sliding time window of the incoming data. 
 
-Data flowing into the cold path, on the other hand, is not subject to the same low latency requirements. This allows for high accuracy computation across large data sets, which can be very time intensive. In addition, data in this path is immutable, meaning any changes to the value of a particular datum are stored alongside existing values in the form of new, timestamped datum. This allows for recomputation of a particular datum at any point in time across the history of the data collected. The hot path is enabled by today's ability to capture and store all raw, immutable data, allowing us to recompute this data through batch computation at any time.
+Data flowing into the cold path, on the other hand, is not subject to the same low latency requirements. This allows for high accuracy computation across large data sets, which can be very time intensive. 
 
 Eventually, the hot and cold paths converge at the analytics client application. If the client needs to display timely, yet potentially less accurate data in real time, it will acquire its result from the hot path. Otherwise, it will select results from the cold path to display less timely but more accurate data. In other words, the hot path has data for a relatively small window of time, after which the results can be updated with more accurate data from the cold path.
 
+The raw data stored at the batch layer is immutable. Incoming data is always appended to the existing data, and the previous data is never overwritten. Any changes to the value of a particular datum are stored as a new timestamped event record. This allows for recomputation at any point in time across the history of the data collected. The ability to recompute the batch view from the original raw data is important, because it allows for new views to be created as the system evolves. 
+
 ## Kappa architecture
 
-The kappa architecture is another type of pipeline with the same basic goals as the lambda architecture, but with one important distinction: all data (called events in this architecture) flows through a single hot path, where all processing occurs in a near-real-time streaming mode. It was created due to the nature of lambda architectures containing two paths, leading to potentially duplicate computation logic and the complexity of managing the architecture for both paths. Because there is no cold path in this architecture, any recomputation of data is performed by streaming through the kappa pipeline once again.
+A drawback to the lambda architecture is its complexity. Processing logic appears in two different places &mdash; the cold and hot paths &mdash; using different frameworks. This leads to duplicate computation logic and the complexity of managing the architecture for both paths.
+
+The **kappa architecture** was proposed by Jay Kreps as an alternative to the lambda architecture. It has the same basic goals as the lambda architecture, but with an important distinction: All data flows through a single path, using a stream processing system. 
 
 ![Kappa architecture diagram](./images/kappa.png)
 
-There are some similarities to the lambda architecture's cold path, in that the event data is immutable and all of it is collected, instead of a subset. The data, or events, are ingested into a distributed and fault tolerant unified log, of which there is a single deployment. These events are ordered, and the current state of an event is changed only by a new event being appended. Similar to a lambda architecture's hot path, all processing of events is performed on the input streams and persisted as a real-time view. This data can be recomputed at any point, as it is persisted to scalable, fault-tolerant storage.
+There are some similarities to the lambda architecture's batch layer, in that the event data is immutable and all of it is collected, instead of a subset. The data is ingested as a stream of events into a distributed and fault tolerant unified log. These events are ordered, and the current state of an event is changed only by a new event being appended. Similar to a lambda architecture's speed layer, all event processing is performed on the input stream and persisted as a real-time view. 
+
+If you need to recompute the entire data set (equivalent to what the batch layer does in lambda), you simply replay the stream, typically using parallelism to complete the computation in a timely fashion.
 
 ## Internet of Things (IoT)
 
