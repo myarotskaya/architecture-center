@@ -17,16 +17,16 @@ Time series data represents how an asset or process changes over time. It’s un
 
 Some examples of time series data are:
 
-- Stock prices captured over time to detect trends, review past performance, and even conduct some level of prediction.
+- Stock prices captured over time to detect trends.
 - Server performance, such as CPU usage, IO load, memory usage, and network bandwidth consumption.
-- Telemetry captured from temperature sensors on industrial equipment, providing real-time, valuable data on temperature readings that can be used to detect pending equipment failure and trigger alert notifications.
-- Combine incoming real-time car telemetry data including speed, braking, and acceleration over a time window to produce an aggregate risk score for the driver.
+- Telemetry from sensors on industrial equipment, which can be used to detect pending equipment failure and trigger alert notifications.
+- Real-time car telemetry data including speed, braking, and acceleration over a time window to produce an aggregate risk score for the driver.
 
 In each of these cases, you can see how time is most meaningful as an axis. Displaying the events in the order in which they arrived is a key characteristic of time series data, as there is a natural temporal ordering. This differs from data captured for standard OLTP data pipelines where data can be entered in any order, and updated at any time.
 
 ## When to use this solution
 
-Choose a time series solution when you need to ingest data whose strategic value is centered around changes over a period of time, and you are primarily inserting new data and rarely updating, if at all. You can use this information to detect anomalies, visualize trends, compare current data to historical data, among other things. This type of architecture is also best suited for predictive modeling and forecasting results, because you have historical record of changes over time that can then be applied to any number of forecasting models. Forecasting means understanding how a metric moves through time and being able to project/predict the future.
+Choose a time series solution when you need to ingest data whose strategic value is centered around changes over a period of time, and you are primarily inserting new data and rarely updating, if at all. You can use this information to detect anomalies, visualize trends, and compare current data to historical data, among other things. This type of architecture is also best suited for predictive modeling and forecasting results, because you have the historical record of changes over time, which can be applied to any number of forecasting models. 
 
 Using time series offers the following benefits:
 
@@ -42,13 +42,11 @@ For more information, see [Internet of Things](../concepts/big-data.md#internet-
 
 ### Real-time analytics
 
-Often, data is most valuable at its time of arrival. Whether your data is streaming into your real-time pipeline from connected IoT devices, or from telemetry originating from security monitoring software, there is a growing need for deriving insights from the millions of events being generated in real time. Any delay in insights can cause significant downtime and business impact. Additionally, the need to correlate data from a variety of different sources, such as sensors, is paramount to debug and optimize business processes and workflows. Reducing the time and expertise required for this is essential for businesses to gain a competitive edge and optimize their operations.
+Time series data is often time sensitive &mdash; that is, it must be acted on quickly, to spot trends in real time or generate alerts. In these scenarios, any delay in insights can cause downtime and business impact. In addition, there is often a need to correlate data from a variety of different sources, such as sensors.
 
-Ideally, you would have a stream processing layer that can handle the influx of data and process all of it with high precision and high granularity. This isn't always possible, depending on your streaming architecture and the components of your stream buffering and stream processing layers. You may need to sacrifice some precision of the time series data by reducing it. This is done by processing sliding windows of several seconds apiece, allowing the processing layer to perform calculations in a timely manner. If you are capable of capturing full fidelity of your streaming data, you need the compute power and ability to down sample (through aggregates) your data when displaying longer periods of time, such as zooming out your graph to display data captured over several months, for example.
+Ideally, you would have a stream processing layer that can handle the incoming data in real time and process all of it with high precision and high granularity. This isn't always possible, depending on your streaming architecture and the components of your stream buffering and stream processing layers. You may need to sacrifice some precision of the time series data by reducing it. This is done by processing sliding time windows (several seconds, for example), allowing the processing layer to perform calculations in a timely manner. You may also need to downsample and aggregate your data when displaying longer periods of time, such as zooming to display data captured over several months.
 
 ## Challenges
-
-Establishing a time series architecture can have some of the following challenges:
 
 * Time series data is often very high volume, especially in IoT scenarios. Storing, indexing, querying, analyzing, and visualizing time series data can be challenging. 
 * Finding the right combination of high-speed storage and powerful compute operations for handling real-time/near real-time analytics, while minimizing time to market and overall cost investment.
