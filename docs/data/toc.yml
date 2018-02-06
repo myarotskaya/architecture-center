@@ -49,14 +49,14 @@
       items:
       - name: Batch processing
         href: scenarios/batch-processing.md
+      - name: Real time processing
+        href: scenarios/real-time-processing.md
+      - name: Free-form text search
+        href: scenarios/search.md
       - name: Interactive data exploration
         href: scenarios/interactive-data-exploration.md
       - name: Natural language processing
         href: scenarios/natural-language-processing.md
-      - name: Real time processing
-        href: scenarios/real-time-processing.md
-      - name: Search
-        href: scenarios/search.md
       - name: Time series solutions
         href: scenarios/time-series.md
     - name: Technology choices
