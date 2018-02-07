@@ -2,7 +2,7 @@
 title: Big data architectures
 description: 
 author: zoinerTejada
-ms:date: 01/17/2018
+ms:date: 02/09/2018
 ---
 
 # Big data architectures

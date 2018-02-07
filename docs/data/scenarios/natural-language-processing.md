@@ -2,7 +2,7 @@
 title: Natural language processing
 description: 
 author: zoinerTejada
-ms:date: 01/17/2018
+ms:date: 02/09/2018
 ---
 
 # Natural language processing

@@ -2,7 +2,7 @@
 title: Securing data solutions
 description: 
 author: zoinerTejada
-ms:date: 01/17/2018
+ms:date: 02/09/2018
 ---
 
 # Securing data solutions
@@ -49,7 +49,7 @@ Establishing a secure solution can cause you to face some of the following chall
 * Implementing encryption and authorization management across your applications and services.
 * Ensuring that centralized identity management works across all of your solution components, whether on-premises or in the cloud.
 
-## Secure data solutions in Azure
+## Securing data solutions in Azure
 
 ### Encryption
 
@@ -69,28 +69,26 @@ Use [Role-Based Access Control](/azure/active-directory/role-based-access-contro
 
 Use [Conditional access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal) to enforce controls on the access to applications in your environment based on specific conditions. For example, your policy statement could take the form of: _When contractors are trying to access our cloud apps from networks that are not trusted, then block access_. 
 
-Finally, [Azure AD Privileged Identity Management](/azure/active-directory/active-directory-privileged-identity-management-configure) can help you manage, control, and monitor your users and what sorts of tasks they are performing with their admin privileges. This is an important step to limiting who in your organization can carry out privileged operations in Azure AD, Azure, Office 365, or SaaS apps, as well as monitor their activities.
+[Azure AD Privileged Identity Management](/azure/active-directory/active-directory-privileged-identity-management-configure) can help you manage, control, and monitor your users and what sorts of tasks they are performing with their admin privileges. This is an important step to limiting who in your organization can carry out privileged operations in Azure AD, Azure, Office 365, or SaaS apps, as well as monitor their activities.
 
 ### Network
 
 To protect data in transit, always use SSL/TLS when exchanging data across different locations. Sometimes you need to isolate your entire communication channel between your on-premises and cloud infrastructure by using either a virtual private network (VPN) or [ExpressRoute](/azure/expressroute/). For more information, see [Extending on-premises data solutions to the cloud](../cross-cutting/hybrid-on-premises-and-cloud.md).
 
-Use [network security groups](/azure/virtual-network/virtual-networks-nsg) (NSGs) to reducing the number of potential attack vectors. A network security group contains a list of security rules that allow or deny inbound or outbound network traffic based on source or destination IP address, port, and protocol. 
+Use [network security groups](/azure/virtual-network/virtual-networks-nsg) (NSGs) to reduce the number of potential attack vectors. A network security group contains a list of security rules that allow or deny inbound or outbound network traffic based on source or destination IP address, port, and protocol. 
 
 Use [Virtual Network service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview) to secure Azure SQL or Azure Storage resources, so that only traffic from your virtual network can access these resources.
 
 VMs within an Azure Virtual Network (VNet) can securely communicate with other VNets using [virtual network peering](/azure/virtual-network/virtual-network-peering-overview). Network traffic between peered virtual networks is private. Traffic between the virtual networks is kept on the Microsoft backbone network.
 
+For more information, see [Azure network security](/azure/security/azure-network-security)
+
 ### Monitoring
 
-Security monitoring and auditing can be centralized with the help of [Azure Security Center](/azure/security-center/security-center-intro). This service automatically collects, analyzes, and integrates log data from your Azure resources, the network, and connected partner solutions, like firewall and endpoint protection solutions, to detect real threats and reduce false positives. A list of prioritized security alerts is shown in Security Center along with the information you need to quickly investigate the problem and recommendations for how to remediate an attack. [Log Analytics](/azure/log-analytics/log-analytics-overview), part of the [Operations Management Suite](/azure/operations-management-suite/operations-management-suite-overview) (OMS), also provides centralized access to your logs and helps you analyze that data and create custom alerts based on key factors that you define.
+[Azure Security Center](/azure/security-center/security-center-intro) automatically collects, analyzes, and integrates log data from your Azure resources, the network, and connected partner solutions, such as firewall solutions, to detect real threats and reduce false positives. 
 
-For security monitoring on your managed Azure SQL Database instances, you can take advantage of [Azure SQL Database Threat Detection](/azure/sql-database/sql-database-threat-detection), a security intelligence feature built into the Azure SQL Database service. Working around the clock to learn, profile and detect anomalous database activities, Azure SQL Database Threat Detection identifies potential threats to the database. Security officers or other designated administrators can receive an immediate notification about suspicious database activities as they occur. Each notification provides details of the suspicious activity and recommends how to further investigate and mitigate the threat.
+[Log Analytics](/azure/log-analytics/log-analytics-overview) provides centralized access to your logs and helps you analyze that data and create custom alerts.
 
-### Application development
+[Azure SQL Database Threat Detection](/azure/sql-database/sql-database-threat-detection) detects anomalous activities indicating unusual and potentially harmful attempts to access or exploit databases. Security officers or other designated administrators can receive an immediate notification about suspicious database activities as they occur. Each notification provides details of the suspicious activity and recommends how to further investigate and mitigate the threat.
 
-Services that support Azure Active Directory authentication can authenticate between one another by enabling Managed Service Identity (MSI). When MSI is enabled on an Azure service, Azure automatically creates an identity for the service instance in the Azure AD tenant used by your Azure subscription. Once created, the identity can be used to authenticate to any service that supports Azure AD authentication without having any credentials in your code. This makes your code more secure by removing any service credentials that could otherwise appear on developer workstations or get checked into source control.
-
-For information on securing your own application code that runs in the cloud, refer to the [cloud design security patterns](/azure/architecture/patterns/category/security) article, and consider following the code security best practices found in the Microsoft [Security Development Lifecycle](https://www.microsoft.com/sdl) (SDL) to minimize
-vulnerabilities and their security impact.
 

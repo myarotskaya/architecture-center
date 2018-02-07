@@ -2,7 +2,7 @@
 title: Choosing a machine learning technology
 description: 
 author: zoinerTejada
-ms:date: 01/17/2018
+ms:date: 02/09/2018
 ---
 
 # Choosing a machine learning technology

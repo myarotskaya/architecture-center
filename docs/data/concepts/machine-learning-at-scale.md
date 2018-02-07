@@ -2,7 +2,7 @@
 title: Machine learning at scale
 description: 
 author: zoinerTejada
-ms:date: 01/17/2018
+ms:date: 02/09/2018
 ---
 
 # Machine learning at scale

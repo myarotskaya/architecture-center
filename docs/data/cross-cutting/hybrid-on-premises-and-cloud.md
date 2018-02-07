@@ -2,7 +2,7 @@
 title: Extending on-premises data solutions to the cloud
 description: 
 author: zoinerTejada
-ms:date: 01/17/2018
+ms:date: 02/09/2018
 ---
 
 # Extending on-premises data solutions to the cloud
@@ -92,7 +92,7 @@ This article focused on hybrid data solutions, but another consideration is how 
 
 - [Choose a solution for connecting an on-premises network to Azure](../../reference-architectures/hybrid-networking/considerations.md)
 
-- [Hybrid network reference architectures](../../architecture/reference-architectures/hybrid-networking/index.md)
+- [Hybrid network reference architectures](../../reference-architectures/hybrid-networking/index.md)
 
 ## Technology choices
 
