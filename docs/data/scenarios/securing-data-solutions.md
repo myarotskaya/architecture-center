@@ -22,7 +22,7 @@ To learn more about protecting your data at rest or intransit, see [Azure Data S
 
 ## Access Control
 
-Central to protecting your data in the cloud is a combination of identity management and access control. Given the variety and type of cloud services, as well as the rising popularity of [hybrid cloud](../cross-cutting/hybrid-on-premises-and-cloud.md), there are several key practices you should follow when it comes to identity and access control:
+Central to protecting your data in the cloud is a combination of identity management and access control. Given the variety and type of cloud services, as well as the rising popularity of [hybrid cloud](../scenarios/hybrid-on-premises-and-cloud.md), there are several key practices you should follow when it comes to identity and access control:
 
 * Centralize your identity management.
 * Enable Single Sign-On (SSO).
@@ -73,7 +73,7 @@ Use [Conditional access in Azure Active Directory](/azure/active-directory/activ
 
 ### Network
 
-To protect data in transit, always use SSL/TLS when exchanging data across different locations. Sometimes you need to isolate your entire communication channel between your on-premises and cloud infrastructure by using either a virtual private network (VPN) or [ExpressRoute](/azure/expressroute/). For more information, see [Extending on-premises data solutions to the cloud](../cross-cutting/hybrid-on-premises-and-cloud.md).
+To protect data in transit, always use SSL/TLS when exchanging data across different locations. Sometimes you need to isolate your entire communication channel between your on-premises and cloud infrastructure by using either a virtual private network (VPN) or [ExpressRoute](/azure/expressroute/). For more information, see [Extending on-premises data solutions to the cloud](../scenarios/hybrid-on-premises-and-cloud.md).
 
 Use [network security groups](/azure/virtual-network/virtual-networks-nsg) (NSGs) to reduce the number of potential attack vectors. A network security group contains a list of security rules that allow or deny inbound or outbound network traffic based on source or destination IP address, port, and protocol. 
 

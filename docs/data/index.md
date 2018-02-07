@@ -68,6 +68,6 @@ This guide is not intended to teach you data science or database theory &mdash; 
 
 ## Cross-cutting concerns
 
-- [Data transfer](./technology-choices/data-transfer.md) 
-- [Extending on-premises data solutions to the cloud](./cross-cutting/hybrid-on-premises-and-cloud.md) 
-- [Securing data solutions](./cross-cutting/secure-solutions.md) 
+- [Data transfer](./scenarios/data-transfer.md) 
+- [Extending on-premises data solutions to the cloud](./scenarios/hybrid-on-premises-and-cloud.md) 
+- [Securing data solutions](./scenarios/securing-data-solutions.md) 

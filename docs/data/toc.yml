@@ -86,8 +86,8 @@
   - name: Cross-cutting concerns
     items:
     - name: Data transfer
-      href: technology-choices/data-transfer.md 
+      href: scenarios/data-transfer.md 
     - name: Extending on-premises data solutions to the cloud
-      href: cross-cutting/hybrid-on-premises-and-cloud.md 
+      href: scenarios/hybrid-on-premises-and-cloud.md 
     - name: Securing data solutions
-      href: cross-cutting/secure-solutions.md 
+      href: scenarios/securing-data-solutions.md 
