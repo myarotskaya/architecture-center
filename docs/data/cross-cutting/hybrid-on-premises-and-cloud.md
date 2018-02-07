@@ -66,7 +66,7 @@ The following are some use cases for Azure and Azure Stack:
 * **Cloud applications that meet varied regulations**. Develop and deploy applications in Azure, with the flexibility to deploy the same applications on-premises on Azure Stack to meet regulatory or policy requirements.
 * **Cloud application model on-premises**: Use Azure to update and extend existing applications or build new ones. Use a consistent DevOps processes across Azure in the cloud and Azure Stack on-premises.
 
-### SQL Server data stores
+## SQL Server data stores
 
 If you are running SQL Server on-premises, you can use Microsoft Azure Blob Storage service for backup and restore. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](/sql/relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service). This capability gives you limitless off-site storage, and the ability to share the same backups between your on-premises SQL Server and SQL Server running in a virtual machine in Azure. 
 
@@ -76,7 +76,7 @@ Maintaining data stores on-premises and in the cloud can be challenging when you
 
 For disaster recovery and business continuity, you can use [AlwaysOn Availability Groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) to replicate data across two or more instances of SQL Server, some of which can be running on Azure virtual machines in another geographic region.
 
-### Network shares and file-based data stores
+## Network shares and file-based data stores
 
 [Azure StorSimple](/azure/storsimple/) offers the most complete integrated storage solution for managing storage tasks between your on-premesis devices and Azure cloud storage. StorSimple is an efficient, cost-effective, and easily manageable storage area network (SAN) solution that eliminates many of the issues and expenses associated with enterprise storage and data protection. It uses the proprietary StorSimple 8000 series device, integrates with cloud services, and provides a set of management tools for a seamless view of all enterprise storage, including cloud storage.
 
@@ -88,7 +88,7 @@ For more information, see [Deciding when to use Azure Blob storage, Azure Files,
 
 ## Hybrid networking
 
-This article focused on hybrid data solutions, but another consideration is how to extend your on-premised network to Azure. For more information about this aspect of hybrid solutions, see the following topics:
+This article focused on hybrid data solutions, but another consideration is how to extend your on-premises network to Azure. For more information about this aspect of hybrid solutions, see the following topics:
 
 - [Choose a solution for connecting an on-premises network to Azure](../../reference-architectures/hybrid-networking/considerations.md)
 

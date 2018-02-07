@@ -70,5 +70,4 @@ This guide is not intended to teach you data science or database theory &mdash; 
 
 - [Data transfer](./technology-choices/data-transfer.md) 
 - [Extending on-premises data solutions to the cloud](./cross-cutting/hybrid-on-premises-and-cloud.md) 
-- [Monitoring data solutions](./cross-cutting/monitoring-data-solutions.md) 
 - [Securing data solutions](./cross-cutting/secure-solutions.md) 
