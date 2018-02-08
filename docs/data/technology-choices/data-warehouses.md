@@ -46,21 +46,31 @@ Azure SQL Data Warehouse can also be used for small and medium datasets, where t
 For data warehouse scenarios, choose the appropriate system for your needs by answering these questions:
 
 - Do you want a managed service rather than managing your own servers?
-    - If yes, then narrow your options to those that are managed services.
-- Are you working with extremely large data sets or highly complex, long-running queries? This is sometimes referred to as a big data workload.
-    - If yes, narrow your options to those under MPP capabilities. Some things to consider when reviewing your options for this question, is whether the data source is structured or unstructured. For unstructured, it may need to be processed in a big data environment like Spark on HDInsight or Azure Databricks, Hive LLAP on HDInsight, or perhaps Azure Data Lake Analytics, all of which can serve as ELT (Extract, Load, Transform) and ETL (Extract, Transform, Load) engines. They can output the processed data into structured data, making it easier to load into SQL Data Warehouse or one of the other options. For structured data, SQL Data Warehouse now has a new performance tier called Optimized for Compute. This is provided for compute-intensive workloads requiring ultra-high performance.
-- Do you want to separate your historical data from your current, operational data?
-    - If so, select one of the options where [orchestration](pipeline-orchestration-data-movement.md) is required, as these are standalone warehouses optimized for heavy read access and best suited for acting as a separate historical data store.
-- Do you need the ability to integrate data from several sources, beyond your OLTP data store?
-    - If so, consider options that easily integrate multiple data sources. Along with this consolidation, do you have a multi-tenancy requirement? If so, remove SQL Data Warehouse from your choices, as it is not ideal for this requirement as outlined in the [SQL Data Warehouse Patterns and Anti-Patterns](https://blogs.msdn.microsoft.com/sqlcat/2017/09/05/azure-sql-data-warehouse-workload-patterns-and-anti-patterns/) article.
-- Do you prefer to use a relational data store?
-    - If so, narrow your options to those with a relational data store, but also note that it is possible to use a tool like PolyBase to query non-relational data stores if needed. If you do decide to use PolyBase, consider running a few performance tests to validate whether it will work fast enough against your unstructured data sets for your workload.
-- Do you have real-time reporting requirements?
-    - If you require rapid query response times on high volumes of singleton inserts, narrow your options to those that can support real-time reporting.
-- Do you need to support a large number of concurrent users and connections?
-    - The ability to support a number of concurrent users/connections depends on several factors. When using Azure SQL, refer to the [documented resource limits](/azure/sql-database/sql-database-resource-limits) based on your service tier. SQL Server hosted on a virtual machine will rely on the size of the virtual machine and supporting services (type of storage, and so on.) to determine the limit, but [generally supports](/sql/database-engine/configure-windows/configure-the-user-connections-server-configuration-option) up to a maximum of 32,767 user connections. SQL Data Warehouse, however, supports a [maximum of 32 concurrent queries](/azure/sql-data-warehouse/sql-data-warehouse-develop-concurrency) across 1,024 concurrent connections, though the number of concurrent queries it supports will increase in the future. Consider using complementary services, such as [Azure Analysis Services](/azure/analysis-services/analysis-services-overview), to overcome such limitations if you do select SQL Data Warehouse.
-- What sort of workload do you have?
-    - In general, MPP-based warehouse solutions are best suited for analytical, batch-oriented workloads. If your workloads are transactional by nature, with many small read/write operations or multiple row-by-row operations, consider using one of the SMP options. One exception to this guideline is when using stream processing on an HDInsight cluster, such as Spark Streaming, and storing the data within a Hive table.
+
+- Are you working with extremely large data sets or highly complex, long-running queries? If yes, narrow your options to those under MPP capabilities. 
+
+- For a large data set, is the data source structured or unstructured? Unstructured data may need to be processed in a big data environment such as Spark on HDInsight, Azure Databricks, Hive LLAP on HDInsight, or Azure Data Lake Analytics. All of these can serve as ELT (Extract, Load, Transform) and ETL (Extract, Transform, Load) engines. They can output the processed data into structured data, making it easier to load into SQL Data Warehouse or one of the other options. For structured data, SQL Data Warehouse has a performance tier called Optimized for Compute, for compute-intensive workloads requiring ultra-high performance.
+
+- Do you want to separate your historical data from your current, operational data? If so, select one of the options where [orchestration](pipeline-orchestration-data-movement.md) is required. These are standalone warehouses optimized for heavy read access and best suited as a separate historical data store.
+
+- Do you need to integrate data from several sources, beyond your OLTP data store? If so, consider options that easily integrate multiple data sources. 
+
+
+- Do you have a multi-tenancy requirement? If so, SQL Data Warehouse is not ideal for this requirement. For more information, see [SQL Data Warehouse Patterns and Anti-Patterns](https://blogs.msdn.microsoft.com/sqlcat/2017/09/05/azure-sql-data-warehouse-workload-patterns-and-anti-patterns/).
+
+- Do you prefer a relational data store? If so, narrow your options to those with a relational data store, but also note that you can use a tool like PolyBase to query non-relational data stores if needed. If you decide to use PolyBase, however, run performance tests against your unstructured data sets for your workload.
+
+- Do you have real-time reporting requirements? If you require rapid query response times on high volumes of singleton inserts, narrow your options to those that can support real-time reporting.
+
+- Do you need to support a large number of concurrent users and connections? The ability to support a number of concurrent users/connections depends on several factors. 
+
+    - For Azure SQL Database, refer to the [documented resource limits](/azure/sql-database/sql-database-resource-limits) based on your service tier. 
+    
+    - SQL Server allows a maximum of 32,767 user connections. When running on a VM, performance will depend on the VM size and other factors. 
+    
+    SQL Data Warehouse has limits on concurrent queries and concurrent connections. For more information, see [Concurrency and workload management in SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-develop-concurrency). Consider using complementary services, such as [Azure Analysis Services](/azure/analysis-services/analysis-services-overview), to overcome limits in SQL Data Warehouse.
+
+- What sort of workload do you have? In general, MPP-based warehouse solutions are best suited for analytical, batch-oriented workloads. If your workloads are transactional by nature, with many small read/write operations or multiple row-by-row operations, consider using one of the SMP options. One exception to this guideline is when using stream processing on an HDInsight cluster, such as Spark Streaming, and storing the data within a Hive table.
 
 ## Capability Matrix
 
@@ -68,51 +78,53 @@ Based on your responses to the questions above, the following tables will help y
 
 ### General capabilities
 
-| | Azure SQL Database | SQL Server in a virtual machine | Azure SQL Database managed instance | SQL Data Warehouse | Apache Hive on HDInsight | Hive LLAP on HDInsight |
+| | Azure SQL Database | SQL Server (VM) | SQL Data Warehouse | Apache Hive on HDInsight | Hive LLAP on HDInsight |
 | --- | --- | --- | --- | --- | --- | -- |
-| Is managed service | Yes | No | Yes | Yes | Yes&mdash;with manual configuration/scaling | Yes&mdash;with manual configuration/scaling |
-| Requires data orchestration (holds copy of data/historical data) | No | No | No | Yes | Yes | Yes |
-| Easily integrate multiple data sources | No | No | No | Yes | Yes | Yes |
-| Supports pausing compute | No | No | No | Yes | No \*** | No \*** |
-| Relational data store | Yes | Yes | Yes | Yes | No | No |
-| Real-time reporting | Yes | Yes | Yes | No | No | Yes |
-| Flexible backup restore points | Yes | Yes | Yes | No * | Yes ** | Yes ** |
-| SMP/MPP | SMP | SMP | SMP | MPP | MPP | MPP |
+| Is managed service | Yes | No | Yes | Yes <sup>1</sup> | Yes <sup>1</sup> |
+| Requires data orchestration (holds copy of data/historical data) | No | No | Yes | Yes | Yes |
+| Easily integrate multiple data sources | No | No | Yes | Yes | Yes |
+| Supports pausing compute | No | No | Yes | No <sup>2</sup> | No <sup>2</sup> |
+| Relational data store | Yes | Yes |  Yes | No | No |
+| Real-time reporting | Yes | Yes | No | No | Yes |
+| Flexible backup restore points | Yes | Yes | No <sup>3</sup> | Yes <sup>4</sup> | Yes <sup>4</sup> |
+| SMP/MPP | SMP | SMP | MPP | MPP | MPP |
 
-\* With SQL Data Warehouse, you can restore a database to any available restore point within the last seven days. Snapshots start every four to eight hours and are available for seven days. When a snapshot is older than seven days, it expires and its restore point is no longer available.
+[1] Manual configuration and scaling.
 
-\** Recommend using an [external Hive metastore](/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#use-hiveoozie-metastore) that can be backed up and restored as needed. Standard backup and restore options that apply to Blob Storage or Data Lake Store can be used for the data, or third party HDInsight backup and restore solutions, such as [Imanis Data](https://azure.microsoft.com/blog/imanis-data-cloud-migration-backup-for-your-big-data-applications-on-azure-hdinsight/) can be used for greater flexibility and ease of use.
+[2] HDInsight clusters can be deleted when not needed, and then re-created. Attach an external data store to your cluster so your data is retained when you delete your cluster. You can use Azure Data Factory to automate your cluster's lifecycle by creating an on-demand HDInsight cluster to process your workload, then delete it once the processing is complete.
 
-\*** HDInsight clusters can be deleted when not needed, then re-created when they are. If you want to do this as a way to reduce cost, you will want to attach an external data store to your cluster so your data is retained when you delete your cluster. You can use Azure Data Factory to automate your cluster's lifecycle by creating an on-demand HDInsight cluster to process your workload, then delete it once the processing is complete.
+[3] With SQL Data Warehouse, you can restore a database to any available restore point within the last seven days. Snapshots start every four to eight hours and are available for seven days. When a snapshot is older than seven days, it expires and its restore point is no longer available.
+
+[4] Consider using an [external Hive metastore](/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#use-hiveoozie-metastore) that can be backed up and restored as needed. Standard backup and restore options that apply to Blob Storage or Data Lake Store can be used for the data, or third party HDInsight backup and restore solutions, such as [Imanis Data](https://azure.microsoft.com/blog/imanis-data-cloud-migration-backup-for-your-big-data-applications-on-azure-hdinsight/) can be used for greater flexibility and ease of use.
 
 ### Scalability capabilities
 
-| | Azure SQL Database | SQL Server in a virtual machine | Azure SQL Database managed instance | SQL Data Warehouse | Apache Hive on HDInsight | Hive LLAP on HDInsight |
+| | Azure SQL Database | SQL Server (VM) |  SQL Data Warehouse | Apache Hive on HDInsight | Hive LLAP on HDInsight |
 | --- | --- | --- | --- | --- | --- | -- |
-| Redundant regional servers for high availability  | Yes | Yes | Yes | Yes | No | No |
-| Supports query scale out (distributed queries)  | No | No | No | Yes | Yes | Yes |
-| Dynamic scalability (scale up)  | Yes | No | Yes | Yes * | No | No |
-| Supports in-memory caching of data | Yes | Yes | Yes | No | Yes |
+| Redundant regional servers for high availability  | Yes | Yes  Yes | No | No |
+| Supports query scale out (distributed queries)  | No | No | Yes | Yes | Yes |
+| Dynamic scalability (scale up)  | Yes | No | Yes <sup>1</sup> | No | No |
+| Supports in-memory caching of data | Yes |  Yes | No | Yes |
 
-\* SQL Data Warehouse allows you to scale up or down compute by [adjusting the number of data warehouse units (DWUs)](/azure/sql-data-warehouse/sql-data-warehouse-manage-compute-overview).
+[1] SQL Data Warehouse allows you to scale up or down by adjusting the number of data warehouse units (DWUs). See [Manage compute power in Azure SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-manage-compute-overview).
 
 ### Security capabilities
 
-| | Azure SQL Database | SQL Server in a virtual machine | Azure SQL Database managed instance | SQL Data Warehouse | Apache Hive on HDInsight | Hive LLAP on HDInsight |
+| | Azure SQL Database | SQL Server in a virtual machine | SQL Data Warehouse | Apache Hive on HDInsight | Hive LLAP on HDInsight |
 | --- | --- | --- | --- | --- | --- | -- |
-| Authentication  | SQL / Azure Active Directory | SQL / Azure Active Directory / Active Directory | SQL / Azure Active Directory | SQL / Azure Active Directory | local / Azure Active Directory * | local / Azure Active Directory * |
-| Authorization  | Yes | Yes | Yes | Yes | Yes * | Yes * |
-| Auditing  | Yes | Yes | Yes | Yes | Yes * | Yes * |
-| Data encryption at rest | Yes ** | Yes ** | Yes ** | Yes ** | Yes * | Yes * |
-| Row-level security | Yes | Yes | Yes | No | Yes * | Yes * |
-| Supports firewalls | Yes | Yes | Yes | Yes | Yes \*** | Yes \*** |
-| Dynamic data masking | Yes | Yes | Yes | No | Yes * | Yes * |
+| Authentication  | SQL / Azure Active Directory (Azure AD) | SQL / Azure AD / Active Directory | SQL / Azure AD | local / Azure AD <sup>1</sup> | local / Azure AD <sup>1</sup> |
+| Authorization  | Yes | Yes | Yes | Yes | Yes <sup>1</sup> | Yes <sup>1</sup> |
+| Auditing  | Yes | Yes | Yes | Yes | Yes <sup>1</sup> | Yes <sup>1</sup> |
+| Data encryption at rest | Yes <sup>2</sup> | Yes <sup>2</sup> | Yes <sup>2</sup> | Yes <sup>2</sup> | Yes <sup>1</sup> | Yes <sup>1</sup> |
+| Row-level security | Yes | Yes | Yes | No | Yes <sup>1</sup> | Yes <sup>1</sup> |
+| Supports firewalls | Yes | Yes | Yes | Yes | Yes <sup>3</sup> | Yes <sup>3</sup> |
+| Dynamic data masking | Yes | Yes | Yes | No | Yes <sup>1</sup> | Yes <sup>1</sup> |
 
-\* Requires using a [domain-joined HDInsight cluster](/azure/hdinsight/domain-joined/apache-domain-joined-introduction).
+[1] Requires using a [domain-joined HDInsight cluster](/azure/hdinsight/domain-joined/apache-domain-joined-introduction).
 
-\** Requires using Transparent Data Encryption (TDE) to encrypt and decrypt your data at rest.
+[2] Requires using Transparent Data Encryption (TDE) to encrypt and decrypt your data at rest.
 
-\*** Supported when [used within an Azure Virtual Network](/azure/hdinsight/hdinsight-extend-hadoop-virtual-network).
+[3] Supported when [used within an Azure Virtual Network](/azure/hdinsight/hdinsight-extend-hadoop-virtual-network).
 
 Read more about securing your data warehouse:
 

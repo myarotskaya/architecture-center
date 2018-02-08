@@ -53,9 +53,6 @@ Considerations:
 * You will be unable to access your notebooks when offline.
 * Limited processing capabilities of the free notebook service may not be enough to train large or complex models.
 
-## How do you choose?
-Each analysis, visualization, and reporting method brings with it a unique set of capabilities, giving you the option to select the one that most closely meets your requirements.
-
 ## Key selection criteria
 
 For analysis, visualizations, and reporting scenarios, choose the appropriate system for your needs by answering these questions:

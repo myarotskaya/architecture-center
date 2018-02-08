@@ -31,20 +31,15 @@ These options provide various database models that are optimized for different t
 - [Column-family](https://msdn.microsoft.com/library/dn313285.aspx#sec9) databases are key/value data stores that enable you to structure data storage into collections of related columns called column families. For example, a census database might have one group of columns for a person's name (first, middle, last), one group for the person's address, and one group for the person's profile information (DOB, gender, and so on). The database can then store each column family in a separate partition while keeping all of the data for one person related to the same key. You can then read all profile information without having to read through all of the name and address information as well.
 - [Graph](https://msdn.microsoft.com/library/dn313285.aspx#sec10) databases store information as a collection of objects and relationships. The purpose of a graph database is to enable an application to efficiently perform queries that traverse the network of objects and the relationships between them. For example, the objects might be employees in a human resources database, and you might want to facilitate queries such as "find all employees who directly or indirectly work for Scott."
 
-## How do you choose?
-Each data serving solution brings with it a unique set of capabilities, giving you the option to select the one that most closely meets your requirements.
-Each data serving solution brings with it a unique set of capabilities, giving you options in selecting the one that most closely meets your requirements.
-
 ## Key selection criteria
 
-For data serving storage scenarios, choose the appropriate system for your needs by answering these questions:
+Choose the appropriate system for your needs by answering these questions:
 
-- Do you need serving storage that can serve as a hot path for your data?
-    - If yes, narrow your options to those that are optimized for speed serving layer.
-- Do you need massively parallel processing (MPP) support, where your queries are automatically distributed amongst several processes or nodes?
-    - If so, select an option that supports query scale out.
-- Do you prefer to use a relational data store?
-    - If so, narrow your options to those with a relational database model, but also note that it is possible to use a tool like PolyBase to query non-relational data stores if needed.
+- Do you need serving storage that can serve as a hot path for your data? If yes, narrow your options to those that are optimized for speed serving layer.
+
+- Do you need massively parallel processing (MPP) support, where your queries are automatically distributed amongst several processes or nodes? If yes, select an option that supports query scale out.
+
+- Do you prefer to use a relational data store? If so, narrow your options to those with a relational database model. However, note that some non-relational stores support SQL syntax for querying, and tools such as PolyBase can be used to query non-relational data stores.
 
 ## Capability matrix
 
@@ -54,35 +49,36 @@ The following tables summarize the key differences in capabilities.
 
 | | SQL Database | SQL Data Warehouse | HBase/Phoenix on HDInsight | Hive LLAP on HDInsight | Azure Analysis Services | Azure Cosmos DB |
 | --- | --- | --- | --- | --- | --- | --- |
-| Is managed service | Yes (Azure SQL Database) | Yes | Yes&mdash;with manual configuration/scaling | Yes&mdash;with manual configuration/scaling | Yes | Yes |
-| Primary database model | Relational (columnar format when using columnstore indexes) | Relational tables with columnar storage | Wide column store | Hive/In-Memory | Tabular/MOLAP semantic models | Document store, graph DBMS, key-value store, wide column store |
+| Is managed service | Yes | Yes | Yes <sup>1</sup> | Yes <sup>1</sup> | Yes | Yes |
+| Primary database model | Relational (columnar format when using columnstore indexes) | Relational tables with columnar storage | Wide column store | Hive/In-Memory | Tabular/MOLAP semantic models | Document store, graph, key-value store, wide column store |
 | SQL language support | Yes | Yes | Yes (using the [Phoenix](http://phoenix.apache.org/) JDBC driver) | Yes | No | Yes |
 | Optimized for speed serving layer | Yes, using memory-optimized tables and hash or nonclustered indexes | No | Yes | Yes | No | Yes |
-| Regional availability | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) |
 
+[1] With manual configuration and scaling
+ 
 ### Scalability capabilities
 
 | | SQL Database | SQL Data Warehouse | HBase/Phoenix on HDInsight | Hive LLAP on HDInsight | Azure Analysis Services | Azure Cosmos DB |
 | --- | --- | --- | --- | --- | --- | --- |
-| Redundant regional servers for high availability  | Yes (Azure SQL Database) | Yes | Yes | No | No | Yes | Yes |
+| Redundant regional servers for high availability  | Yes | Yes | Yes | No | No | Yes | Yes |
 | Supports query scale out  | No | Yes | Yes | Yes | Yes | Yes |
-| Dynamic scalability (scale up)  | Yes (Azure SQL Database) | Yes | No | No | Yes | Yes |
+| Dynamic scalability (scale up)  | Yes | Yes | No | No | Yes | Yes |
 | Supports in-memory caching of data | Yes | Yes | No | Yes | Yes | No |
 
 ### Security capabilities
 
 | | SQL Database | SQL Data Warehouse | HBase/Phoenix on HDInsight | Hive LLAP on HDInsight | Azure Analysis Services | Azure Cosmos DB |
 | --- | --- | --- | --- | --- | --- | --- |
-| Authentication  | SQL / Azure Active Directory | SQL / Azure Active Directory | local / Azure Active Directory * | local / Azure Active Directory * | Azure Active Directory | database users / Azure Active Directory via access control (IAM) |
-| Authorization  | Yes | Yes | Yes * | Yes * | Yes | [Yes](/azure/cosmos-db/secure-access-to-data) (hash-based message authentication code (HMAC))
-| Auditing  | Yes | Yes | Yes * | Yes * | Yes (when integrated with [Azure Monitor Resource Diagnostic Logs](/azure/monitoring-and-diagnostics/monitoring-overview-of-diagnostic-logs)) | Yes (through [audit logging/activity logs](/azure/cosmos-db/logging))
-| Data encryption at rest | Yes ** | Yes ** | Yes * | Yes * | Yes | Yes |
-| Row-level security | Yes | No | Yes * | Yes * | Yes (through object-level security in model) | No |
-| Supports firewalls | Yes | Yes | Yes \*** | Yes \*** | Yes | Yes |
-| Dynamic data masking | Yes | No | Yes * | Yes * | No | No |
+| Authentication  | SQL / Azure Active Directory (Azure AD) | SQL / Azure AD | local / Azure AD * | local / Azure AD * | Azure AD | database users / Azure AD via access control (IAM) |
+| Authorization  | Yes | Yes | Yes <sup>1</sup> | Yes <sup>1</sup> | Yes | [Yes](/azure/cosmos-db/secure-access-to-data) (hash-based message authentication code (HMAC))
+| Auditing  | Yes | Yes | Yes <sup>1</sup> | Yes <sup>1</sup> | Yes (when integrated with [Azure Monitor Resource Diagnostic Logs](/azure/monitoring-and-diagnostics/monitoring-overview-of-diagnostic-logs)) | Yes (through [audit logging/activity logs](/azure/cosmos-db/logging))
+| Data encryption at rest | Yes <sup>2</sup> | Yes <sup>2</sup> | Yes <sup>1</sup> | Yes <sup>1</sup> | Yes | Yes |
+| Row-level security | Yes | No | Yes <sup>1</sup> | Yes <sup>1</sup> | Yes (through object-level security in model) | No |
+| Supports firewalls | Yes | Yes | Yes <sup>3</sup> | Yes <sup>3</sup> | Yes | Yes |
+| Dynamic data masking | Yes | No | Yes <sup>1</sup> | Yes * | No | No |
 
-\* Requires using a [domain-joined HDInsight cluster](/azure/hdinsight/domain-joined/apache-domain-joined-introduction).
+[1] Requires using a [domain-joined HDInsight cluster](/azure/hdinsight/domain-joined/apache-domain-joined-introduction).
 
-\** Requires using transparent data encryption (TDE) to encrypt and decrypt your data at rest.
+[2] Requires using transparent data encryption (TDE) to encrypt and decrypt your data at rest.
 
-\*** Supported when [used within an Azure Virtual Network](/azure/hdinsight/hdinsight-extend-hadoop-virtual-network).
+[3] Supported when [used within an Azure Virtual Network](/azure/hdinsight/hdinsight-extend-hadoop-virtual-network).
