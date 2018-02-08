@@ -25,8 +25,8 @@ Each service brings with it a unique set of capabilities, giving you the option 
 For real-time processing scenarios, begin choosing the appropriate service for your needs by answering these questions:
 - Do you want a managed service or do you prefer to setup and manage the cluster of virtual machines running the processing?
     - If yes, then narrow your options to those that are managed services.
-- Do you want to author stream processing logic declartively (for example, as SQL queries) or imperatively (for example, Java code)?
-    - Narrow your options by the programming pardigm (declarative or imperative).
+- Do you want to author stream processing logic declaratively (for example, as SQL queries) or imperatively (for example, Java code)?
+    - Narrow your options by the programming paradigm (declarative or imperative).
 - Do you need built-in support for temporal processing or windowing?
     - If yes, narrow your options to those that support built-in temporal/windowing.
 - Does your data arrive in formats besides Avro, JSON, or CSV?

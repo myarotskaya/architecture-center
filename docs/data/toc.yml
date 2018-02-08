@@ -35,11 +35,11 @@
     items:
     - name: Concepts
       items:
-      - name: Non-relational data
+      - name: Non-relational data stores
         href: concepts/non-relational-data.md
       - name: Working with CSV and JSON files
         href: concepts/csv-and-json.md
-      - name: Big Data architectures
+      - name: Big data architectures
         href: concepts/big-data.md
       - name: Advanced analytics
         href: concepts/advanced-analytics.md 

@@ -16,7 +16,7 @@ In many corporate business intelligence (BI) solutions, reports and semantic mod
 Self-service BI is a name given to a modern approach to business decision making in which users are empowered to find, explore, and share insights from data across the enterprise. To accomplish this, the data solution must support several requirements:
 
 * Discovery of business data sources through a data catalog.
-* Master data management to ensure consistency of data entity defintions and values.
+* Master data management to ensure consistency of data entity definitions and values.
 * Interactive data modeling and visualization tools for business users.
 
 In a self-service BI solution, business users typically find and consume data sources that are relevant to their particular area of the business, and use intuitive tools and productivity applications to define personal data models and reports that they can share with their colleagues.

@@ -26,7 +26,7 @@ Each service brings with it a unique set of capabilities, giving you the option 
 
 ## Key selection criteria
 
-For batch processing processing scenarios, begin choosing the appropriate service for your needs by answering these questions:
+For batch processing scenarios, begin choosing the appropriate service for your needs by answering these questions:
 
 - Do you want a managed service or do you prefer to setup and manage the cluster of virtual machines running the processing?
     - If yes, then narrow your options to those that are managed services.

@@ -23,9 +23,9 @@ One of the big challenges of real-time processing solutions is to ingest, proces
 
 A real-time processing architecture has the following logical components.
 
-- **Real-time message ingestion.** The architecture must include a way to capture and store realtime messages to be consumed by a stream processing consumer. In simple cases, this service could be implemented as a simple data store in which new messages are deposited in a folder. But often the solution requires a message broker, such as Azure Event Hubs, that acts as a buffer for the messages. The message broker should support scale-out processing and reliable delivery.
+- **Real-time message ingestion.** The architecture must include a way to capture and store real-time messages to be consumed by a stream processing consumer. In simple cases, this service could be implemented as a simple data store in which new messages are deposited in a folder. But often the solution requires a message broker, such as Azure Event Hubs, that acts as a buffer for the messages. The message broker should support scale-out processing and reliable delivery.
 
-- **Stream processing.** After capturing realtime messages, the solution must process them by filtering, aggregating, and otherwise preparing the data for analysis.
+- **Stream processing.** After capturing real-time messages, the solution must process them by filtering, aggregating, and otherwise preparing the data for analysis.
 
 - **Analytical data store.** Many big data solutions are designed to prepare data for analysis and then serve the processed data in a structured format that can be queried using analytical tools. 
 

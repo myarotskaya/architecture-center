@@ -9,6 +9,12 @@ ms:date: 02/09/2018
 
 For many, making data accessible in the cloud, particularly when transitioning from working exclusively in on-premises data stores, can cause some concern around increased accessibility to that data and new ways in which to secure it.
 
+## Challenges
+
+* Centralizing the monitoring and analysis of security events stored in numerous logs.
+* Implementing encryption and authorization management across your applications and services.
+* Ensuring that centralized identity management works across all of your solution components, whether on-premises or in the cloud.
+
 ## Data Protection
 
 The first step to protecting information is identifying what to protect. Develop clear, simple, and well-communicated guidelines to identify, protect, and monitor the most important data assets anywhere they reside. Establish the strongest protection for assets that have a disproportionate impact on the organization's mission or profitability. These are known as high value assets, or HVAs. Perform stringent analysis of HVA lifecycle and security dependencies, and establish appropriate security controls and conditions. Similarly, identify and classify sensitive assets, and define the technologies and processes to automatically apply security controls.
@@ -18,7 +24,7 @@ Once the data you need to protect has been identified, consider how you will pro
 * **Data at rest**: Data that exists statically on physical media, whether magnetic or optical disk, on premises or in the cloud.
 * **Data in transit**: Data while it is being transferred between components, locations or programs, such as over the network, across a service bus (from on-premises to cloud and vice-versa), or during an input/output process.
 
-To learn more about protecting your data at rest or intransit, see [Azure Data Security and Encryption Best Practices](/azure/security/azure-security-data-encryption-best-practices).
+To learn more about protecting your data at rest or in transit, see [Azure Data Security and Encryption Best Practices](/azure/security/azure-security-data-encryption-best-practices).
 
 ## Access Control
 
@@ -41,13 +47,7 @@ Beyond the identity and access monitoring previously mentioned, the services and
 
 For more information, see [Azure Logging and Auditing](/azure/security/azure-log-audit).
 
-## Challenges
 
-Establishing a secure solution can cause you to face some of the following challenges:
-
-* Centralizing the monitoring and analysis of security events stored in numerous logs.
-* Implementing encryption and authorization management across your applications and services.
-* Ensuring that centralized identity management works across all of your solution components, whether on-premises or in the cloud.
 
 ## Securing data solutions in Azure
 

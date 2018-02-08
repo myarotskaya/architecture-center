@@ -12,7 +12,7 @@ This guide presents a structured approach for designing data-centric solutions o
 
 ## Introduction
 
-The cloud is changing the way applications are designed, including how data is processed and stored. Instead of a single general-purpose database that handles all of a solution's data, the _polyglot persistence_ approach is to use multiple, specialized databases and data stores &mdash; each optimized to provide specific capabilities. The perspective on data in the solution changes as a result. There are no longer multiple layers of business logic that read and write to a single data layer. Instead, polyglot persistence solutions are designed around a *data pipeline* that describes how data flows through a solution, where it is processed, where it is stored, and how it is consumed by the next component in the pipeline. 
+The cloud is changing the way applications are designed, including how data is processed and stored. Instead of a single general-purpose database that handles all of a solution's data, _polyglot persistence_ uses multiple, specialized data stores, each optimized to provide specific capabilities. The perspective on data in the solution changes as a result. There are no longer multiple layers of business logic that read and write to a single data layer. Instead, solutions are designed around a *data pipeline* that describes how data flows through a solution, where it is processed, where it is stored, and how it is consumed by the next component in the pipeline. 
 
 ## How this guide is structured
 
@@ -51,19 +51,19 @@ This guide is not intended to teach you data science or database theory &mdash; 
 
 ### Concepts
 
-- [Non-relational data](./concepts/non-relational-data.md)
+- [Non-relational data stores](./concepts/non-relational-data.md)
+- [Working with CSV and JSON files](./concepts/csv-and-json.md)
 - [Big data architectures](./concepts/big-data.md)
 - [Advanced analytics](./concepts/advanced-analytics.md) 
 - [Machine learning at scale](./concepts/machine-learning-at-scale.md)
-- [Processing CSV and JSON files](./concepts/csv-and-json.md)
 
 ### Scenarios
 
 - [Batch processing](./scenarios/batch-processing.md)
+- [Real time processing](./scenarios/real-time-processing.md)
+- [Free-form text search](./scenarios/search.md)
 - [Interactive data exploration](./scenarios/interactive-data-exploration.md)
 - [Natural language processing](./scenarios/natural-language-processing.md)
-- [Real time processing](./scenarios/real-time-processing.md)
-- [Search](./scenarios/search.md)
 - [Time series solutions](./scenarios/time-series.md)
 
 ## Cross-cutting concerns

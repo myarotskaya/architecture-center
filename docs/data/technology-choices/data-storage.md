@@ -110,7 +110,7 @@ Based on your responses to the questions above, the following tables will help y
 | Data operations&mdash;authentication protocol | OAuth 2.0. Calls must contain a valid JWT (JSON web token) issued by Azure Active Directory | Hash-based message authentication code (HMAC). Calls must contain a Base64-encoded SHA-256 hash over a part of the HTTP request. |
 | Data operations&mdash;authorization | POSIX access control lists (ACLs). ACLs based on Azure Active Directory identities can be set file and folder level. | For account-level authorization use [Account Access Keys](/azure/storage/common/storage-create-storage-account#manage-your-storage-account)<br>For account, container, or blob authorization use [Shared Access Signature Keys](/azure/storage/common/storage-dotnet-shared-access-signature-part-1) |
 | Data Operations&mdash;Auditing | Available.  |Available |
-| Encryption data at rest | <ul><li>Transparent, server side</li> <ul><li>With service-managed keys</li><li>With customer-managed keys in Azure KeyVault</li></ul></ul> | <ul><li>Transparent, server side</li> <ul><li>With service-managed keys</li><li>With customer-managed keys in Azure KeyVault (coming soon)</li></ul><li>Client-side encryption</li></ul> |
+| Encryption data at rest | <ul><li>Transparent, server side</li> <ul><li>With service-managed keys</li><li>With customer-managed keys in Azure Key Vault</li></ul></ul> | <ul><li>Transparent, server side</li> <ul><li>With service-managed keys</li><li>With customer-managed keys in Azure Key Vault (coming soon)</li></ul><li>Client-side encryption</li></ul> |
 | Management operations (for example, account create) | [Role-based access control](/azure/active-directory/role-based-access-control-what-is) (RBAC) provided by Azure for account management | [Role-based access control](/azure/active-directory/role-based-access-control-what-is) (RBAC) provided by Azure for account management |
 | Developer SDKs | .NET, Java, Python, Node.js | .Net, Java, Python, Node.js, C++, Ruby |
 | Analytics workload performance | Optimized performance for parallel analytics workloads, High Throughput and IOPS | Not optimized for analytics workloads |
@@ -128,7 +128,7 @@ Based on your responses to the questions above, the following tables will help y
 | Data types | Yes (JSON data types) | No |
 | Secondary indexes | Yes | No |
 | SQL language support | Yes | Yes (using the [Phoenix](http://phoenix.apache.org/) JDBC driver) |
-| Available APIs |[DocumentDB](/azure/cosmos-db/documentdb-introduction), [MongoDB](/azure/cosmos-db/mongodb-introduction), [Graph](/azure/cosmos-db/graph-introduction) (Gremlin), RESTful HTTP, [Table](/azure/cosmos-db/table-introduction), [Cassandra](/azure/cosmos-db/cassandra-introduction) (preview) | Java, RESTful HTTP, Thrift |
+| Available APIs |[SQL](/azure/cosmos-db/sql-api-introduction), [MongoDB](/azure/cosmos-db/mongodb-introduction), [Graph](/azure/cosmos-db/graph-introduction) (Gremlin), RESTful HTTP, [Table](/azure/cosmos-db/table-introduction), [Cassandra](/azure/cosmos-db/cassandra-introduction) (preview) | Java, RESTful HTTP, Thrift |
 | Consistency | Strong, bounded-staleness, session, consistent prefix, eventual | Strong |
 | Native Azure Functions integration | [Yes](/azure/cosmos-db/serverless-computing-database) | No |
 | Regional availability | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) |

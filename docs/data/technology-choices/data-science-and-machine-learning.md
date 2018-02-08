@@ -14,12 +14,12 @@ Machine learning solutions are built iteratively, and have two distinct phases:
 * Deployment and consumption of predictive services.
 
 ## Tools and services for data preparation and modeling
-Data scientists typically prefer to work with data using custom code written in Python or R. This code is generally run interactively, with the data scientists using it to query and explore the data, generating visualizations and statistics to help determine the relationships with it. There are many interactive environments for R and Python that data scientsits can use. A particular favorite is **Jupyter Notebooks** that provides a browser-based shell that enables data scientists to create *notebook* files that contain R or Python code and markdown text. This is an effective way to collaborate by sharing and documenting code and results in a single document.
+Data scientists typically prefer to work with data using custom code written in Python or R. This code is generally run interactively, with the data scientists using it to query and explore the data, generating visualizations and statistics to help determine the relationships with it. There are many interactive environments for R and Python that data scientists can use. A particular favorite is **Jupyter Notebooks** that provides a browser-based shell that enables data scientists to create *notebook* files that contain R or Python code and markdown text. This is an effective way to collaborate by sharing and documenting code and results in a single document.
 
 Other commonly used tools include:
 * **Spyder**: The interactive development environment (IDE) for Python provided with the Anaconda Python distribution.
 * **R Studio**: An IDE for the R programming language.
-* **Visual Studio Code**: A lighweight, multi-platform coding environment that supports Python as well as commonly used frameworks for machine learning and AI development.
+* **Visual Studio Code**: A lightweight, cross-platform coding environment that supports Python as well as commonly used frameworks for machine learning and AI development.
 
 In addition to these tools, data scientists can leverage Azure services to simplify code and model management.
 
@@ -37,7 +37,7 @@ Considerations:
 * Limited processing capabilities of the free notebook service may not be enough to train large or complex models.
 
 ### Data science virtual machine
-The data science virtual machine is an Azure virtual machine image that includes the tools and frameworks commonly used by data scientists, including R, Python, Jupyter Notebooks, Visual Studio Code, and libraries for machine learning modeling such as the Microsoft Cognitive Toolkit. These tools can be complex and time consuming to to install, and contain many interdependencies that often lead to version management issues. Having a preinstalled image can reduce the time data scientists spend troubleshooting environment issues, allowing them to focus on the data exploration and modeling tasks they need to perform.
+The data science virtual machine is an Azure virtual machine image that includes the tools and frameworks commonly used by data scientists, including R, Python, Jupyter Notebooks, Visual Studio Code, and libraries for machine learning modeling such as the Microsoft Cognitive Toolkit. These tools can be complex and time consuming to install, and contain many interdependencies that often lead to version management issues. Having a preinstalled image can reduce the time data scientists spend troubleshooting environment issues, allowing them to focus on the data exploration and modeling tasks they need to perform.
 
 Key benefits:
 * Reduced time to install, manage, and troubleshoot data science tools and frameworks.
@@ -56,8 +56,8 @@ From Azure Machine Learning Workbench, you can use the interactive data preparat
 When you are ready to deploy your model, the Workbench environment enables you to package up the model and deploy it as a web service to a Docker container, Spark on Azure HDinsight, Microsoft Machine Learning Server, or SQL Server. The Azure Machine Learning Model Management service then enables you to track and manage model deployments in the cloud, on edge devices, or across the enterprise.
 
 Key benefits:
-* Central managamenent of scripts and run history, making it easy to compare model versions.
-* Interactive data trasformation through a visual editor.
+* Central management of scripts and run history, making it easy to compare model versions.
+* Interactive data transformation through a visual editor.
 * Easy deployment and management of models to the cloud or edge devices.
 
 Considerations:
@@ -73,7 +73,7 @@ Azure Machine Learning Model Management can be used to take models from Batch AI
 Azure Machine Learning Studio is a cloud-based, visual development environment for creating data experiments, training machine learning models, and publishing them as web services in Azure. Its visual drag and drop nature makes it possible for data scientists and power users to create effective machine learning solutions quickly and easily, while supporting custom R and Python logic, a wide range of established statistical algorithms and techniques for machine learning modeling tasks, and built-in support for Jupyter Notebooks.
 
 Key benefits:
-* Interative visual interface enabling machine learning modeling with minimal code.
+* Interactive visual interface enabling machine learning modeling with minimal code.
 * Built-in Jupyter Notebooks for data exploration.
 * Direct deployment of trained models as Azure web services.
 
@@ -93,7 +93,7 @@ Key benefits:
 * You can deploy models directly to Spark in HDinsight from Azure Machine Learning Workbench, and manage them using the Azure Machine Learning Model Management service.
 
 Considerations:
-* Spark runs in an HDinsght cluster that incurs charges the whole time it is running. If the machine learning service will only be used occassionally, this may result in unnecessary costs.
+* Spark runs in an HDinsght cluster that incurs charges the whole time it is running. If the machine learning service will only be used occasionally, this may result in unnecessary costs.
 
 ### Web service in a container
 You can deploy a machine learning model as a Python web service in a Docker container. This enables you to deploy the model to the cloud (in the Azure Container Service) or to an edge device where it can be used locally with the data on which it operates.
@@ -108,7 +108,7 @@ Considerations:
 * This deployment model is based on Docker containers, so you should be familiar with this technology before deploying a web service this way.
 
 ### Microsoft Machine Learning Server
-Machine Learning Server (formerly Microsoft R Server) is a scalable platform for R and Python code, specicially designed for machine learning scenarios.
+Machine Learning Server (formerly Microsoft R Server) is a scalable platform for R and Python code, specifically designed for machine learning scenarios.
 
 Key benefits:
 * High scalability.
@@ -123,7 +123,7 @@ Microsoft SQL Server supports R and Python natively, enabling you to encapsulate
 Key benefits:
 * Encapsulate predictive logic in a database function, making it easy to include in data-tier logic.
 
-Consideratons:
+Considerations:
 * Assumes a SQL Server database as the data tier for your application.
 
 ### Azure Machine Learning web service

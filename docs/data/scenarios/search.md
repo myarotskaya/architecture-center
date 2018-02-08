@@ -9,7 +9,7 @@ ms:date: 02/09/2018
 
 To support search, free-form text processing can be performed against documents containing paragraphs of text.
 
-Text search works by constructing a specialized index that is precomputed against a collection of documents. A client application submits a query that contains the search terms. The query returns a result set, consisting of a list of documents sorted by how well each document matches the search criteria. The result set may also include the context in which the the document matches the criteria, which enables the application to highlight the matching phrase in the document. 
+Text search works by constructing a specialized index that is precomputed against a collection of documents. A client application submits a query that contains the search terms. The query returns a result set, consisting of a list of documents sorted by how well each document matches the search criteria. The result set may also include the context in which the document matches the criteria, which enables the application to highlight the matching phrase in the document. 
 
 ![](./images/search-pipeline.png)
 

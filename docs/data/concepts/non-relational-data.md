@@ -16,7 +16,7 @@ The term *NoSQL* refers to data stores that do not use SQL for queries, and inst
 The following sections describe the major categories of non-relational or NoSQL database.
 
 ## Document data stores
-A document data store manages a set of named string fields and object data values in an entity referred to as a *document*. These data stores typcially store data in the form of JSON documents. Each field value could be a scalar item, such as a number, or a compound element, such as a list or a parent-child collection. The data in the fields of a document can be encoded in a variety of ways, including XML, YAML, JSON, BSON, or even stored as plain text. The fields within documents are exposed to the storage management system, enabling an application to query and filter data by using the values in these fields.  
+A document data store manages a set of named string fields and object data values in an entity referred to as a *document*. These data stores typically store data in the form of JSON documents. Each field value could be a scalar item, such as a number, or a compound element, such as a list or a parent-child collection. The data in the fields of a document can be encoded in a variety of ways, including XML, YAML, JSON, BSON, or even stored as plain text. The fields within documents are exposed to the storage management system, enabling an application to query and filter data by using the values in these fields.  
 
 Typically, a document contains the entire data for an entity. What items constitute an entity are application specific. For example, an entity could contain the details of a customer, an order, or a combination of both. A single document might contain information that would be spread across several relational tables in a relational database management system (RDBMS). A document store does not require that all documents have the same structure. This free-form approach provides a great deal of flexibility. For example, applications can store different data in documents in response to a change in business requirements.  
 
@@ -134,10 +134,10 @@ The following compares the requirements for each of the non-relational data stor
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Normalization | Denormalized | Denormalized | Denormalized | Normalized | Normalized | Denormalized | Denormalized |
 | Schema | Schema on read | Column families defined on write, column schema on read | Schema on read | Schema on read | Schema on read | Schema on read | Schema on write | 
-| Consistency (across concurrent transactions) | Tuneable consistency, document-level guarantees | Column-family&ndash;level guarantees | Key-level guarantees | Graph-level guarantees | N/A | N/A | N/A | 
+| Consistency (across concurrent transactions) | Tunable consistency, document-level guarantees | Column-family&ndash;level guarantees | Key-level guarantees | Graph-level guarantees | N/A | N/A | N/A | 
 | Referential Integrity | N/A | N/A | N/A | N/A | N/A | N/A | N/A |  
 | Atomicity (transaction scope) | Collection | Table | Table | Graph | N/A | Object | N/A |
-| Locking Strategy | Optmistic (lock free) | Pessimistic (row locks) | Optimistic (ETag) | Optmistic (lock free) | N/A | Pessimistic (blob locks) | N/A |
+| Locking Strategy | Optimistic (lock free) | Pessimistic (row locks) | Optimistic (ETag) | Optimistic (lock free) | N/A | Pessimistic (blob locks) | N/A |
 | Access pattern | Random access | Aggregates on tall/wide data | Random access | Random access | Random access and aggregation | Sequential access | Random access | 
 | Indexing | Primary and secondary indexes | Primary and secondary indexes | Primary index only | Primary and secondary indexes | Primary and secondary indexes | Primary index only | N/A |
 | Model | non-relational | non-relational | non-relational | non-relational | non-relational | non-relational | non-relational | 

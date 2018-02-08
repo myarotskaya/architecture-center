@@ -7,7 +7,7 @@ ms:date: 02/09/2018
 
 # Choosing an OLTP data store
 
-[Online Online transaction processing](../scenarios/online-transaction-processing.md) (OLTP) is the management of transactional data and transaction processing. This topic compares options for OLTP solutions in Azure.
+[Online transaction processing](../scenarios/online-transaction-processing.md) (OLTP) is the management of transactional data and transaction processing. This topic compares options for OLTP solutions in Azure.
 
 ## What are your options when choosing an OLTP data store?
 
@@ -23,7 +23,7 @@ In Azure, all of the following data stores will meet the core requirements for O
 The following table summarize the key differences in capabilities between each option. For OLTP scenarios, begin choosing the appropriate database for your needs by answering these questions:
 
 - Do you want a managed service rather than managing your own servers?
-    - Managed services remove the operational overhead required by virtual machines, such as patching, configuring high availability, and applying the security best practices associated with managing a server. However, if you do need to use a VM-based solution, consider using one of the database images on [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/) and use automated patching and backup on your provisioned VMs to reduce the administrative burdon. Otherwise, narrow your options to those that are managed services.
+    - Managed services remove the operational overhead required by virtual machines, such as patching, configuring high availability, and applying the security best practices associated with managing a server. However, if you do need to use a VM-based solution, consider using one of the database images on [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/) and use automated patching and backup on your provisioned VMs to reduce the administrative burden. Otherwise, narrow your options to those that are managed services.
 - Does your solution have specific dependencies for Microsoft SQL Server, MySQL or PostgreSQL compatibility?
     - Your application may limit the data stores you can choose based on the drivers it supports for communicating with the data store, or the assumptions it makes about which database is used.
 - Are your write throughput requirements particularly high?

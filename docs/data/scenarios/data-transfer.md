@@ -36,7 +36,7 @@ The [detailed steps for using this service](/azure/storage/common/storage-import
 
 [Azure Data Box](https://azure.microsoft.com/services/storage/databox/) is a Microsoft-provided appliance that works much like the Azure Import/Export service, in that it allows you to offline-transfer large data sets to Azure in a secure, human-portable way. Microsoft ships you the proprietary, secure, and tamper-resistant transfer appliance and handles the end-to-end logistics, which you can track through the portal. One benefit the Azure Data Box service has over the Azure Import/Export service, is ease of use. With Azure Data Box, you don't need to purchase several hard drives, prepare them, and transfer files to each one until it reaches capacity.
 
-Azure Data Box is supported by a number of industry-leading Azure partners to make it easier to seamlessly leverage offline transport to the cloud from their products. Partners include Commvault, Veritas, Peer, Veeam, CloudLanes, NetApp, WANdisco, Rubrik, and many more.
+Azure Data Box is supported by a number of industry-leading Azure partners to make it easier to seamlessly leverage offline transport to the cloud from their products. 
 
 ## Command line tools and APIs
 
@@ -54,7 +54,7 @@ If you would like to programmatically integrate AzCopy functionality into your .
 
 ### PowerShell
 
-Another command-line option is to use the [`Start-AzureStorageBlobCopy` PowerShell cmdlet](/powershell/module/azure.storage/start-azurestorageblobcopy?view=azurermps-5.0.0), a familiar option for Windows administrators who are used to PowerShell. This cmdlet can be used alongside other cmdlets by using the pipeline operator. For instance, the following command retrieves all of the blobs in a container named ContosoUploads, by using the `Get-AzureStorageBlob` cmdlet, and then passes the results to the `Start-AzureStorageBlobCopy` cmdlet to start copying the blobs to the ContosoArchives container: `Get-AzureStorageBlob -Container "ContosoUploads" | Start-AzureStorageBlobCopy -DestContainer "ContosoArchives"`.
+Another command-line option is to use the [`Start-AzureStorageBlobCopy` PowerShell cmdlet](/powershell/module/azure.storage/start-azurestorageblobcopy?view=azurermps-5.0.0), a familiar option for Windows administrators who are used to PowerShell. This cmdlet can be used alongside other cmdlets by using the pipeline operator. 
 
 ### AdlCopy
 
@@ -97,7 +97,7 @@ Both Blob storage and Data Lake Store provide a web-based interface for explorin
 
 ### Azure Data Factory
 
-[Azure Data Factory](/azure/data-factory/) is a powerful, cloud-based service best suited for regularly transferring files between a number of Azure services, on-premises, or a combination of the two. Using Azure Data Factory, you can create and schedule data-driven workflows (called pipelines) that can ingest data from disparate data stores. It can process and transform the data by using compute services such as Azure HDInsight Hadoop, Spark, Azure Data Lake Analytics, and Azure Machine Learning. In other words, Azure Data Factory is a cloud-based data integration service that allows you to create data-driven workflows in the cloud for [orchestrating](pipeline-orchestration-data-movement.md) and automating data movement and data transformation.
+[Azure Data Factory](/azure/data-factory/) is a powerful, cloud-based service best suited for regularly transferring files between a number of Azure services, on-premises, or a combination of the two. Using Azure Data Factory, you can create and schedule data-driven workflows (called pipelines) that can ingest data from disparate data stores. It can process and transform the data by using compute services such as Azure HDInsight Hadoop, Spark, Azure Data Lake Analytics, and Azure Machine Learning. In other words, Azure Data Factory is a cloud-based data integration service that allows you to create data-driven workflows in the cloud for [orchestrating](../technology-choices/pipeline-orchestration-data-movement.md) and automating data movement and data transformation.
 
 If your data store is behind a firewall and you are using v1 of Data Factory, use a [data management gateway](/azure/data-factory/v1/data-factory-data-management-gateway) that's installed in your on-premises environment to move the data instead. If using version 2 of Data Factory, use the new self-hosted [integration runtime](/azure/data-factory/create-self-hosted-integration-runtime) (IR) in place of the data management gateway.
 

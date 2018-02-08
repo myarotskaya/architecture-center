@@ -15,7 +15,7 @@ The process of creating a deploying machine learning models is an iterative one,
 * The optimal model is deployed into production&mdash;often as a web service or some other encapsulated function.
 * As new data is collected, the model is periodically retrained to improve is effectiveness.
 
-Machine learning at scale addresses two different scalability concerns. The first centers around model training, wherein the model needs to be trained against large data sets that require the scale-out capabilities of a cluster to train. The second centers around operationalizating the learned model in a fashion that can scale to meet the scoring requirements of the applications that consume it &mdash; this is typically accomplished by deploying the predictive capabilites as a web service that can then be scaled out. 
+Machine learning at scale addresses two different scalability concerns. The first centers around model training, wherein the model needs to be trained against large data sets that require the scale-out capabilities of a cluster to train. The second centers around operationalizating the learned model in a fashion that can scale to meet the scoring requirements of the applications that consume it &mdash; this is typically accomplished by deploying the predictive capabilities as a web service that can then be scaled out. 
 
 Machine learning at scale has the benefit that it can produce powerful, predictive capabilities because better models typically result from more data. Also, because once a model is trained in can be deployed as a stateless, highly-performant, scale-out web service. 
 
@@ -26,12 +26,12 @@ During the model preparation and training phase, data scientists explore the dat
 * Determine correlations and relationships in the data through statistical analysis and visualization.
 * Apply *feature engineering* techniques to generate new calculated features that improve the predictiveness of statistical relationships.
 * Train machine learning models based on predictive algorithms.
-* Validate trained models using data that was witheld during training.
+* Validate trained models using data that was withheld during training.
 
 To support this interactive analysis and modeling phase, the enterprise ecosystem must enable data scientists to access data using the tools they need to explore it. Additionally, the training of a complex machine learning model can require a lot of intensive processing of high volumes of data, so sufficient resources for scaling out the model training is essential.
 
 ## Model deployment and consumption
-When a model is ready to be deployed, it can be encapsulated as a web service and deployed in the cloud, to an edge device, or within an enterprise machine learning execution evironment. This deployment process is referred to as operationalization.
+When a model is ready to be deployed, it can be encapsulated as a web service and deployed in the cloud, to an edge device, or within an enterprise machine learning execution environment. This deployment process is referred to as operationalization.
 
 ## Challenges
 

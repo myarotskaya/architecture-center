@@ -27,7 +27,7 @@ Relational databases support various types of constraints that help to ensure da
 
 Most relational databases use the Structured Query Language (SQL) language that enables a  declarative approach to querying. The query author focuses solely on authoring a query that shapes the desired result, allowing the relational database engine to decide how to execute the query. This is as opposed to the procedural approach used by other data stores, whereby the query program specifies the processing steps explicitly. Relational databases also allow for the storage of executable code routines in the form of stored procedures and functions, which enable a mixture of declarative and procedural approaches.
 
-To improve query performace, relational databases use *indexes*. Primary indexes, which are used by the primary key, define the order of the data as it sits on disk. Secondary indexes provide an alternative combination of fields by which to quickly locate the desired rows, without having to re-sort the entire data on disk.
+To improve query performance, relational databases use *indexes*. Primary indexes, which are used by the primary key, define the order of the data as it sits on disk. Secondary indexes provide an alternative combination of fields by which to quickly locate the desired rows, without having to re-sort the entire data on disk.
 
 Because relational databases enforce referential integrity, scaling a relational database can become challenging. You can scale out the database by sharding the data, but this requires careful design of the schema. For more information, see [Sharding pattern](../../patterns/sharding.md).
 
