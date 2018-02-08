@@ -15,21 +15,19 @@ In Azure, the following services and tools will meet the core requirements for p
 - [Oozie on HDInsight](/azure/hdinsight/hdinsight-use-oozie-linux-mac)
 - [SQL Server Integration Services (SSIS)](/sql/integration-services/sql-server-integration-services)
 
-## How do you choose?
-These services and tools can be used independently from one another, or at times, used together to create a hybrid solution for your data pipeline needs. For instance, the new Integration Runtime (IR) in Azure Data Factory V2 is capable of natively executing SSIS packages in a managed Azure compute environment. While there is some overlap in functionality between these services, there are a few key differences that will lead you to select one over the other in certain situations.
+These services and tools can be used independently from one another, or used together to create a hybrid solution for your data pipeline needs. For instance, the Integration Runtime (IR) in Azure Data Factory V2 can natively execute SSIS packages in a managed Azure compute environment. While there is some overlap in functionality between these services, there are a few key differences.
 
 ## Key Selection Criteria
 
 Answer the following questions to help you narrow down your choices, then use the matrices below to select your options for your scenario: 
 
-- Do you need big data capabilities for moving and transforming your data? Usually this means multi-gigabytes to terabytes of data.
-    - If yes, then narrow your options to those that best suited for big data.
-- Do you require a managed service that can operate at scale?
-    - If so, select one of the cloud-based services that aren't limited by your local processing power.
-- Are some of your data sources located on-premises?
-    - If yes, look for options that can work with both cloud and on-premises data sources or destinations.
-- Is your source data stored in Blob storage on an HDFS filesystem?
-    - Look for options that support Hive queries.
+- Do you need big data capabilities for moving and transforming your data? Usually this means multi-gigabytes to terabytes of data. If yes, then narrow your options to those that best suited for big data.
+
+- Do you require a managed service that can operate at scale? If yes, select one of the cloud-based services that aren't limited by your local processing power.
+
+- Are some of your data sources located on-premises? If yes, look for options that can work with both cloud and on-premises data sources or destinations.
+
+- Is your source data stored in Blob storage on an HDFS filesystem? If so, choose an option that supports Hive queries.
 
 ## Capability matrix
 

@@ -82,12 +82,11 @@ The [HDInsight implementation](/azure/hdinsight/hbase/apache-hbase-overview) lev
 
 For data ingestion, choose the appropriate system for your needs by answering these questions:
 
-- Do you need managed, high speed, cloud-based storage for any type of text or binary data?
-    - If yes, then select one of the file storage options.
-- Do you need file storage that is optimized for parallel analytics workloads and high throughput/IOPS?
-    - If yes, then narrow your file storage options to those that are tuned to analytics workload performance.
-- Do you need to store your unstructured or semi-structured data in a schemaless database that provides high-speed read access and consistency to your data?
-    - If so, select one of the NoSQL options. Compare options for indexing, available database models, and regional availability. Depending on the type of data you need to store and how you want to work with it, the selection of primary database models may be the biggest determining factor.
+- Do you need managed, high speed, cloud-based storage for any type of text or binary data? If yes, then select one of the file storage options.
+
+- Do you need file storage that is optimized for parallel analytics workloads and high throughput/IOPS? If yes, then narrow your file storage options to those that are tuned to analytics workload performance.
+
+- Do you need to store unstructured or semi-structured data in a schemaless database? If so, select one of the non-relational options. Compare options for indexing and database models. Depending on the type of data you need to store, the primary database models may be the largest factor.
 
 - Can you use the service in your region? Check the regional availability for each Azure service. See [Products available by region](https://azure.microsoft.com/regions/services/).
 
@@ -110,30 +109,20 @@ Based on your responses to the questions above, the following tables will help y
 | Data operations&mdash;authentication protocol | OAuth 2.0. Calls must contain a valid JWT (JSON web token) issued by Azure Active Directory | Hash-based message authentication code (HMAC). Calls must contain a Base64-encoded SHA-256 hash over a part of the HTTP request. |
 | Data operations&mdash;authorization | POSIX access control lists (ACLs). ACLs based on Azure Active Directory identities can be set file and folder level. | For account-level authorization use [Account Access Keys](/azure/storage/common/storage-create-storage-account#manage-your-storage-account)<br>For account, container, or blob authorization use [Shared Access Signature Keys](/azure/storage/common/storage-dotnet-shared-access-signature-part-1) |
 | Data Operations&mdash;Auditing | Available.  |Available |
-| Encryption data at rest | <ul><li>Transparent, server side</li> <ul><li>With service-managed keys</li><li>With customer-managed keys in Azure Key Vault</li></ul></ul> | <ul><li>Transparent, server side</li> <ul><li>With service-managed keys</li><li>With customer-managed keys in Azure Key Vault (coming soon)</li></ul><li>Client-side encryption</li></ul> |
-| Management operations (for example, account create) | [Role-based access control](/azure/active-directory/role-based-access-control-what-is) (RBAC) provided by Azure for account management | [Role-based access control](/azure/active-directory/role-based-access-control-what-is) (RBAC) provided by Azure for account management |
+| Encryption data at rest | Transparent, server side | Transparent, server side; Client-side encryption |
 | Developer SDKs | .NET, Java, Python, Node.js | .Net, Java, Python, Node.js, C++, Ruby |
 | Analytics workload performance | Optimized performance for parallel analytics workloads, High Throughput and IOPS | Not optimized for analytics workloads |
 | Size limits | No limits on account sizes, file sizes or number of files | Specific limits documented [here](/azure/azure-subscription-service-limits#storage-limits) |
 | Geo-redundancy | Locally-redundant (multiple copies of data in one Azure region) | Locally redundant (LRS), globally redundant (GRS), read-access globally redundant (RA-GRS). See [here](/azure/storage/common/storage-redundancy) for more information |
-| Service state | Generally available | Generally available |
-| Regional availability | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) |
-| Price | See [Pricing](https://azure.microsoft.com/pricing/details/data-lake-store/) | See [Pricing](https://azure.microsoft.com/pricing/details/storage/) |
 
 ### NoSQL database capabilities
 
 | | Azure Cosmos DB | HBase on HDInsight |
 | --- | --- | --- |
-| Primary database model | Document store, graph DBMS, key-value store, wide column store | Wide column store |
-| Data types | Yes (JSON data types) | No |
+| Primary database model | Document store, graph, key-value store, wide column store | Wide column store |
 | Secondary indexes | Yes | No |
 | SQL language support | Yes | Yes (using the [Phoenix](http://phoenix.apache.org/) JDBC driver) |
-| Available APIs |[SQL](/azure/cosmos-db/sql-api-introduction), [MongoDB](/azure/cosmos-db/mongodb-introduction), [Graph](/azure/cosmos-db/graph-introduction) (Gremlin), RESTful HTTP, [Table](/azure/cosmos-db/table-introduction), [Cassandra](/azure/cosmos-db/cassandra-introduction) (preview) | Java, RESTful HTTP, Thrift |
 | Consistency | Strong, bounded-staleness, session, consistent prefix, eventual | Strong |
 | Native Azure Functions integration | [Yes](/azure/cosmos-db/serverless-computing-database) | No |
-| Regional availability | See [here](https://azure.microsoft.com/regions/#services) | See [here](https://azure.microsoft.com/regions/#services) |
 | Automatic global distribution | [Yes](/azure/cosmos-db/distribute-data-globally), while maintaining all 5 consistency models | No [HBase cluster replication can be configured](/azure/hdinsight/hbase/apache-hbase-replication) across regions with eventual consistency |
 | Pricing model | Elastically scalable request units (RUs) charged per-second as needed, elastically scalable storage | Per-minute pricing for HDInsight cluster (horizontal scaling of nodes), storage |
-
-
-

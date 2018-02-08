@@ -16,21 +16,17 @@ In Azure, the following services provide natural language processing (NLP) capab
 - [Azure HDInsight with Spark and Spark MLlib](/azure/hdinsight/spark/apache-spark-overview)
 - [Microsoft Cognitive Services](/azure/#pivot=products&panel=cognitive)
 
-## How do you choose?
-
-Each service brings with it a unique set of capabilities, giving you options in selecting the one that most closely meets your requirements. 
-
 ## Key selection criteria
 
 For NLP scenarios, begin choosing the appropriate service for your needs by answering these questions:
-- Do you want to leverage prebuilt models instead of training your own models with your own data?
-    - If yes (you want prebuilt models), then consider using the APIs offered by Microsoft Cognitive Services.
-- Do you need to train custom models against a large corpus of text data?
-    - If yes, then consider using Azure HDInsight with Spark MLlib and Spark NLP.
-- Do you need low-level NLP capabilities like tokenization, stemming, lemmatization, and term frequency/inverse document frequency (TF/IDF)?
-    - If yes, consider using Azure HDInsight with Spark MLlib and Spark NLP.
-- Do you need simple, high-level NLP capabilities like entity and intent identification, topic detection, spell check, or sentiment analysis?
-    - If yes, consider using the APIs offered by Microsoft Cognitive Services.
+
+- Do you want to use prebuilt models? If yes, consider using the APIs offered by Microsoft Cognitive Services.
+
+- Do you need to train custom models against a large corpus of text data? If yes, consider using Azure HDInsight with Spark MLlib and Spark NLP.
+
+- Do you need low-level NLP capabilities like tokenization, stemming, lemmatization, and term frequency/inverse document frequency (TF/IDF)? If yes, consider using Azure HDInsight with Spark MLlib and Spark NLP.
+
+- Do you need simple, high-level NLP capabilities like entity and intent identification, topic detection, spell check, or sentiment analysis? If yes, consider using the APIs offered by Microsoft Cognitive Services.
 
 ## Capability matrix
 
@@ -49,22 +45,22 @@ Based on your responses to the questions above, the following tables will help y
 
 | | Azure HDInsight | Microsoft Cognitive Services |  
 | --- | --- | --- | 
-| Tokenizer | Yes&mdash;using Spark NLP | Yes&mdash;using Linguistic Analysis API |
-| Stemmer | Yes&mdash;using Spark NLP | No |
-| Lemmatizer | Yes&mdash;using Spark NLP | No |
-| Part of speech tagging | Yes&mdash;using Spark NLP | Yes&mdash;using Linguistic Analysis API |
-| Term frequency/inverse-document frequency (TF/IDF) | Yes&mdash;using Spark MLlib | No |
-| String similarity&mdash;edit distance calculation | Yes&mdash;using Spark MLlib | No |
-| N-gram calculation | Yes&mdash;using Spark MLlib | No |
-| Stop word removal | Yes&mdash;using Spark MLlib | No |
+| Tokenizer | Yes (Spark NLP) | Yes (Linguistic Analysis API) |
+| Stemmer | Yes (Spark NLP) | No |
+| Lemmatizer | Yes (Spark NLP) | No |
+| Part of speech tagging | Yes (Spark NLP) | Yes (Linguistic Analysis API) |
+| Term frequency/inverse-document frequency (TF/IDF) | Yes (Spark MLlib) | No |
+| String similarity&mdash;edit distance calculation | Yes (Spark MLlib) | No |
+| N-gram calculation | Yes (Spark MLlib) | No |
+| Stop word removal | Yes (Spark MLlib) | No |
 
 ### High-level natural language processing capabilities
 
 | | Azure HDInsight | Microsoft Cognitive Services |
 | --- | --- | --- | 
-| Entity/intent identification & extraction | No | Yes&mdash;using Language Understanding Intelligent Service (LUIS) API |    
-| Topic detection | Yes&mdash;using Spark NLP | Yes&mdash;using the Text Analytics API |
-| Spell checking | Yes&mdash;using Spark NLP | Yes&mdash;using the Bing Spell Check API |
-| Sentiment analysis | Yes&mdash;using Spark NLP | Yes&mdash;using the Text Analytics API |
-| Language detection | No | Yes&mdash;using the Text Analytics API |
-| Supports multiple languages besides English | No | Yes&mdash;language support varies by API |
+| Entity/intent identification & extraction | No | Yes (Language Understanding Intelligent Service (LUIS) API) |    
+| Topic detection | Yes (Spark NLP) | Yes (Text Analytics API) |
+| Spell checking | Yes (Spark NLP) | Yes (Bing Spell Check API) |
+| Sentiment analysis | Yes (Spark NLP) | Yes (Text Analytics API) |
+| Language detection | No | Yes (Text Analytics API) |
+| Supports multiple languages besides English | No | Yes (varies by API) |

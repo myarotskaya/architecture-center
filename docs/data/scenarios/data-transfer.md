@@ -138,19 +138,17 @@ Based on your responses to the questions above, the following tables will help y
 
 | | Azure CLI | AzCopy | PowerShell | AdlCopy | Distcp | Sqoop | PolyBase | Hadoop command line |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Compatible platform(s) | Linux, OS X, Windows | Linux, Windows | Windows | Linux, OS X, Windows | Hadoop/HDInsight * | Hadoop/HDInsight * | Windows w/ SQL Server instance, Azure SQL Data Warehouse | Hadoop/HDInsight * |
+| Compatible platforms | Linux, OS X, Windows | Linux, Windows | Windows | Linux, OS X, Windows | Hadoop, HDInsight | Hadoop, HDInsight | SQL Server, Azure SQL Data Warehouse | Hadoop, HDInsight |
 | Copy to/from relational database | No | No | No | No | No | Yes | Yes | No |
 | Copy to Blob storage | Yes | Yes | Yes | No | Yes | Yes | Yes | Yes |
 | Copy from Blob storage | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No |
 | Copy to Data Lake Store | No | No | Yes | Yes | Yes | Yes | Yes | Yes |
 | Copy from Data Lake Store | No | No | Yes | Yes | Yes | Yes | Yes | No |
-| Optimized for big data | No | No | No | Yes ** | Yes | Yes | Yes *** | Yes |
+| Optimized for big data | No | No | No | Yes <sup>1</sup> | Yes | Yes | Yes <sup>2</sup> | Yes |
 
-\* Can be run from a command line/shell session invoked from Linux, OS X, or Windows.
+[1] AdlCopy is optimized for transferring big data when used with a Data Lake Analytics account.
 
-\** AdlCopy is optimized for transferring big data when used with a Data Lake Analytics account.
-
-\*** PolyBase [performance can be increased](/sql/relational-databases/polybase/polybase-guide#performance) by pushing computation to Hadoop and using [PolyBase  scale-out groups](/sql/relational-databases/polybase/polybase-scale-out-groups) to enable parallel data transfer between SQL Server instances and Hadoop nodes.
+[2] PolyBase [performance can be increased](/sql/relational-databases/polybase/polybase-guide#performance) by pushing computation to Hadoop and using [PolyBase  scale-out groups](/sql/relational-databases/polybase/polybase-scale-out-groups) to enable parallel data transfer between SQL Server instances and Hadoop nodes.
 
 #### Graphical user interface capabilities
 
