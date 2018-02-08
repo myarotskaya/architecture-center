@@ -136,15 +136,29 @@ Based on your responses to the questions above, the following tables will help y
 
 #### Command line capabilities
 
-| | Azure CLI | AzCopy | PowerShell | AdlCopy | Distcp | Sqoop | PolyBase | Hadoop command line |
+Hadoop/HDInsight
+
+| |  Distcp | Sqoop | Hadoop CLI |
+|  --- | --- | --- | --- |
+| Copy to/from relational database |  No | Yes | No |
+| Copy to Blob storage |  Yes | Yes | Yes |
+| Copy from Blob storage | Yes |  Yes | No |
+| Copy to Data Lake Store | Yes | Yes | Yes |
+| Copy from Data Lake Store | Yes | Yes | No |
+| Optimized for big data | Yes | Yes |  Yes |
+
+Other
+
+| | Azure CLI | AzCopy | PowerShell | AdlCopy | PolyBase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Compatible platforms | Linux, OS X, Windows | Linux, Windows | Windows | Linux, OS X, Windows | Hadoop, HDInsight | Hadoop, HDInsight | SQL Server, Azure SQL Data Warehouse | Hadoop, HDInsight |
-| Copy to/from relational database | No | No | No | No | No | Yes | Yes | No |
-| Copy to Blob storage | Yes | Yes | Yes | No | Yes | Yes | Yes | Yes |
-| Copy from Blob storage | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No |
-| Copy to Data Lake Store | No | No | Yes | Yes | Yes | Yes | Yes | Yes |
-| Copy from Data Lake Store | No | No | Yes | Yes | Yes | Yes | Yes | No |
-| Optimized for big data | No | No | No | Yes <sup>1</sup> | Yes | Yes | Yes <sup>2</sup> | Yes |
+| Compatible platforms | Linux, OS X, Windows | Linux, Windows | Windows | Linux, OS X, Windows | SQL Server, Azure SQL Data Warehouse | 
+| Copy to/from relational database | No | No | No | No | Yes | 
+| Copy to Blob storage | Yes | Yes | Yes | No | Yes | 
+| Copy from Blob storage | Yes | Yes | Yes | Yes | Yes |
+| Copy to Data Lake Store | No | No | Yes | Yes |  Yes | 
+| Copy from Data Lake Store | No | No | Yes | Yes | Yes | 
+| Optimized for big data | No | No | No | Yes <sup>1</sup> | Yes <sup>2</sup> |
+
 
 [1] AdlCopy is optimized for transferring big data when used with a Data Lake Analytics account.
 
