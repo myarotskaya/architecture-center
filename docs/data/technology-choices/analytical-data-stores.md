@@ -69,7 +69,7 @@ The following tables summarize the key differences in capabilities.
 
 | | SQL Database | SQL Data Warehouse | HBase/Phoenix on HDInsight | Hive LLAP on HDInsight | Azure Analysis Services | Azure Cosmos DB |
 | --- | --- | --- | --- | --- | --- | --- |
-| Authentication  | SQL / Azure Active Directory (Azure AD) | SQL / Azure AD | local / Azure AD * | local / Azure AD * | Azure AD | database users / Azure AD via access control (IAM) |
+| Authentication  | SQL / Azure Active Directory (Azure AD) | SQL / Azure AD | local / Azure AD <sup>1</sup> | local / Azure AD <sup>1</sup> | Azure AD | database users / Azure AD via access control (IAM) |
 | Authorization  | Yes | Yes | Yes <sup>1</sup> | Yes <sup>1</sup> | Yes | [Yes](/azure/cosmos-db/secure-access-to-data) (hash-based message authentication code (HMAC))
 | Auditing  | Yes | Yes | Yes <sup>1</sup> | Yes <sup>1</sup> | Yes (when integrated with [Azure Monitor Resource Diagnostic Logs](/azure/monitoring-and-diagnostics/monitoring-overview-of-diagnostic-logs)) | Yes (through [audit logging/activity logs](/azure/cosmos-db/logging))
 | Data encryption at rest | Yes <sup>2</sup> | Yes <sup>2</sup> | Yes <sup>1</sup> | Yes <sup>1</sup> | Yes | Yes |
@@ -81,4 +81,4 @@ The following tables summarize the key differences in capabilities.
 
 [2] Requires using transparent data encryption (TDE) to encrypt and decrypt your data at rest.
 
-[3] Supported when [used within an Azure Virtual Network](/azure/hdinsight/hdinsight-extend-hadoop-virtual-network).
+[3] When used within an Azure Virtual Network. See [Extend Azure HDInsight using an Azure Virtual Network](/azure/hdinsight/hdinsight-extend-hadoop-virtual-network).

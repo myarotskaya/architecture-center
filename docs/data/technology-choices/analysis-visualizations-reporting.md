@@ -57,14 +57,13 @@ Considerations:
 
 For analysis, visualizations, and reporting scenarios, choose the appropriate system for your needs by answering these questions:
 
-- Do you want the ability to connect to numerous data sources, providing a centralized place to create reports for data spread throughout your domain?
-    - If so, look for options that allow you to connect to 100s of data sources.
-- Do you want to be able to embed powerful, dynamic visualizations in an external website or application?
-    - If so, look for options that provide embedding capabilities.
-- Do you want to be able to design your visualizations and reports while offline?
-    - If yes, narrow your choices to those that provide offline capabilities.
-- Do you need heavy processing power to train large or complex AI models or work with very large data sets?
-    - If yes, then narrow your options to those that can tap into the power of a big data cluster, such as Spark on HDInsight.
+- Do you need to connect to numerous data sources, providing a centralized place to create reports for data spread throughout your domain? If so, choose an option that allows you to connect to 100s of data sources.
+
+- Do you want to to embed dynamic visualizations in an external website or application? If so, choose an option that provides embedding capabilities.
+
+- Do you want to design your visualizations and reports while offline? If yes, choose an option with offline capabilities.
+
+- Do you need heavy processing power to train large or complex AI models or work with very large data sets? If yes, choose an option that can connect to a big data cluster.
 
 ## Capability matrix
 
@@ -75,23 +74,21 @@ The following tables summarize the key differences in capabilities.
 | | Power BI | Jupyter Notebooks | Zeppelin Notebooks | Microsoft Azure Notebooks |
 | --- | --- | --- | --- | --- |
 | Connect to big data cluster for advanced processing | Yes | Yes | Yes | No |
-| Managed service | Yes | Yes \* | Yes \* | Yes |
+| Managed service | Yes | Yes <sup>1</sup> | Yes <sup>1</sup> | Yes |
 | Connect to 100s of data sources | Yes | No | No | No |
-| Offline capabilities | Yes \** | No | No | No |
+| Offline capabilities | Yes <sup>2</sup> | No | No | No |
 | Embedding capabilities | Yes | No | No | No |
-| Automatic data refresh | Yes \*** | No | No | No |
-| Access to numerous open source packages | No | Yes + | Yes + | Yes ++ |
+| Automatic data refresh | Yes | No | No | No |
+| Access to numerous open source packages | No | Yes <sup>3</sup> | Yes <sup>3</sup> | Yes <sup>4</sup> |
 | Data transformation/cleansing options | [Power Query](https://powerbi.microsoft.com/blog/getting-started-with-power-query-part-i/), R | 40 languages, including Python, R, Julia, and Scala | 20+ interpreters, including Python, JDBC, and R | Python, F#, R |
 | Pricing | Free for Power BI Desktop (authoring), see [pricing](https://powerbi.microsoft.com/pricing/) for hosting options | Free | Free | Free |
 | Multiuser collaboration | [Yes](/power-bi/service-how-to-collaborate-distribute-dashboards-reports) | Yes (through sharing or with a multiuser server like [JupyterHub](https://github.com/jupyterhub/jupyterhub)) | Yes | Yes (through sharing) |
 
-\* When used as part of a managed HDInsight cluster.
+[1] When used as part of a managed HDInsight cluster.
 
-\** With the use of Power BI Desktop.
+[2] With the use of Power BI Desktop.
 
-\*** There are [several ways](/power-bi/refresh-data) that data is automatically refreshed in Power BI.
+[2] You can search the [Maven repository](http://search.maven.org/) for community-contributed packages.
 
-\+ You can search the [Maven repository](http://search.maven.org/) for community-contributed packages.
-
-\++ Python packages can be installed using either pip or conda. R packages can be installed from CRAN or GitHub. Packages in F# can be installed via nuget.org using the [Paket dependency manager](https://fsprojects.github.io/Paket/).
+[3] Python packages can be installed using either pip or conda. R packages can be installed from CRAN or GitHub. Packages in F# can be installed via nuget.org using the [Paket dependency manager](https://fsprojects.github.io/Paket/).
 

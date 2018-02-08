@@ -80,7 +80,7 @@ The [HDInsight implementation](/azure/hdinsight/hbase/apache-hbase-overview) lev
 
 ## Key selection criteria
 
-For data ingest scenarios, choose the appropriate system for your needs by answering these questions:
+For data ingestion, choose the appropriate system for your needs by answering these questions:
 
 - Do you need managed, high speed, cloud-based storage for any type of text or binary data?
     - If yes, then select one of the file storage options.
@@ -88,8 +88,8 @@ For data ingest scenarios, choose the appropriate system for your needs by answe
     - If yes, then narrow your file storage options to those that are tuned to analytics workload performance.
 - Do you need to store your unstructured or semi-structured data in a schemaless database that provides high-speed read access and consistency to your data?
     - If so, select one of the NoSQL options. Compare options for indexing, available database models, and regional availability. Depending on the type of data you need to store and how you want to work with it, the selection of primary database models may be the biggest determining factor.
-- Can you use the service in your region?
-    - Check the [regional availability for each Azure service](https://azure.microsoft.com/regions/#services) to find out. If the service you want to use is not in your region, or nearby, then that could automatically disqualify it from your options. This is especially true in situations when data sovereignty is a high priority.
+
+- Can you use the service in your region? Check the regional availability for each Azure service. See [Products available by region](https://azure.microsoft.com/regions/services/).
 
 ## Capability matrix
 
