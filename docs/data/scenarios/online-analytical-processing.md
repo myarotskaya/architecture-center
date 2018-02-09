@@ -9,17 +9,21 @@ ms:date: 02/09/2018
 
 Online analytical processing (OLAP) is a technology that organizes large business databases and supports complex analysis. It can be used to perform complex analytical queries without negatively affecting transactional systems.
 
-The databases that a business uses to store all its transactions and records are called [online transaction processing (OLTP)](online-transaction-processing.md) databases. These databases usually have records that are entered one at a time and that contain a wealth of information that can be used by strategists to make informed decisions about their business. The databases that are used to store the data, however, were not designed for analysis. Therefore, retrieving answers from these databases is costly in terms of time and effort. OLAP systems were designed to help extract this business intelligence information from the data in a highly performant way. This is because OLAP databases are optimized for heavy read, low write workloads.
+The databases that a business uses to store all its transactions and records are called [online transaction processing (OLTP)](online-transaction-processing.md) databases. These databases usually have records that are entered one at a time. Often they contain a great deal of information that is valuable to the organization. The databases that are used for OLTP, however, were not designed for analysis. Therefore, retrieving answers from these databases is costly in terms of time and effort. OLAP systems were designed to help extract this business intelligence information from the data in a highly performant way. This is because OLAP databases are optimized for heavy read, low write workloads.
 
 ![OLAP in Azure](./images/olap-data-pipeline.png) 
 
 ## When to use this solution
 
-Choose OLAP when you need to rapidly execute complex analytical and ad hoc queries without negatively affecting your OLTP systems trying to conduct other transactions. Also consider using this architecture when you want to provide business users with a simple way to generate reports from your data, or when you want to provide a number of aggregations that will allow users to get fast, consistent results. OLAP is especially useful for applying aggregate calculations over large amounts of data.
+Consider OLAP in the following scenarios:
 
-OLAP systems are optimized for read-heavy scenarios, such as analytics and business intelligence. OLAP allows users to segment multi-dimensional data into slices that can be viewed in two dimensions (such as a pivot table) or filter the data by specific values. This process is sometimes called "slicing and dicing" the data, and can be done regardless of whether the data is partitioned across several data sources. This helps users to find trends, spot patterns, and explore the data without having to know the details of traditional data analysis.
+- You need to execute complex analytical and ad hoc queries rapidly, without negatively affecting your OLTP systems. 
+- You want to provide business users with a simple way to generate reports from your data
+- You want to provide a number of aggregations that will allow users to get fast, consistent results. 
 
-[Semantic models](../concepts/semantic-modeling.md) can help business users abstract relationship complexities and make it easier to analyze the data much faster than they would otherwise be able, if at all.
+OLAP is especially useful for applying aggregate calculations over large amounts of data. OLAP systems are optimized for read-heavy scenarios, such as analytics and business intelligence. OLAP allows users to segment multi-dimensional data into slices that can be viewed in two dimensions (such as a pivot table) or filter the data by specific values. This process is sometimes called "slicing and dicing" the data, and can be done regardless of whether the data is partitioned across several data sources. This helps users to find trends, spot patterns, and explore the data without having to know the details of traditional data analysis.
+
+[Semantic models](../concepts/semantic-modeling.md) can help business users abstract relationship complexities and make it easier to analyze data quickly.
 
 ## Challenges
 
