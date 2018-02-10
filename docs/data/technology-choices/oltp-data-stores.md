@@ -7,7 +7,10 @@ ms:date: 02/09/2018
 
 # Choosing an OLTP data store
 
-[Online transaction processing](../scenarios/online-transaction-processing.md) (OLTP) is the management of transactional data and transaction processing. This topic compares options for OLTP solutions in Azure.
+Online transaction processing (OLTP) is the management of transactional data and transaction processing. This topic compares options for OLTP solutions in Azure.
+
+> [!NOTE]
+> For more information about when to use an OLTP data store, see [Online transaction processing](../scenarios/online-analytical-processing.md).
 
 ## What are your options when choosing an OLTP data store?
 
@@ -20,7 +23,7 @@ In Azure, all of the following data stores will meet the core requirements for O
 
 ## Key selection criteria
 
-The following table summarize the key differences in capabilities between each option. For OLTP scenarios, begin choosing the appropriate database for your needs by answering these questions:
+For OLTP scenarios, begin choosing the appropriate database for your needs by answering these questions:
 
 - Do you want a managed service rather than managing your own servers?
 
@@ -32,11 +35,13 @@ The following table summarize the key differences in capabilities between each o
 
 - Does your data need to be readable with low latency in multiple regions? If yes, choose an option that supports readable secondary replicas.
 
-- Does your database need to be highly available across geo-graphic regions? If yes, choose an options that supports for geographic replication. Also consider the options that support automatic failover from the primary replica to a secondary replica.
+- Does your database need to be highly available across geo-graphic regions? If yes, choose an option that supports geographic replication. Also consider the options that support automatic failover from the primary replica to a secondary replica.
 
 - Does your database have specific security needs? If yes, examine the options that provide capabilities like row level security, data masking, and transparent data encryption.
 
 ## Capability matrix
+
+Based on your responses to the questions above, the following tables will help you select the choice that's right for you.
 
 ### General capabilities 
 | | Azure SQL Database | SQL Server in an Azure virtual machine | Azure Database for MySQL | Azure Database for PostgreSQL |

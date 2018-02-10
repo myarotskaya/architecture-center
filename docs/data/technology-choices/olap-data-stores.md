@@ -7,7 +7,10 @@ ms:date: 02/09/2018
 
 # Choosing an online analytical processing (OLAP) data store
 
-[Online analytical processing](../scenarios/online-analytical-processing.md) (OLAP) is a technology that organizes large business databases and supports complex analysis. This topic compares the options for OLAP solutions in Azure.
+Online analytical processing (OLAP) is a technology that organizes large business databases and supports complex analysis. This topic compares the options for OLAP solutions in Azure.
+
+> [!NOTE]
+> For more information about when to use an OLAP data store, see [Online analytical processing](../scenarios/online-analytical-processing.md).
 
 ## What are your options when choosing an OLAP data store?
 In Azure, all of the following data stores will meet the core requirements for OLAP:
@@ -16,13 +19,13 @@ In Azure, all of the following data stores will meet the core requirements for O
 - [Azure Analysis Services](/azure/analysis-services/analysis-services-overview)
 - [SQL Server Analysis Services (SSAS)](/sql/analysis-services/analysis-services)
 
-SQL Server Analysis Services (SSAS) offers OLAP and data mining functionality for business intelligence applications. You can either install SSAS on local servers, or host within a virtual machine in Azure. Azure Analysis Services is a fully managed platform as a service (PaaS) offering that provides the same major features as SSAS, but in the cloud. Because Azure Analysis Services lives in the cloud, its servers support connecting to [various data sources](/azure/analysis-services/analysis-services-datasource) in the cloud and on-premises in your organization.
+SQL Server Analysis Services (SSAS) offers OLAP and data mining functionality for business intelligence applications. You can either install SSAS on local servers, or host within a virtual machine in Azure. Azure Analysis Services is a fully managed service that provides the same major features as SSAS. Azure Analysis Services supports connecting to [various data sources](/azure/analysis-services/analysis-services-datasource) in the cloud and on-premises in your organization.
 
 Clustered Columnstore indexes are available in SQL Server 2014 and above, as well as Azure SQL Database, and are ideal for OLAP workloads. However, beginning with SQL Server 2016 (including Azure SQL Database), you can take advantage of hybrid transactional/analytics processing (HTAP) through the use of updateable nonclustered columnstore indexes. HTAP enables you to perform OLTP and OLAP processing on the same platform, which removes the need to store multiple copies of your data, and eliminates the need for distinct OLTP and OLAP systems. For more information, see [Get started with Columnstore for real-time operational analytics](/sql/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics).
 
 ## Key selection criteria
 
-The following tables summarize the key differences in capabilities between each. For OLAP scenarios, choose the appropriate system for your needs by answering these questions:
+For OLAP scenarios, choose the appropriate system for your needs by answering these questions:
 
 - Do you want a managed service rather than managing your own servers?
 
@@ -32,13 +35,15 @@ The following tables summarize the key differences in capabilities between each.
 
     *Real-time analytics* in this context applies to a single data source, such as an enterprise resource planning (ERP) application, that will run both an operational and an analytics workload. If you need to integrate data from multiple sources, or require extreme analytics performance by using pre-aggregated data such as cubes, you might still require a separate data warehouse.
 
-- Do you need to use pre-aggregated data, such as to provide semantic models that make analytics more business user friendly? If yes, choose an option that supports multidimensional cubes or tabular semantic models. 
+- Do you need to use pre-aggregated data, for example to provide semantic models that make analytics more business user friendly? If yes, choose an option that supports multidimensional cubes or tabular semantic models. 
 
     Providing aggregates can help users consistently calculate data aggregates. Pre-aggregated data can also provide a large performance boost when dealing with several columns across many rows. Data can be pre-aggregated in multidimensional cubes or tabular semantic models.
 
-- Do you need the ability to integrate data from several sources, beyond your OLTP data store? If so, consider options that easily integrate multiple data sources.
+- Do you need to integrate data from several sources, beyond your OLTP data store? If so, consider options that easily integrate multiple data sources.
 
 ## Capability matrix
+
+Based on your responses to the questions above, the following tables will help you select the choice that's right for you.
 
 ### General capabilities
 
