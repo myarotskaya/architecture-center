@@ -72,7 +72,7 @@ Relevant Azure services:
 ## Graph data stores
 A graph data store manages two types of information, nodes and edges. Nodes represent entities, and edges specify the relationships between these entities. Both nodes and edges can have properties that provide information about that node or edge, similar to columns in a table. Edges can also have a direction indicating the nature of the relationship.  
 
-The purpose of a graph data store is to allow an application to efficiently perform queries that traverse the network of nodes and edges, and to analyze the relationships between entities. The follow diagram shows an organization's personnel data structured as a graph. The entities are employees and departments, and the edges indicate reporting relationships and the department in which employees work. In this graph, the arrows on the edges show the direction of the relationships.
+The purpose of a graph data store is to allow an application to efficiently perform queries that traverse the network of nodes and edges, and to analyze the relationships between entities. The following diagram shows an organization's personnel data structured as a graph. The entities are employees and departments, and the edges indicate reporting relationships and the department in which employees work. In this graph, the arrows on the edges show the direction of the relationships.
 
 ![Example of data in a graph data store](../../guide/technology-choices/images/graph.png)
 
@@ -86,14 +86,16 @@ Time series data is a set of values organized by time, and a time series data st
 
 ![Example of time series data](./images/time-series.png)
 
-Although the records written to a time series database are generally small, there are often a large number of records, and total data size can grow rapidly. Time series data stores also handle out of order and late-arriving data, automatic indexing of data points, and optimized querying for queries described in terms of windows of time. This last feature enables queries to run across millions of data points and multiple data streams quickly, in order to support time series visualizations, which is a common way that time series data is consumed. 
+Although the records written to a time series database are generally small, there are often a large number of records, and total data size can grow rapidly. Time series data stores also handle out-of-order and late-arriving data, automatic indexing of data points, and optimizations for queries described in terms of windows of time. This last feature enables queries to run across millions of data points and multiple data streams quickly, in order to support time series visualizations, which is a common way that time series data is consumed. 
+
+For more information, see [Time series solutions](../scenarios/time-series)
 
 Relevant Azure service:  
 - [Azure Time Series Insights](https://azure.microsoft.com/services/time-series-insights/)  
 - [OpenTSDB with HBase on HDInsight](/azure/hdinsight/hdinsight-hbase-overview)
 
 ## Object data stores
-Object data stores are optimized for storing and retrieving large binary objects or blobs such as images, text files, video and audio streams, large application data objects and documents, and virtual machine disk images. Objects are composed of the stored data, some metadata, and a unique ID for accessing the object. Object stores are designed to support files that are individually very large, as well provide large amounts of total storage to manage all files.  
+Object data stores are optimized for storing and retrieving large binary objects or blobs such as images, text files, video and audio streams, large application data objects and documents, and virtual machine disk images. An object consists of the stored data, some metadata, and a unique ID for accessing the object. Object stores are designed to support files that are individually very large, as well provide large amounts of total storage to manage all files.  
 
 ![Example of object data](./images/object.png)
 
@@ -112,13 +114,13 @@ Relevant Azure service:
 
 External index data stores provide the ability to search for information held in other data stores and services. An external index acts as a secondary index for any data store, and can be used to index massive volumes of data and provide near real-time access to these indexes. 
 
-For example, you might have text files stored in a file system. Find a file by its file path is quick, but searching based on the contents of the file would require a scan of all of the files, which is slow. An external index lets you create secondary search indexes and then quickly find the path to the files that match your criteria. Another example application of an external index is with key/value stores that only index by the key. You can build a secondary index based on the values in the data, and quickly look up the key that uniquely identifies each matched item. 
+For example, you might have text files stored in a file system. Finding a file by its file path is quick, but searching based on the contents of the file would require a scan of all of the files, which is slow. An external index lets you create secondary search indexes and then quickly find the path to the files that match your criteria. Another example application of an external index is with key/value stores that only index by the key. You can build a secondary index based on the values in the data, and quickly look up the key that uniquely identifies each matched item. 
 
 ![Example of search data](./images/search.png)
 
 The indexes are created by running an indexing process. This can be performed using a pull model, triggered by the data store, or using a push model, initiated by application code. Indexes can be multidimensional and may support free-text searches across large volumes of text data. 
 
-External index data stores are often used to support full text and web based search. In these cases, searching can be exact or fuzzy. A fuzzy search finds documents that match a set of terms and calculates how closely they match. Some external indexes also support linguistic analysis that can return matches based on synonyms, genre expansions (for example, matching dogs to pets), and stemming (for example searching for run also matches ran and running). 
+External index data stores are often used to support full text and web based search. In these cases, searching can be exact or fuzzy. A fuzzy search finds documents that match a set of terms and calculates how closely they match. Some external indexes also support linguistic analysis that can return matches based on synonyms, genre expansions (for example, matching "dogs" to "pets"), and stemming (for example, searching for "run" also matches "ran" and "running"). 
 
 Relevant Azure service:  
 
@@ -130,23 +132,33 @@ Non-relational data stores often use a different storage architecture from that 
 
 The following compares the requirements for each of the non-relational data stores:
 
-| Requirement | Document data | Column-family data | Key/value data | Graph data | Time series data | Object data | External index data |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Normalization | Denormalized | Denormalized | Denormalized | Normalized | Normalized | Denormalized | Denormalized |
-| Schema | Schema on read | Column families defined on write, column schema on read | Schema on read | Schema on read | Schema on read | Schema on read | Schema on write | 
-| Consistency (across concurrent transactions) | Tunable consistency, document-level guarantees | Column-family&ndash;level guarantees | Key-level guarantees | Graph-level guarantees | N/A | N/A | N/A | 
-| Referential Integrity | N/A | N/A | N/A | N/A | N/A | N/A | N/A |  
-| Atomicity (transaction scope) | Collection | Table | Table | Graph | N/A | Object | N/A |
-| Locking Strategy | Optimistic (lock free) | Pessimistic (row locks) | Optimistic (ETag) | Optimistic (lock free) | N/A | Pessimistic (blob locks) | N/A |
-| Access pattern | Random access | Aggregates on tall/wide data | Random access | Random access | Random access and aggregation | Sequential access | Random access | 
-| Indexing | Primary and secondary indexes | Primary and secondary indexes | Primary index only | Primary and secondary indexes | Primary and secondary indexes | Primary index only | N/A |
-| Model | non-relational | non-relational | non-relational | non-relational | non-relational | non-relational | non-relational | 
-| Data shape | Document | Tabular with column families containing columns | Key and value | Graph containing edges and vertices | Tabular | Blob and metadata | Document |
-| Sparse | Yes | Yes | Yes | No | No | N/A | No | 
-| Wide (lots of columns/attributes) | Yes | Yes | No | No | No | Yes | Yes |  
-| Query interface | API or SQL | API or SQL | API | API | API | API | API | 
-| Query flexibility (variety of access patterns supported) | Flexible | Flexible | Inflexible | Inflexible | Inflexible | Flexible |
-| Datum size | Small (KBs) to medium (low MBs) | Medium (MBs) to Large (low GBs) | Small (KBs) | Small (KBs) | Small (KBs) | Large (GBs) to Very Large (TBs) | Small (KBs) |
-| Overall Maximum Scale | Very Large (PBs) | Very Large (PBs) | Very Large (PBs) | Large (TBs) | Large (low TBs)  | Very Large (PBs) | Large (low TBs) | 
+| Requirement | Document data | Column-family data | Key/value data | Graph data | 
+| --- | --- | --- | --- | --- | 
+| Normalization | Denormalized | Denormalized | Denormalized | Normalized | 
+| Schema | Schema on read | Column families defined on write, column schema on read | Schema on read | Schema on read | 
+| Consistency (across concurrent transactions) | Tunable consistency, document-level guarantees | Column-family&ndash;level guarantees | Key-level guarantees | Graph-level guarantees 
+| Atomicity (transaction scope) | Collection | Table | Table | Graph | 
+| Locking Strategy | Optimistic (lock free) | Pessimistic (row locks) | Optimistic (ETag) | 
+| Access pattern | Random access | Aggregates on tall/wide data | Random access | Random access |
+| Indexing | Primary and secondary indexes | Primary and secondary indexes | Primary index only | Primary and secondary indexes | 
+| Data shape | Document | Tabular with column families containing columns | Key and value | Graph containing edges and vertices | 
+| Sparse | Yes | Yes | Yes | No | 
+| Wide (lots of columns/attributes) | Yes | Yes | No | No |  
+| Datum size | Small (KBs) to medium (low MBs) | Medium (MBs) to Large (low GBs) | Small (KBs) | Small (KBs) | 
+| Overall Maximum Scale | Very Large (PBs) | Very Large (PBs) | Very Large (PBs) | Large (TBs) | 
 
+| Requirement | Time series data | Object data | External index data |
+| ---  --- | --- | --- |
+| Normalization | Normalized | Denormalized | Denormalized |
+| Schema | Schema on read | Schema on read | Schema on write | 
+| Consistency (across concurrent transactions) | N/A | N/A | N/A | 
+| Atomicity (transaction scope) | N/A | Object | N/A |
+| Locking Strategy | N/A | Pessimistic (blob locks) | N/A |
+| Access pattern | Random access and aggregation | Sequential access | Random access | 
+| Indexing | Primary and secondary indexes | Primary index only | N/A |
+| Data shape | Tabular | Blob and metadata | Document |
+| Sparse | No | N/A | No | 
+| Wide (lots of columns/attributes) |  No | Yes | Yes |  
+| Datum size | Small (KBs) | Large (GBs) to Very Large (TBs) | Small (KBs) |
+| Overall Maximum Scale | Large (low TBs)  | Very Large (PBs) | Large (low TBs) | 
 
