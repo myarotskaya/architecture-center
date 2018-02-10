@@ -9,7 +9,7 @@ ms:date: 02/09/2018
 
 A big data architecture is designed to handle the ingestion, processing, and analysis of data that is too large or complex for traditional database systems. The threshold at which organizations enter into the big data realm differs, depending on the capabilities of the users and their tools. For some, it can mean hundreds of gigabytes of data, while for others it means hundreds of terabytes. As tools for working with big data sets advance, so does the meaning of big data. More and more, this term relates to the value you can extract from your data sets through advanced analytics, rather than strictly the size of the data, although in these cases they tend to be quite large.
 
-Over the years, the data landscape has changed. What you can do, or are expected to do, with data has changed. The cost of storage keeps plummeting, while the means by which data is collected keeps growing. Some data arrives at a rapid pace, constantly demanding to be collected and observed. Other data arrives more slowly, but in very large chunks, often in the form of decades of historical data. You might be facing an advanced analytics problem, or one that requires machine learning. These are challenges that big data architectures seek to solve.
+Over the years, the data landscape has changed. What you can do, or are expected to do, with data has changed. The cost of storage has fallen dramatically, while the means by which data is collected keeps growing. Some data arrives at a rapid pace, constantly demanding to be collected and observed. Other data arrives more slowly, but in very large chunks, often in the form of decades of historical data. You might be facing an advanced analytics problem, or one that requires machine learning. These are challenges that big data architectures seek to solve.
 
 Big data solutions typically involve one or more of the following types of workload:
 
@@ -60,7 +60,7 @@ A data lake consists of both storage and processing. Data lake storage is built 
 
 Data lake stores are often used in event streaming or IoT scenarios, because they can persist large amounts of relational and nonrelational data without transformation or schema definition. They are built to handle high volumes of small writes at low latency, and are optimized for massive throughput.
 
-Another term commonly used in data scenarios is _datamart_. Typically, a datamart is a store of data that is cleansed, packaged, and structured for easy consumption. Unlike a data mart, a data lake is designed to ingest raw data, leaving it in its original or least-processed form to allow questions to be asked in various ways and at various times. If the data is cleansed and structured in a specific way, like in a data mart, then it is difficult to adapt how the data is processed and analyzed when new questions or tools come about in the future. This is why a data lake is composed of both storage and processing as separate entities.
+Another term commonly used in data scenarios is _data mart_. Typically, a data mart is a store of data that is cleansed, packaged, and structured for easy consumption. Unlike a data mart, a data lake is designed to ingest raw data, leaving it in its original or least-processed form to allow questions to be asked in various ways and at various times. If the data is cleansed and structured in a specific way, like in a data mart, then it is difficult to adapt how the data is processed and analyzed when new questions or tools come about in the future. This is why a data lake is composed of both storage and processing as separate entities.
 
 Relevant Azure service:
 - [Azure Data Lake](https://azure.microsoft.com/scenarios/data-lake/)
@@ -73,9 +73,9 @@ One drawback to this approach is that it introduces latency &mdash; if processin
 
 The **lambda architecture**, first proposed by Nathan Marz, addresses this problem by creating two paths for data flow. All data coming into the system goes through these two paths:
 
-* A **batch layer** (cold path) that stores all of the incoming data in its raw form and performs batch processing on the data. The result of this processing is stored as a **batch view**.
+* A **batch layer** (cold path) stores all of the incoming data in its raw form and performs batch processing on the data. The result of this processing is stored as a **batch view**.
 
-* A **speed layer** (hot path) that analyzes data in real time. This layer is designed for low latency, at the expense of accuracy.
+* A **speed layer** (hot path) analyzes data in real time. This layer is designed for low latency, at the expense of accuracy.
 
 The batch layer feeds into a **serving layer** that indexes the batch view for efficient querying. The speed layer updates the serving layer with incremental updates based on the most recent data.
 
@@ -103,7 +103,7 @@ If you need to recompute the entire data set (equivalent to what the batch layer
 
 ## Internet of Things (IoT)
 
-From a practical viewpoint, Internet of Things (IoT) represents any device that is connected to the Internet. This includes your PC, mobile phone, smart watch, smart thermostat, smart refrigerator, connected automobile, heart monitoring implants, and anything else that connects to the Internet and sends or receives data. The number of connected devices grows every day, as does the amount of data collected from them. Oftentimes this data is being collected on the edge, in highly constrained, sometimes high latency environments. In other cases, data is sent from low latency environments by thousands or millions of devices, requiring the ability to rapidly ingest the barrage of data and process accordingly. Therefore, proper planning is required to handle these constraints and unique requirements.
+From a practical viewpoint, Internet of Things (IoT) represents any device that is connected to the Internet. This includes your PC, mobile phone, smart watch, smart thermostat, smart refrigerator, connected automobile, heart monitoring implants, and anything else that connects to the Internet and sends or receives data. The number of connected devices grows every day, as does the amount of data collected from them. Often this data is being collected in highly constrained, sometimes high-latency environments. In other cases, data is sent from low-latency environments by thousands or millions of devices, requiring the ability to rapidly ingest the data and process accordingly. Therefore, proper planning is required to handle these constraints and unique requirements.
 
 Event-driven architectures are central to IoT solutions. The following diagram shows a possible logical architecture for IoT. The diagram emphasizes the event-streaming components of the architecture.
 
