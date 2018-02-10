@@ -7,7 +7,10 @@ ms:date: 02/09/2018
 
 # Choosing a data warehouse
 
-A [data warehouse](../scenarios/data-warehousing.md) is a central, organizational, relational repository of integrated data from one or more disparate sources. This topic compares options for data warehouses in Azure.
+A data warehouse is a central, organizational, relational repository of integrated data from one or more disparate sources. This topic compares options for data warehouses in Azure.
+
+> [!NOTE]
+> For more information about when to use a data warehouse, see [Data warehousing and data marts](../scenarios/data-warehousing.md).
 
 ## What are your options when choosing a data warehouse?
 
@@ -26,11 +29,13 @@ MPP:
 
 As a general rule, SMP-based warehouses are best suited for small to medium data sets (up to 4-100 TB), while MPP is often used for big data. The delineation between small/medium and big data partly has to do with your organization's definition and supporting infrastructure. (See [Choosing an OLTP data store](oltp-data-stores.md#scalability-capabilities).) 
 
-Beyond data sizes, the type of workload pattern you plan to support is likely to be a greater determining factor. For example, complex queries may be too slow for an SMP solution, and require an MPP solution instead. MPP-based systems are likely to impose a performance penalty with small data sizes, due to the way jobs are distributed and consolidated across nodes. If your data sizes are already exceeding 1 TB and are expected to continually grow, you may want to consider selecting an MPP solution. However, if your data sizes are less than this, but your workloads are exceeding the available resources of your SMP solution, then MPP may be your best option as well.
+Beyond data sizes, the type of workload pattern is likely to be a greater determining factor. For example, complex queries may be too slow for an SMP solution, and require an MPP solution instead. MPP-based systems are likely to impose a performance penalty with small data sizes, due to the way jobs are distributed and consolidated across nodes. If your data sizes already exceed 1 TB and are expected to continually grow, consider selecting an MPP solution. However, if your data sizes are less than this, but your workloads are exceeding the available resources of your SMP solution, then MPP may be your best option as well.
 
 The data accessed or stored by your data warehouse could come from a number of data sources, including a data lake, such as [Azure Data Lake Store](/azure/data-lake-store/). For a video session that compares the different strengths of MPP services that can use Azure Data Lake, see [Azure Data Lake and Azure Data Warehouse: Applying Modern Practices to Your App](https://azure.microsoft.com/resources/videos/build-2016-azure-data-lake-and-azure-data-warehouse-applying-modern-practices-to-your-app/).
 
-SMP systems are characterized by a single instance of a relational database management system sharing all resources (CPU/Memory/Disk&mdash;that is, shared everything). MPP solutions, on the other hand, require a different skillset, due to variances in querying, modeling, partitioning of data, and other factors unique to parallel processing. You can scale up an SMP system by adding processors with more CPU cores or faster CPU cores, add more memory, and use a faster I/O subsystem. For an MPP system, you can scale out by adding more compute nodes (which have their own CPU, memory and I/O subsystems). There are physical limitations to scaling up a server, at which point scaling out is more desirable, depending on the workload.
+SMP systems are characterized by a single instance of a relational database management system sharing all resources (CPU/Memory/Disk). You can scale up an SMP system. For SQL Server running on a VM, you can scale up the VM size. For Azure SQL Database, you can scale up by selecting a different service tier. 
+
+MPP systems can be scaled out by adding more compute nodes (which have their own CPU, memory and I/O subsystems). There are physical limitations to scaling up a server, at which point scaling out is more desirable, depending on the workload. However, MPP solutions require a different skillset, due to variances in querying, modeling, partitioning of data, and other factors unique to parallel processing. 
 
 When deciding which SMP solution to use, see [A closer look at Azure SQL Database and SQL Server on Azure VMs](/azure/sql-database/sql-database-paas-vs-sql-server-iaas#a-closer-look-at-azure-sql-database-and-sql-server-on-azure-vms). 
 
@@ -47,14 +52,13 @@ For data warehouse scenarios, choose the appropriate system for your needs by an
 
 - Do you want a managed service rather than managing your own servers?
 
-- Are you working with extremely large data sets or highly complex, long-running queries? If yes, narrow your options to those under MPP capabilities. 
+- Are you working with extremely large data sets or highly complex, long-running queries? If yes, consider an MPP option. 
 
 - For a large data set, is the data source structured or unstructured? Unstructured data may need to be processed in a big data environment such as Spark on HDInsight, Azure Databricks, Hive LLAP on HDInsight, or Azure Data Lake Analytics. All of these can serve as ELT (Extract, Load, Transform) and ETL (Extract, Transform, Load) engines. They can output the processed data into structured data, making it easier to load into SQL Data Warehouse or one of the other options. For structured data, SQL Data Warehouse has a performance tier called Optimized for Compute, for compute-intensive workloads requiring ultra-high performance.
 
-- Do you want to separate your historical data from your current, operational data? If so, select one of the options where [orchestration](pipeline-orchestration-data-movement.md) is required. These are standalone warehouses optimized for heavy read access and best suited as a separate historical data store.
+- Do you want to separate your historical data from your current, operational data? If so, select one of the options where [orchestration](pipeline-orchestration-data-movement.md) is required. These are standalone warehouses optimized for heavy read access, and are best suited as a separate historical data store.
 
 - Do you need to integrate data from several sources, beyond your OLTP data store? If so, consider options that easily integrate multiple data sources. 
-
 
 - Do you have a multi-tenancy requirement? If so, SQL Data Warehouse is not ideal for this requirement. For more information, see [SQL Data Warehouse Patterns and Anti-Patterns](https://blogs.msdn.microsoft.com/sqlcat/2017/09/05/azure-sql-data-warehouse-workload-patterns-and-anti-patterns/).
 
@@ -68,7 +72,7 @@ For data warehouse scenarios, choose the appropriate system for your needs by an
     
     - SQL Server allows a maximum of 32,767 user connections. When running on a VM, performance will depend on the VM size and other factors. 
     
-    SQL Data Warehouse has limits on concurrent queries and concurrent connections. For more information, see [Concurrency and workload management in SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-develop-concurrency). Consider using complementary services, such as [Azure Analysis Services](/azure/analysis-services/analysis-services-overview), to overcome limits in SQL Data Warehouse.
+    - SQL Data Warehouse has limits on concurrent queries and concurrent connections. For more information, see [Concurrency and workload management in SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-develop-concurrency). Consider using complementary services, such as [Azure Analysis Services](/azure/analysis-services/analysis-services-overview), to overcome limits in SQL Data Warehouse.
 
 - What sort of workload do you have? In general, MPP-based warehouse solutions are best suited for analytical, batch-oriented workloads. If your workloads are transactional by nature, with many small read/write operations or multiple row-by-row operations, consider using one of the SMP options. One exception to this guideline is when using stream processing on an HDInsight cluster, such as Spark Streaming, and storing the data within a Hive table.
 
@@ -101,12 +105,12 @@ Based on your responses to the questions above, the following tables will help y
 
 | | Azure SQL Database | SQL Server (VM) |  SQL Data Warehouse | Apache Hive on HDInsight | Hive LLAP on HDInsight |
 | --- | --- | --- | --- | --- | --- | -- |
-| Redundant regional servers for high availability  | Yes | Yes  Yes | No | No |
+| Redundant regional servers for high availability  | Yes | Yes | Yes | No | No |
 | Supports query scale out (distributed queries)  | No | No | Yes | Yes | Yes |
 | Dynamic scalability (scale up)  | Yes | No | Yes <sup>1</sup> | No | No |
-| Supports in-memory caching of data | Yes |  Yes | No | Yes |
+| Supports in-memory caching of data | Yes |  Yes | No | Yes | Yes |
 
-[1] SQL Data Warehouse allows you to scale up or down by adjusting the number of data warehouse units (DWUs). See [Manage compute power in Azure SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-manage-compute-overview).
+[1] SQL Data Warehouse allows you to scale up or doanw by adjusting the number of data warehouse units (DWUs). See [Manage compute power in Azure SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-manage-compute-overview).
 
 ### Security capabilities
 
