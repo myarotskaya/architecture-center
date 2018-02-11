@@ -62,7 +62,7 @@ For more information, see [Data storage](../technology-choices/data-storage.md).
 
 ### Batch processing
 
-- **R Server** or **Spark**. Most data scientists use programming languages with strong support for mathematical and statistical packages, such as R or Python to work with data. When working with large volumes of data, you can reduce latency by using platforms that enable these languages to use distributed processing techniques. R Server can be used on its own or in conjunction with Spark to scale out R processing functions, and Spark natively supports Python for similar scale-out capabilities in that language.
+- **R Server** or **Spark**. Most data scientists use programming languages with strong support for mathematical and statistical packages, such as R or Python. When working with large volumes of data, you can reduce latency by using platforms that enable these languages to use distributed processing. R Server can be used on its own or in conjunction with Spark to scale out R processing functions, and Spark natively supports Python for similar scale-out capabilities in that language.
 - **Hive**. Hive is a good choice for transforming data using SQL-like semantics. Users can create and load tables using HiveQL statements, which are semantically similar to SQL.
 
 For more information, see [Batch processing](../technology-choices/batch-processing.md).
