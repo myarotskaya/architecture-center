@@ -52,7 +52,7 @@ The following tables summarize the key differences in capabilities.
 | --- | --- | --- | --- | --- | --- | --- |
 | Is managed service | Yes | Yes | Yes <sup>1</sup> | Yes <sup>1</sup> | Yes | Yes |
 | Primary database model | Relational (columnar format when using columnstore indexes) | Relational tables with columnar storage | Wide column store | Hive/In-Memory | Tabular/MOLAP semantic models | Document store, graph, key-value store, wide column store |
-| SQL language support | Yes | Yes | Yes (using the [Phoenix](http://phoenix.apache.org/) JDBC driver) | Yes | No | Yes |
+| SQL language support | Yes | Yes | Yes (using [Phoenix](http://phoenix.apache.org/) JDBC driver) | Yes | No | Yes |
 | Optimized for speed serving layer | Yes <sup>2</sup> | No | Yes | Yes | No | Yes |
 
 [1] With manual configuration and scaling.
@@ -72,8 +72,6 @@ The following tables summarize the key differences in capabilities.
 | | SQL Database | SQL Data Warehouse | HBase/Phoenix on HDInsight | Hive LLAP on HDInsight | Azure Analysis Services | Cosmos DB |
 | --- | --- | --- | --- | --- | --- | --- |
 | Authentication  | SQL / Azure Active Directory (Azure AD) | SQL / Azure AD | local / Azure AD <sup>1</sup> | local / Azure AD <sup>1</sup> | Azure AD | database users / Azure AD via access control (IAM) |
-| Authorization  | Yes | Yes | Yes <sup>1</sup> | Yes <sup>1</sup> | Yes | [Yes](/azure/cosmos-db/secure-access-to-data) (hash-based message authentication code (HMAC))
-| Auditing  | Yes | Yes | Yes <sup>1</sup> | Yes <sup>1</sup> | Yes (when integrated with [Azure Monitor Resource Diagnostic Logs](/azure/monitoring-and-diagnostics/monitoring-overview-of-diagnostic-logs)) | Yes (through [audit logging/activity logs](/azure/cosmos-db/logging))
 | Data encryption at rest | Yes <sup>2</sup> | Yes <sup>2</sup> | Yes <sup>1</sup> | Yes <sup>1</sup> | Yes | Yes |
 | Row-level security | Yes | No | Yes <sup>1</sup> | Yes <sup>1</sup> | Yes (through object-level security in model) | No |
 | Supports firewalls | Yes | Yes | Yes <sup>3</sup> | Yes <sup>3</sup> | Yes | Yes |
